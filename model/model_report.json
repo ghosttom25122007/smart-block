@@ -1,0 +1,101 @@
+{
+  "cv_per_fold": [
+    {
+      "fold": 1,
+      "auc": 0.6748,
+      "pr_auc": 0.1936,
+      "f1": 0.0374,
+      "precision": 0.1818,
+      "recall": 0.0208,
+      "brier": 0.1055
+    },
+    {
+      "fold": 2,
+      "auc": 0.6796,
+      "pr_auc": 0.2578,
+      "f1": 0.1333,
+      "precision": 0.7778,
+      "recall": 0.0729,
+      "brier": 0.1002
+    },
+    {
+      "fold": 3,
+      "auc": 0.6446,
+      "pr_auc": 0.1896,
+      "f1": 0.0189,
+      "precision": 0.1111,
+      "recall": 0.0103,
+      "brier": 0.1082
+    },
+    {
+      "fold": 4,
+      "auc": 0.7277,
+      "pr_auc": 0.275,
+      "f1": 0.0396,
+      "precision": 0.5,
+      "recall": 0.0206,
+      "brier": 0.0991
+    },
+    {
+      "fold": 5,
+      "auc": 0.7305,
+      "pr_auc": 0.265,
+      "f1": 0.0192,
+      "precision": 0.1429,
+      "recall": 0.0103,
+      "brier": 0.0993
+    }
+  ],
+  "cv_mean": {
+    "auc": 0.6914,
+    "pr_auc": 0.2362,
+    "f1": 0.0497,
+    "precision": 0.3427,
+    "recall": 0.027,
+    "brier": 0.1025
+  },
+  "cv_std": {
+    "auc": 0.0369,
+    "pr_auc": 0.0412,
+    "f1": 0.0478,
+    "precision": 0.2887,
+    "recall": 0.0262,
+    "brier": 0.0041
+  },
+  "oos_test_metrics": {
+    "auc": 0.6869,
+    "pr_auc": 0.3126,
+    "f1": 0.0833,
+    "precision": 0.5294,
+    "recall": 0.0452,
+    "brier": 0.1315
+  },
+  "oos_confusion_matrix": [
+    [
+      993,
+      8
+    ],
+    [
+      190,
+      9
+    ]
+  ],
+  "feature_importance": {
+    "safety_critical_asset": 0.14339999854564667,
+    "severity": 0.13030000030994415,
+    "single_line_section": 0.11760000139474869,
+    "weather_score": 0.07940000295639038,
+    "traffic_density_trains_per_day": 0.07280000299215317,
+    "days_overdue": 0.06989999860525131,
+    "days_since_last_maintenance": 0.06930000334978104,
+    "department_enc": 0.06870000064373016,
+    "past_failures_12m": 0.06750000268220901,
+    "asset_age_years": 0.06199999898672104,
+    "block_duration_min": 0.06019999831914902,
+    "asset_type_enc": 0.058800000697374344
+  },
+  "n_train": 4000,
+  "n_oos_test": 1200,
+  "train_incident_rate": 0.1207,
+  "oos_incident_rate": 0.1658
+}
