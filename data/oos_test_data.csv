@@ -1,0 +1,1201 @@
+task_id,department,asset_type,defect_type,severity,days_overdue,asset_age_years,past_failures_12m,traffic_density_trains_per_day,single_line_section,safety_critical_asset,weather_exposure,days_since_last_maintenance,block_duration_min,incident_occurred,true_incident_probability
+T104100000,TRD,OHE,OHE wear,3,22,6.6,0,67,0,1,Low,90,54,0,0.1307
+T104100001,ENG,Rail,Rail crack,3,9,9.2,2,10,1,1,Medium,254,20,0,0.2696
+T104100002,TRD,Insulator,Insulator crack,2,5,8.4,1,43,1,0,Medium,310,48,0,0.1572
+T104100003,ENG,Fastening,Fastening renewal,3,5,13.5,0,49,0,0,Low,69,45,0,0.033
+T104100004,SNT,Interlocking,Interlocking fault,2,9,18.5,1,81,0,1,Low,17,67,0,0.085
+T104100005,SNT,Signal LED,LED failure,1,30,0.0,0,114,0,0,Medium,337,72,0,0.1476
+T104100006,TRD,OHE,OHE wear,5,6,17.9,0,82,1,1,Medium,229,87,0,0.6396
+T104100007,SNT,Axle Counter,Axle counter drift,1,15,18.3,1,60,0,1,Medium,283,71,0,0.2299
+T104100008,TRD,OHE,OHE wear,3,3,8.1,3,57,1,1,Low,151,41,0,0.313
+T104100009,ENG,Ballast,Ballast deficiency,4,4,9.0,0,77,1,0,Low,237,49,0,0.1746
+T104100010,SNT,Point Machine,Point machine overdue,4,5,20.1,2,62,1,1,Medium,125,36,1,0.4758
+T104100011,TRD,Insulator,Insulator crack,3,7,21.5,0,57,0,0,Medium,196,67,0,0.0845
+T104100012,ENG,Ballast,Ballast deficiency,3,14,12.9,0,22,1,0,Medium,201,62,0,0.162
+T104100013,TRD,Sub-station,Sub-station overdue PM,5,10,8.4,1,55,0,0,Medium,72,82,0,0.1717
+T104100014,SNT,Signal LED,LED failure,5,4,12.9,0,53,1,0,Low,170,86,0,0.1673
+T104100015,ENG,Ballast,Ballast deficiency,4,3,14.4,0,90,0,0,High,233,44,0,0.1712
+T104100016,SNT,Axle Counter,Axle counter drift,5,14,1.7,0,61,0,1,Medium,89,54,0,0.2635
+T104100017,ENG,Ballast,Ballast deficiency,4,27,11.1,0,83,1,0,Low,322,52,0,0.4226
+T104100018,SNT,Cable,Cable insulation fault,2,13,9.6,1,60,1,0,Medium,106,54,0,0.104
+T104100019,TRD,Feeder,Feeder overdue PM,1,12,15.1,0,49,0,0,High,74,53,0,0.0486
+T104100020,ENG,Rail,Rail crack,5,4,19.8,0,93,0,1,Low,76,79,0,0.2549
+T104100021,ENG,Ballast,Ballast deficiency,4,8,8.9,0,46,0,0,Low,196,38,0,0.1018
+T104100022,ENG,Ballast,Ballast deficiency,5,8,20.6,2,68,0,0,Low,364,50,0,0.2723
+T104100023,TRD,Insulator,Insulator crack,5,13,0.0,0,66,0,0,Medium,217,20,0,0.1583
+T104100024,TRD,Feeder,Feeder overdue PM,2,7,6.4,0,87,1,0,Medium,235,41,0,0.163
+T104100025,SNT,Cable,Cable insulation fault,5,9,13.4,1,46,1,0,Medium,37,43,0,0.319
+T104100026,TRD,Feeder,Feeder overdue PM,2,11,10.4,0,47,0,0,Low,196,75,0,0.0296
+T104100027,SNT,Axle Counter,Axle counter drift,2,2,6.9,0,44,1,1,Medium,151,22,1,0.1482
+T104100028,SNT,Cable,Cable insulation fault,4,5,17.7,1,53,0,0,Low,86,46,0,0.1124
+T104100029,TRD,Feeder,Feeder overdue PM,3,5,4.1,1,79,1,0,Medium,119,65,0,0.1039
+T104100030,SNT,Point Machine,Point machine overdue,1,6,5.4,2,55,0,1,Medium,5,67,0,0.0935
+T104100031,TRD,Feeder,Feeder overdue PM,5,5,9.5,2,85,1,0,Low,119,43,0,0.3076
+T104100032,ENG,Bridge,Bearing wear,2,13,12.0,2,71,1,0,Medium,395,33,0,0.3036
+T104100033,SNT,Point Machine,Point machine overdue,5,18,12.0,1,81,1,1,Medium,354,68,1,0.6619
+T104100034,TRD,Feeder,Feeder overdue PM,1,29,7.8,1,109,0,0,Low,125,44,0,0.0978
+T104100035,ENG,Fastening,Fastening renewal,5,9,13.8,0,74,0,0,Medium,223,30,0,0.165
+T104100036,TRD,OHE,OHE wear,4,18,2.8,2,42,0,1,Medium,183,53,0,0.3109
+T104100037,SNT,Signal LED,LED failure,1,4,18.7,0,32,1,0,High,300,33,1,0.1119
+T104100038,ENG,Ballast,Ballast deficiency,4,4,14.8,0,25,0,0,Medium,292,62,0,0.0696
+T104100039,SNT,Axle Counter,Axle counter drift,2,12,13.8,0,73,1,1,Low,94,53,0,0.1499
+T104100040,TRD,Insulator,Insulator crack,4,18,15.4,0,69,0,0,Medium,5,48,0,0.0868
+T104100041,SNT,Signal LED,LED failure,2,9,25.6,0,27,1,0,Low,80,70,0,0.0883
+T104100042,ENG,Bridge,Bearing wear,1,21,23.5,0,54,0,0,Low,241,80,0,0.0639
+T104100043,TRD,Sub-station,Sub-station overdue PM,2,10,9.2,0,55,1,0,Low,158,32,0,0.0759
+T104100044,ENG,Rail,Rail crack,5,6,21.6,1,65,0,1,Low,189,59,0,0.3067
+T104100045,SNT,Cable,Cable insulation fault,5,8,15.9,0,56,0,0,Medium,106,64,1,0.1309
+T104100046,ENG,Fastening,Fastening renewal,1,7,10.6,0,75,0,0,Medium,271,62,0,0.0607
+T104100047,ENG,Bridge,Bearing wear,2,2,20.3,2,47,0,0,Medium,153,33,0,0.0588
+T104100048,ENG,Fastening,Fastening renewal,3,7,20.6,0,29,1,0,High,290,56,0,0.1668
+T104100049,TRD,Sub-station,Sub-station overdue PM,5,2,9.0,0,77,1,0,Low,75,54,0,0.1712
+T104100050,ENG,Bridge,Bearing wear,4,10,15.3,0,46,1,0,Medium,205,67,0,0.1783
+T104100051,ENG,Fastening,Fastening renewal,2,18,14.8,0,19,0,0,Medium,91,79,0,0.0373
+T104100052,TRD,Feeder,Feeder overdue PM,4,5,6.3,0,88,0,0,Low,113,43,0,0.1216
+T104100053,TRD,OHE,OHE wear,3,5,13.3,0,80,1,1,Medium,252,33,1,0.4042
+T104100054,SNT,Cable,Cable insulation fault,4,5,15.7,2,21,0,0,Medium,235,20,0,0.1634
+T104100055,ENG,Rail,Rail crack,4,9,6.1,1,44,1,1,Medium,194,48,1,0.3932
+T104100056,ENG,Bridge,Bearing wear,4,16,22.4,1,45,1,0,Low,238,43,0,0.2563
+T104100057,SNT,Axle Counter,Axle counter drift,1,14,13.4,0,47,0,1,Low,129,34,0,0.078
+T104100058,TRD,Sub-station,Sub-station overdue PM,3,16,6.4,0,82,1,0,Medium,201,39,1,0.2263
+T104100059,SNT,Cable,Cable insulation fault,1,36,13.4,2,108,0,0,Low,225,71,0,0.1362
+T104100060,ENG,Rail,Rail crack,1,5,13.1,1,90,1,1,Medium,349,79,0,0.3123
+T104100061,ENG,Bridge,Bearing wear,1,29,15.3,1,52,0,0,Low,314,56,0,0.1175
+T104100062,TRD,Sub-station,Sub-station overdue PM,2,7,8.8,1,76,0,0,Low,250,64,0,0.0504
+T104100063,TRD,Sub-station,Sub-station overdue PM,5,9,9.2,0,57,0,0,High,211,36,1,0.1977
+T104100064,ENG,Fastening,Fastening renewal,1,20,9.2,0,77,0,0,Medium,263,48,1,0.0898
+T104100065,TRD,Feeder,Feeder overdue PM,5,8,5.5,0,72,0,0,Low,212,60,0,0.108
+T104100066,SNT,Interlocking,Interlocking fault,1,7,15.9,0,51,0,1,Low,5,62,0,0.0585
+T104100067,SNT,Axle Counter,Axle counter drift,3,6,6.3,0,69,0,1,High,5,32,0,0.1621
+T104100068,ENG,Rail,Rail crack,1,38,24.8,0,40,1,1,High,177,58,1,0.3911
+T104100069,SNT,Signal LED,LED failure,4,13,11.8,0,73,1,0,High,371,61,1,0.3352
+T104100070,SNT,Axle Counter,Axle counter drift,1,4,7.1,1,71,0,1,Medium,262,92,0,0.1387
+T104100071,ENG,Fastening,Fastening renewal,2,3,13.0,0,71,1,0,Low,143,72,0,0.0644
+T104100072,ENG,Bridge,Bearing wear,4,6,8.8,0,49,1,0,Medium,23,21,0,0.1059
+T104100073,ENG,Rail,Rail crack,3,3,18.6,1,65,0,1,Low,275,35,0,0.1973
+T104100074,ENG,Bridge,Bearing wear,5,14,17.4,0,83,1,0,Medium,156,30,0,0.379
+T104100075,ENG,Fastening,Fastening renewal,4,2,7.9,0,38,0,0,Low,223,81,0,0.0424
+T104100076,SNT,Point Machine,Point machine overdue,3,11,13.1,0,117,1,1,High,129,52,0,0.373
+T104100077,ENG,Fastening,Fastening renewal,5,4,11.2,0,91,0,0,Low,233,62,0,0.1855
+T104100078,ENG,Ballast,Ballast deficiency,2,5,19.7,2,29,0,0,Medium,389,54,0,0.0979
+T104100079,SNT,Signal LED,LED failure,2,16,9.1,0,94,0,0,High,191,55,0,0.1149
+T104100080,ENG,Rail,Rail crack,4,8,3.8,1,74,0,1,Medium,249,43,0,0.3598
+T104100081,ENG,Ballast,Ballast deficiency,3,3,12.5,0,34,1,0,Medium,254,20,0,0.1401
+T104100082,ENG,Ballast,Ballast deficiency,3,8,9.1,1,67,1,0,Medium,212,20,0,0.213
+T104100083,ENG,Bridge,Bearing wear,2,7,10.1,0,49,0,0,Low,131,56,0,0.0585
+T104100084,ENG,Ballast,Ballast deficiency,2,4,3.8,2,68,1,0,High,256,20,1,0.1446
+T104100085,SNT,Point Machine,Point machine overdue,5,14,5.0,0,46,1,1,Low,135,43,0,0.3443
+T104100086,TRD,Sub-station,Sub-station overdue PM,4,9,8.5,1,33,0,0,Medium,179,42,0,0.1
+T104100087,ENG,Bridge,Bearing wear,4,9,12.3,0,10,0,0,Medium,296,59,0,0.1008
+T104100088,SNT,Point Machine,Point machine overdue,1,5,25.0,1,64,0,1,Medium,298,53,0,0.2099
+T104100089,ENG,Ballast,Ballast deficiency,1,6,14.6,0,5,1,0,Medium,84,20,0,0.0366
+T104100090,SNT,Interlocking,Interlocking fault,1,12,14.8,1,46,0,1,High,200,44,0,0.1493
+T104100091,SNT,Cable,Cable insulation fault,1,7,22.4,1,20,0,0,Medium,222,60,0,0.0582
+T104100092,ENG,Fastening,Fastening renewal,5,4,0.7,1,57,0,0,High,304,83,0,0.2235
+T104100093,ENG,Fastening,Fastening renewal,3,18,18.0,0,77,1,0,Low,160,56,0,0.1513
+T104100094,ENG,Bridge,Bearing wear,5,3,17.9,0,54,1,0,High,149,52,1,0.2384
+T104100095,ENG,Fastening,Fastening renewal,1,25,16.9,3,48,0,0,Low,352,32,0,0.1345
+T104100096,ENG,Fastening,Fastening renewal,4,6,11.1,2,47,1,0,Medium,337,34,0,0.282
+T104100097,TRD,Sub-station,Sub-station overdue PM,1,18,20.4,0,30,1,0,Low,125,46,0,0.0521
+T104100098,ENG,Rail,Rail crack,2,4,19.5,0,43,0,1,High,81,40,1,0.1247
+T104100099,TRD,Sub-station,Sub-station overdue PM,5,3,10.8,0,76,0,0,Medium,348,46,0,0.1875
+T104100100,SNT,Cable,Cable insulation fault,4,4,17.7,2,42,0,0,Low,342,20,0,0.1679
+T104100101,SNT,Signal LED,LED failure,4,20,11.9,0,56,0,0,Low,227,59,0,0.1734
+T104100102,TRD,Feeder,Feeder overdue PM,3,7,6.7,2,59,0,0,Low,227,25,0,0.0824
+T104100103,TRD,Insulator,Insulator crack,1,30,17.4,1,48,1,0,Medium,243,20,0,0.1885
+T104100104,ENG,Ballast,Ballast deficiency,2,14,13.4,0,50,1,0,Medium,93,38,0,0.1203
+T104100105,SNT,Signal LED,LED failure,5,7,10.3,1,86,0,0,Low,249,43,1,0.1898
+T104100106,ENG,Rail,Rail crack,2,6,5.9,0,96,0,1,Low,246,53,1,0.1348
+T104100107,TRD,Insulator,Insulator crack,3,7,12.9,0,32,1,0,Low,180,64,0,0.1294
+T104100108,SNT,Signal LED,LED failure,2,5,6.4,0,35,1,0,Low,168,85,0,0.047
+T104100109,ENG,Fastening,Fastening renewal,5,8,10.5,1,66,0,0,Medium,44,47,0,0.0949
+T104100110,TRD,Sub-station,Sub-station overdue PM,3,15,7.7,0,42,1,0,Medium,72,27,0,0.0985
+T104100111,SNT,Cable,Cable insulation fault,5,23,14.4,0,90,1,0,Low,5,34,0,0.2876
+T104100112,TRD,Sub-station,Sub-station overdue PM,1,10,9.8,1,90,0,0,Medium,131,33,0,0.0532
+T104100113,SNT,Point Machine,Point machine overdue,3,6,0.0,0,89,1,1,Low,5,23,0,0.1371
+T104100114,TRD,OHE,OHE wear,4,3,14.8,2,53,1,1,High,290,90,0,0.5157
+T104100115,SNT,Interlocking,Interlocking fault,5,3,7.7,0,95,1,1,Low,270,39,1,0.4707
+T104100116,TRD,Feeder,Feeder overdue PM,5,3,12.6,0,56,1,0,Low,133,48,0,0.2028
+T104100117,TRD,Sub-station,Sub-station overdue PM,3,19,9.0,0,83,1,0,Low,221,24,1,0.183
+T104100118,ENG,Ballast,Ballast deficiency,3,14,13.3,1,118,1,0,Low,78,90,0,0.231
+T104100119,SNT,Signal LED,LED failure,5,11,18.1,0,63,1,0,Low,180,65,0,0.2731
+T104100120,ENG,Bridge,Bearing wear,2,9,21.1,0,61,0,0,High,155,84,0,0.0719
+T104100121,TRD,Insulator,Insulator crack,4,2,10.9,0,88,1,0,High,217,60,0,0.2
+T104100122,ENG,Ballast,Ballast deficiency,1,11,24.2,0,49,0,0,Low,174,79,0,0.0306
+T104100123,ENG,Fastening,Fastening renewal,2,15,9.1,1,42,0,0,Medium,11,64,0,0.0362
+T104100124,SNT,Axle Counter,Axle counter drift,1,12,18.1,0,77,0,1,Medium,171,48,0,0.1036
+T104100125,TRD,Feeder,Feeder overdue PM,3,8,16.6,1,48,1,0,Medium,129,49,0,0.1442
+T104100126,SNT,Point Machine,Point machine overdue,3,3,9.7,1,64,1,1,Low,448,54,1,0.3778
+T104100127,ENG,Ballast,Ballast deficiency,1,4,24.2,1,16,1,0,Low,5,58,0,0.0292
+T104100128,ENG,Fastening,Fastening renewal,1,6,12.5,0,58,0,0,High,220,92,0,0.0684
+T104100129,ENG,Rail,Rail crack,2,6,9.6,0,56,1,1,Low,371,78,0,0.21
+T104100130,SNT,Point Machine,Point machine overdue,4,12,10.7,0,80,0,1,Medium,292,55,0,0.26
+T104100131,TRD,Feeder,Feeder overdue PM,1,11,8.8,0,26,1,0,Low,298,49,0,0.0541
+T104100132,ENG,Ballast,Ballast deficiency,4,11,17.0,2,95,0,0,Low,207,36,0,0.2073
+T104100133,SNT,Signal LED,LED failure,5,11,13.7,0,46,1,0,High,140,91,1,0.3879
+T104100134,SNT,Point Machine,Point machine overdue,2,12,11.4,0,28,0,1,Low,177,79,0,0.0877
+T104100135,TRD,OHE,OHE wear,1,2,16.4,0,52,1,1,High,334,63,0,0.1687
+T104100136,ENG,Ballast,Ballast deficiency,2,4,19.1,0,88,0,0,Medium,326,71,0,0.1242
+T104100137,SNT,Cable,Cable insulation fault,5,23,16.1,2,70,1,0,High,194,20,1,0.5746
+T104100138,SNT,Signal LED,LED failure,1,2,4.7,1,65,1,0,Low,85,56,0,0.0413
+T104100139,SNT,Point Machine,Point machine overdue,4,7,9.9,1,83,0,1,Low,92,68,0,0.173
+T104100140,SNT,Interlocking,Interlocking fault,1,2,14.4,0,53,0,1,Low,68,44,0,0.052
+T104100141,SNT,Cable,Cable insulation fault,5,3,6.8,1,19,1,0,Medium,129,37,0,0.1198
+T104100142,SNT,Point Machine,Point machine overdue,1,32,12.2,1,33,1,1,Low,223,51,0,0.2929
+T104100143,ENG,Rail,Rail crack,5,3,10.2,0,36,1,1,Medium,132,33,0,0.2579
+T104100144,SNT,Interlocking,Interlocking fault,5,16,6.6,1,104,0,1,High,132,46,1,0.5155
+T104100145,TRD,OHE,OHE wear,3,3,8.7,0,33,0,1,Medium,202,34,0,0.1094
+T104100146,ENG,Fastening,Fastening renewal,1,5,21.9,0,69,1,0,Low,147,39,0,0.0597
+T104100147,ENG,Ballast,Ballast deficiency,1,6,21.6,1,56,1,0,Medium,276,47,0,0.1298
+T104100148,TRD,Insulator,Insulator crack,4,7,11.3,1,89,1,0,High,246,37,0,0.3458
+T104100149,TRD,Feeder,Feeder overdue PM,5,3,4.6,1,80,0,0,Low,155,40,0,0.1212
+T104100150,ENG,Rail,Rail crack,2,7,15.4,1,35,1,1,High,55,68,0,0.2531
+T104100151,ENG,Rail,Rail crack,1,6,9.6,1,55,1,1,Medium,76,65,0,0.1285
+T104100152,SNT,Cable,Cable insulation fault,5,3,21.2,1,33,1,0,Low,326,86,0,0.2044
+T104100153,TRD,OHE,OHE wear,3,2,0.0,2,31,0,1,Low,421,70,0,0.2518
+T104100154,TRD,Feeder,Feeder overdue PM,2,5,16.1,0,121,1,0,Low,210,77,0,0.1572
+T104100155,ENG,Fastening,Fastening renewal,5,8,6.3,1,50,0,0,High,165,27,0,0.1466
+T104100156,ENG,Rail,Rail crack,4,6,14.3,3,40,1,1,Low,188,90,0,0.2914
+T104100157,SNT,Axle Counter,Axle counter drift,3,10,14.2,0,53,0,1,Low,234,48,1,0.1833
+T104100158,TRD,Sub-station,Sub-station overdue PM,1,12,14.3,0,86,1,0,High,237,61,0,0.1822
+T104100159,SNT,Point Machine,Point machine overdue,1,35,13.3,1,59,1,1,High,172,84,0,0.346
+T104100160,SNT,Signal LED,LED failure,2,3,7.3,0,59,1,0,Low,5,58,0,0.0621
+T104100161,ENG,Rail,Rail crack,3,5,11.2,2,71,0,1,Low,236,67,0,0.1808
+T104100162,SNT,Cable,Cable insulation fault,3,3,13.3,0,43,0,0,Medium,142,53,0,0.0586
+T104100163,ENG,Rail,Rail crack,5,4,29.6,0,39,1,1,Medium,144,49,0,0.452
+T104100164,ENG,Bridge,Bearing wear,1,7,15.1,1,93,1,0,Medium,104,80,1,0.1451
+T104100165,ENG,Fastening,Fastening renewal,4,9,4.1,0,45,0,0,High,297,41,0,0.1547
+T104100166,TRD,Feeder,Feeder overdue PM,4,4,11.0,0,5,1,0,Medium,80,74,0,0.0853
+T104100167,ENG,Fastening,Fastening renewal,4,6,12.8,3,101,1,0,Medium,233,60,0,0.3386
+T104100168,ENG,Fastening,Fastening renewal,1,15,21.2,1,53,1,0,Low,165,41,0,0.0973
+T104100169,ENG,Rail,Rail crack,5,27,10.2,1,78,1,1,Low,374,70,1,0.7579
+T104100170,TRD,Sub-station,Sub-station overdue PM,5,3,14.9,3,76,1,0,Low,135,37,0,0.2766
+T104100171,TRD,Feeder,Feeder overdue PM,1,6,12.1,0,75,1,0,Low,169,61,0,0.0645
+T104100172,TRD,OHE,OHE wear,4,7,17.4,0,101,1,1,Low,132,20,0,0.4229
+T104100173,SNT,Interlocking,Interlocking fault,5,2,6.3,1,46,0,1,Low,42,64,0,0.1515
+T104100174,ENG,Fastening,Fastening renewal,3,3,8.6,0,49,1,0,Low,42,67,0,0.0398
+T104100175,TRD,OHE,OHE wear,1,48,11.7,0,52,0,1,Low,65,24,1,0.1767
+T104100176,SNT,Cable,Cable insulation fault,1,13,6.7,0,86,1,0,Medium,195,44,0,0.1417
+T104100177,ENG,Ballast,Ballast deficiency,4,2,7.9,0,66,0,0,Medium,35,20,0,0.0692
+T104100178,ENG,Fastening,Fastening renewal,2,2,11.5,0,48,1,0,Medium,5,30,0,0.0554
+T104100179,ENG,Bridge,Bearing wear,4,2,15.9,0,14,1,0,Low,267,42,0,0.1035
+T104100180,SNT,Point Machine,Point machine overdue,5,3,11.0,1,28,0,1,Medium,27,67,1,0.1902
+T104100181,SNT,Signal LED,LED failure,1,15,6.8,1,16,0,0,Low,74,42,0,0.0175
+T104100182,TRD,Sub-station,Sub-station overdue PM,4,6,8.1,0,74,1,0,High,298,42,1,0.371
+T104100183,SNT,Cable,Cable insulation fault,2,16,2.6,0,91,0,0,Low,219,56,0,0.0514
+T104100184,SNT,Cable,Cable insulation fault,5,15,9.2,0,38,0,0,High,182,83,0,0.1028
+T104100185,TRD,Sub-station,Sub-station overdue PM,3,25,13.4,0,37,0,0,Low,50,68,0,0.0654
+T104100186,TRD,Insulator,Insulator crack,2,8,6.0,0,66,0,0,High,200,68,0,0.0985
+T104100187,ENG,Bridge,Bearing wear,1,10,17.9,0,81,0,0,Low,338,68,0,0.0555
+T104100188,ENG,Bridge,Bearing wear,4,12,1.2,0,41,0,0,High,153,43,0,0.1194
+T104100189,SNT,Signal LED,LED failure,5,36,0.0,0,105,0,0,Medium,5,32,0,0.2379
+T104100190,SNT,Cable,Cable insulation fault,2,8,21.2,0,74,0,0,Low,240,39,0,0.0739
+T104100191,SNT,Cable,Cable insulation fault,5,8,6.1,3,98,1,0,Low,220,72,0,0.3951
+T104100192,TRD,Feeder,Feeder overdue PM,5,3,12.5,0,83,0,0,High,264,39,0,0.1853
+T104100193,ENG,Fastening,Fastening renewal,2,20,12.8,0,76,0,0,High,242,101,0,0.1125
+T104100194,ENG,Fastening,Fastening renewal,2,9,17.2,0,105,1,0,Medium,57,86,0,0.1058
+T104100195,ENG,Fastening,Fastening renewal,2,8,15.5,0,28,0,0,Low,270,25,1,0.0652
+T104100196,ENG,Rail,Rail crack,5,3,24.5,0,85,0,1,Low,292,78,0,0.3456
+T104100197,TRD,OHE,OHE wear,4,4,9.5,1,46,1,1,Medium,123,57,0,0.3459
+T104100198,ENG,Bridge,Bearing wear,1,12,14.5,0,78,1,0,High,5,87,0,0.0825
+T104100199,TRD,OHE,OHE wear,5,14,4.4,1,25,0,1,Medium,110,95,0,0.2112
+T104100200,SNT,Point Machine,Point machine overdue,2,17,13.6,1,10,1,1,Medium,265,41,0,0.287
+T104100201,ENG,Ballast,Ballast deficiency,3,14,11.1,0,104,1,0,Low,101,24,0,0.1749
+T104100202,SNT,Point Machine,Point machine overdue,4,12,0.8,1,85,1,1,Medium,379,20,1,0.6283
+T104100203,TRD,OHE,OHE wear,4,7,22.2,0,42,0,1,Low,90,32,0,0.1284
+T104100204,SNT,Signal LED,LED failure,1,7,12.6,0,79,0,0,Medium,146,58,0,0.0379
+T104100205,ENG,Bridge,Bearing wear,1,5,11.3,0,19,0,0,Low,328,68,0,0.0279
+T104100206,ENG,Rail,Rail crack,5,12,10.3,0,87,0,1,Low,214,53,1,0.3199
+T104100207,ENG,Fastening,Fastening renewal,1,11,12.8,1,63,1,0,Medium,173,64,0,0.1119
+T104100208,TRD,Sub-station,Sub-station overdue PM,3,3,1.9,2,26,0,0,High,5,20,0,0.051
+T104100209,TRD,OHE,OHE wear,3,6,7.5,0,90,1,1,Medium,146,50,0,0.2887
+T104100210,SNT,Signal LED,LED failure,5,6,15.6,1,98,1,0,Medium,144,49,0,0.351
+T104100211,SNT,Point Machine,Point machine overdue,3,5,12.8,1,50,1,1,Low,176,41,0,0.1825
+T104100212,ENG,Fastening,Fastening renewal,4,4,15.5,1,78,0,0,Medium,212,47,0,0.1503
+T104100213,ENG,Ballast,Ballast deficiency,3,6,8.0,0,92,1,0,Low,313,68,0,0.1564
+T104100214,TRD,OHE,OHE wear,3,3,9.8,1,16,1,1,Low,225,88,0,0.142
+T104100215,ENG,Rail,Rail crack,3,17,12.0,0,76,0,1,Low,137,89,0,0.1541
+T104100216,ENG,Ballast,Ballast deficiency,3,19,9.7,0,76,1,0,Low,224,47,0,0.1668
+T104100217,ENG,Fastening,Fastening renewal,5,5,6.4,0,17,0,0,Low,182,49,0,0.0767
+T104100218,SNT,Signal LED,LED failure,1,6,19.0,0,57,1,0,Low,27,43,0,0.0496
+T104100219,TRD,Insulator,Insulator crack,5,16,16.0,0,71,1,0,Medium,123,66,1,0.2956
+T104100220,ENG,Bridge,Bearing wear,2,28,6.3,1,76,0,0,Medium,102,51,0,0.1041
+T104100221,ENG,Fastening,Fastening renewal,2,16,1.7,0,61,0,0,Low,150,53,0,0.0475
+T104100222,SNT,Interlocking,Interlocking fault,2,15,22.2,0,59,0,1,Low,77,33,0,0.1054
+T104100223,SNT,Signal LED,LED failure,2,4,15.4,0,72,1,0,Low,114,24,0,0.0665
+T104100224,ENG,Fastening,Fastening renewal,1,7,11.2,1,48,0,0,Low,154,56,0,0.0273
+T104100225,ENG,Rail,Rail crack,1,3,7.0,0,30,0,1,Medium,246,65,0,0.0602
+T104100226,SNT,Axle Counter,Axle counter drift,2,15,11.3,0,50,1,1,Medium,296,44,0,0.3299
+T104100227,ENG,Bridge,Bearing wear,1,3,22.8,0,47,1,0,Low,255,20,0,0.0695
+T104100228,ENG,Fastening,Fastening renewal,5,9,10.8,1,71,0,0,Medium,161,72,0,0.1778
+T104100229,ENG,Bridge,Bearing wear,1,18,12.2,1,63,1,0,Medium,197,63,0,0.1401
+T104100230,ENG,Ballast,Ballast deficiency,4,18,4.8,0,125,1,0,Low,186,59,1,0.4327
+T104100231,ENG,Ballast,Ballast deficiency,1,6,6.5,0,69,0,0,Low,195,73,0,0.0359
+T104100232,ENG,Ballast,Ballast deficiency,2,15,10.0,0,45,0,0,Low,302,39,0,0.0961
+T104100233,ENG,Ballast,Ballast deficiency,1,3,14.8,2,40,1,0,Medium,63,42,0,0.0725
+T104100234,ENG,Fastening,Fastening renewal,4,17,12.2,2,41,1,0,Medium,124,70,1,0.2546
+T104100235,ENG,Rail,Rail crack,4,4,16.2,0,89,1,1,Low,335,42,1,0.4719
+T104100236,TRD,Feeder,Feeder overdue PM,3,3,8.5,0,41,0,0,Low,154,83,0,0.0436
+T104100237,SNT,Axle Counter,Axle counter drift,3,3,14.8,0,39,1,1,Medium,62,46,0,0.1853
+T104100238,TRD,Sub-station,Sub-station overdue PM,5,8,9.6,1,58,1,0,High,224,67,1,0.3528
+T104100239,ENG,Fastening,Fastening renewal,1,3,9.1,1,42,1,0,Low,257,67,0,0.056
+T104100240,ENG,Bridge,Bearing wear,5,6,17.1,2,23,0,0,Low,110,38,0,0.0918
+T104100241,ENG,Bridge,Bearing wear,2,41,13.4,1,75,1,0,High,190,38,1,0.4298
+T104100242,ENG,Ballast,Ballast deficiency,2,25,15.7,1,47,1,0,Low,234,73,0,0.1506
+T104100243,ENG,Fastening,Fastening renewal,2,13,14.9,1,79,1,0,Low,170,29,0,0.1361
+T104100244,TRD,Insulator,Insulator crack,2,4,5.1,0,97,0,0,Medium,97,43,0,0.0604
+T104100245,TRD,Insulator,Insulator crack,1,6,12.3,0,24,0,0,Low,143,53,0,0.0294
+T104100246,ENG,Fastening,Fastening renewal,3,6,17.8,0,45,0,0,Low,318,47,0,0.0598
+T104100247,SNT,Point Machine,Point machine overdue,5,5,8.2,2,66,0,1,Low,184,65,1,0.3243
+T104100248,ENG,Fastening,Fastening renewal,4,24,18.8,1,47,1,0,Low,32,46,0,0.1711
+T104100249,ENG,Bridge,Bearing wear,1,9,11.6,0,34,0,0,Medium,293,20,0,0.0404
+T104100250,SNT,Interlocking,Interlocking fault,1,7,27.3,0,40,0,1,Low,239,63,0,0.0692
+T104100251,ENG,Bridge,Bearing wear,3,5,17.2,0,49,0,0,Low,155,48,0,0.0473
+T104100252,SNT,Interlocking,Interlocking fault,5,5,5.2,0,47,0,1,High,200,92,1,0.2259
+T104100253,TRD,Sub-station,Sub-station overdue PM,2,5,12.5,0,56,0,0,Medium,99,92,0,0.0468
+T104100254,ENG,Bridge,Bearing wear,5,3,4.6,1,75,1,0,Medium,106,26,0,0.2496
+T104100255,SNT,Interlocking,Interlocking fault,3,9,8.3,0,21,1,1,Low,223,43,1,0.1173
+T104100256,SNT,Point Machine,Point machine overdue,1,13,0.0,0,47,0,1,Low,338,43,0,0.0896
+T104100257,SNT,Interlocking,Interlocking fault,5,4,7.1,2,79,0,1,Medium,5,20,1,0.2552
+T104100258,ENG,Rail,Rail crack,1,17,10.2,0,58,0,1,High,255,68,0,0.1756
+T104100259,ENG,Fastening,Fastening renewal,2,5,10.8,1,61,1,0,Medium,207,73,0,0.1554
+T104100260,TRD,OHE,OHE wear,1,16,11.3,0,72,0,1,Low,160,76,0,0.0881
+T104100261,TRD,Sub-station,Sub-station overdue PM,1,5,11.7,0,74,0,0,Medium,111,44,1,0.0357
+T104100262,SNT,Point Machine,Point machine overdue,2,11,17.2,0,135,0,1,Low,251,87,0,0.226
+T104100263,TRD,OHE,OHE wear,4,2,11.0,1,51,0,1,Medium,276,77,0,0.1544
+T104100264,TRD,Sub-station,Sub-station overdue PM,2,22,12.6,2,69,0,0,Low,108,35,0,0.0838
+T104100265,ENG,Ballast,Ballast deficiency,2,9,10.7,0,20,0,0,Medium,237,68,0,0.0644
+T104100266,TRD,Feeder,Feeder overdue PM,4,12,10.6,1,89,1,0,High,135,81,1,0.3748
+T104100267,ENG,Fastening,Fastening renewal,3,7,5.0,2,57,1,0,Low,154,105,0,0.1177
+T104100268,TRD,Feeder,Feeder overdue PM,4,4,14.0,0,68,1,0,High,173,82,1,0.2687
+T104100269,SNT,Point Machine,Point machine overdue,5,4,4.4,0,50,0,1,Medium,73,56,0,0.1188
+T104100270,SNT,Point Machine,Point machine overdue,4,12,14.2,2,60,0,1,High,190,45,0,0.364
+T104100271,ENG,Ballast,Ballast deficiency,5,13,20.9,1,62,0,0,Low,252,47,1,0.2101
+T104100272,ENG,Fastening,Fastening renewal,4,14,5.2,0,25,1,0,High,201,39,0,0.2138
+T104100273,ENG,Ballast,Ballast deficiency,3,7,5.5,0,85,1,0,High,62,72,0,0.1374
+T104100274,TRD,Insulator,Insulator crack,3,3,6.9,0,74,1,0,High,189,41,0,0.1523
+T104100275,SNT,Point Machine,Point machine overdue,5,20,14.5,1,41,0,1,Medium,99,31,1,0.2688
+T104100276,SNT,Interlocking,Interlocking fault,4,7,9.9,1,62,1,1,Low,225,70,1,0.3151
+T104100277,SNT,Signal LED,LED failure,1,3,9.5,1,93,1,0,Medium,129,76,0,0.0849
+T104100278,TRD,OHE,OHE wear,3,12,8.2,1,20,0,1,Low,314,43,0,0.1941
+T104100279,ENG,Ballast,Ballast deficiency,2,11,5.4,1,50,1,0,Medium,137,50,0,0.109
+T104100280,TRD,Feeder,Feeder overdue PM,3,5,1.8,1,43,1,0,Low,98,34,0,0.0681
+T104100281,ENG,Rail,Rail crack,4,13,7.2,2,76,0,1,Low,338,83,0,0.3564
+T104100282,SNT,Point Machine,Point machine overdue,4,2,21.7,0,72,0,1,Medium,230,45,0,0.2094
+T104100283,ENG,Rail,Rail crack,2,15,15.8,0,92,0,1,Low,115,91,0,0.119
+T104100284,SNT,Cable,Cable insulation fault,5,4,26.2,0,100,0,0,Medium,251,69,0,0.2925
+T104100285,ENG,Rail,Rail crack,1,4,20.9,0,29,1,1,Low,206,62,0,0.0988
+T104100286,ENG,Rail,Rail crack,2,19,13.7,2,96,1,1,High,184,74,1,0.5547
+T104100287,ENG,Bridge,Bearing wear,5,2,17.7,1,85,0,0,Low,293,62,0,0.2008
+T104100288,SNT,Point Machine,Point machine overdue,1,13,14.7,0,87,1,1,Medium,19,77,0,0.2163
+T104100289,ENG,Fastening,Fastening renewal,5,3,15.1,1,51,1,0,Low,246,64,0,0.1976
+T104100290,ENG,Rail,Rail crack,2,2,17.9,0,77,1,1,Medium,5,23,0,0.1182
+T104100291,TRD,OHE,OHE wear,1,8,3.4,0,75,0,1,Low,299,67,0,0.0827
+T104100292,ENG,Ballast,Ballast deficiency,5,16,12.5,0,46,1,0,Medium,84,63,0,0.1693
+T104100293,SNT,Interlocking,Interlocking fault,2,5,10.6,0,70,1,1,Medium,187,62,0,0.2013
+T104100294,ENG,Rail,Rail crack,1,44,3.5,1,94,0,1,Low,230,106,1,0.2741
+T104100295,ENG,Bridge,Bearing wear,5,3,8.3,2,64,1,0,Low,116,73,0,0.2736
+T104100296,ENG,Fastening,Fastening renewal,1,3,10.6,0,52,1,0,Low,109,34,0,0.0414
+T104100297,TRD,Insulator,Insulator crack,1,14,4.3,0,55,0,0,Medium,139,66,0,0.0371
+T104100298,ENG,Fastening,Fastening renewal,4,2,9.6,1,31,0,0,Low,132,23,0,0.0876
+T104100299,TRD,OHE,OHE wear,3,6,19.3,0,52,0,1,Low,167,24,0,0.0712
+T104100300,SNT,Cable,Cable insulation fault,5,3,21.8,3,83,0,0,Low,194,52,1,0.2703
+T104100301,ENG,Rail,Rail crack,3,6,24.9,2,34,1,1,Low,161,75,0,0.2106
+T104100302,ENG,Bridge,Bearing wear,3,9,5.6,0,64,0,0,Medium,275,100,0,0.0851
+T104100303,SNT,Point Machine,Point machine overdue,4,4,11.5,0,46,1,1,Medium,203,40,0,0.2189
+T104100304,TRD,Feeder,Feeder overdue PM,5,8,13.8,1,52,0,0,High,53,65,0,0.1611
+T104100305,ENG,Bridge,Bearing wear,2,7,2.9,1,60,1,0,Low,136,38,0,0.0497
+T104100306,ENG,Ballast,Ballast deficiency,3,15,13.5,0,63,1,0,Low,170,49,1,0.1224
+T104100307,ENG,Ballast,Ballast deficiency,3,2,19.3,0,99,0,0,Medium,199,27,0,0.0999
+T104100308,TRD,Sub-station,Sub-station overdue PM,2,11,17.8,1,26,0,0,Low,142,36,0,0.0566
+T104100309,SNT,Axle Counter,Axle counter drift,2,2,8.0,0,77,0,1,High,5,64,0,0.0902
+T104100310,TRD,OHE,OHE wear,3,24,14.2,0,63,0,1,Medium,135,56,0,0.2372
+T104100311,ENG,Rail,Rail crack,3,5,11.3,1,65,0,1,Low,210,45,0,0.2291
+T104100312,TRD,Feeder,Feeder overdue PM,5,6,12.1,1,42,1,0,Low,182,84,1,0.2189
+T104100313,TRD,Insulator,Insulator crack,4,21,5.9,2,55,0,0,Low,73,20,0,0.1153
+T104100314,ENG,Bridge,Bearing wear,3,5,16.3,1,95,0,0,High,296,44,0,0.1352
+T104100315,TRD,Feeder,Feeder overdue PM,3,6,21.6,0,80,0,0,Low,127,82,0,0.0531
+T104100316,ENG,Fastening,Fastening renewal,5,2,17.5,0,74,1,0,Medium,146,56,0,0.2099
+T104100317,ENG,Bridge,Bearing wear,5,5,10.1,0,21,0,0,Medium,258,60,0,0.1852
+T104100318,TRD,OHE,OHE wear,1,2,0.4,0,71,0,1,Low,300,50,0,0.0832
+T104100319,SNT,Signal LED,LED failure,2,10,9.3,0,116,0,0,High,192,65,0,0.106
+T104100320,ENG,Bridge,Bearing wear,1,4,19.5,1,88,0,0,Medium,187,36,0,0.0586
+T104100321,TRD,Sub-station,Sub-station overdue PM,1,3,12.7,0,58,1,0,Medium,170,54,0,0.0474
+T104100322,SNT,Cable,Cable insulation fault,5,17,1.8,2,49,1,0,Medium,106,54,0,0.3232
+T104100323,ENG,Ballast,Ballast deficiency,4,10,23.7,2,89,1,0,Low,132,45,1,0.2087
+T104100324,ENG,Ballast,Ballast deficiency,4,17,11.1,1,50,1,0,Medium,177,28,0,0.2217
+T104100325,TRD,Feeder,Feeder overdue PM,3,12,8.6,0,57,1,0,Medium,317,47,0,0.1889
+T104100326,ENG,Fastening,Fastening renewal,4,5,15.1,0,44,0,0,Medium,127,48,0,0.073
+T104100327,ENG,Fastening,Fastening renewal,1,7,13.8,1,79,0,0,Low,180,30,0,0.0396
+T104100328,TRD,Feeder,Feeder overdue PM,1,3,0.1,0,40,0,0,Low,358,67,0,0.0302
+T104100329,ENG,Ballast,Ballast deficiency,4,9,11.2,0,77,0,0,Low,147,77,0,0.0661
+T104100330,SNT,Interlocking,Interlocking fault,5,2,15.8,1,65,0,1,Medium,78,20,0,0.2047
+T104100331,ENG,Fastening,Fastening renewal,2,10,18.6,0,112,0,0,Low,195,50,0,0.1034
+T104100332,ENG,Rail,Rail crack,1,12,5.2,0,33,0,1,Low,139,20,0,0.0696
+T104100333,ENG,Fastening,Fastening renewal,5,3,11.4,0,68,0,0,Medium,202,50,0,0.1343
+T104100334,ENG,Rail,Rail crack,5,12,0.0,0,52,0,1,High,272,54,0,0.2183
+T104100335,TRD,Sub-station,Sub-station overdue PM,4,16,12.0,0,74,0,0,Low,239,52,0,0.1299
+T104100336,SNT,Point Machine,Point machine overdue,2,8,11.3,1,48,0,1,Low,230,28,0,0.0953
+T104100337,TRD,Feeder,Feeder overdue PM,5,5,8.8,2,39,0,0,Low,77,20,0,0.0555
+T104100338,SNT,Signal LED,LED failure,2,9,5.3,1,53,0,0,High,265,39,0,0.0891
+T104100339,SNT,Cable,Cable insulation fault,4,4,10.9,1,76,0,0,High,232,43,0,0.2045
+T104100340,ENG,Bridge,Bearing wear,4,19,17.1,0,60,0,0,Medium,196,39,0,0.2085
+T104100341,SNT,Point Machine,Point machine overdue,2,12,0.0,1,58,1,1,High,116,32,0,0.2758
+T104100342,SNT,Point Machine,Point machine overdue,4,11,13.7,0,66,1,1,Low,233,39,0,0.3592
+T104100343,TRD,Feeder,Feeder overdue PM,5,4,15.8,0,52,0,0,Low,170,30,0,0.0757
+T104100344,SNT,Interlocking,Interlocking fault,4,17,3.1,1,66,0,1,Low,104,36,0,0.1996
+T104100345,TRD,Sub-station,Sub-station overdue PM,4,9,17.4,0,57,1,0,High,168,46,0,0.2374
+T104100346,ENG,Bridge,Bearing wear,3,15,7.8,0,112,1,0,Low,93,37,1,0.1417
+T104100347,ENG,Fastening,Fastening renewal,5,11,4.0,4,92,0,0,Medium,62,38,0,0.2692
+T104100348,ENG,Rail,Rail crack,4,8,14.1,1,34,1,1,Medium,202,42,0,0.3529
+T104100349,ENG,Bridge,Bearing wear,3,23,12.0,2,6,0,0,Medium,143,74,0,0.1302
+T104100350,ENG,Fastening,Fastening renewal,4,3,14.7,0,16,1,0,Medium,227,59,0,0.0842
+T104100351,SNT,Point Machine,Point machine overdue,5,10,26.6,1,54,0,1,Medium,314,27,1,0.4745
+T104100352,SNT,Interlocking,Interlocking fault,3,11,13.9,0,92,0,1,Medium,282,105,0,0.1917
+T104100353,TRD,Sub-station,Sub-station overdue PM,4,5,10.3,0,7,0,0,Medium,184,31,0,0.0766
+T104100354,SNT,Axle Counter,Axle counter drift,5,5,24.4,1,93,1,1,Low,94,21,1,0.5121
+T104100355,SNT,Axle Counter,Axle counter drift,2,4,17.6,1,69,0,1,Medium,330,56,0,0.2173
+T104100356,SNT,Interlocking,Interlocking fault,5,5,15.5,1,109,1,1,Medium,162,98,0,0.5793
+T104100357,TRD,Feeder,Feeder overdue PM,3,9,4.8,1,18,0,0,Low,167,29,0,0.046
+T104100358,SNT,Point Machine,Point machine overdue,5,3,19.3,1,38,1,1,Medium,136,64,0,0.2825
+T104100359,ENG,Ballast,Ballast deficiency,1,16,15.1,0,54,1,0,Medium,353,54,0,0.1437
+T104100360,ENG,Bridge,Bearing wear,4,2,26.0,1,39,0,0,High,261,57,1,0.1634
+T104100361,TRD,Sub-station,Sub-station overdue PM,2,5,6.7,0,66,1,0,High,62,56,0,0.0821
+T104100362,TRD,Sub-station,Sub-station overdue PM,1,3,14.1,0,44,0,0,Low,18,48,0,0.0154
+T104100363,TRD,Sub-station,Sub-station overdue PM,4,16,2.1,1,51,0,0,Low,5,55,0,0.0616
+T104100364,TRD,Insulator,Insulator crack,3,21,7.1,0,6,1,0,High,5,61,1,0.0904
+T104100365,ENG,Ballast,Ballast deficiency,4,11,0.6,2,36,0,0,High,212,75,0,0.1951
+T104100366,TRD,OHE,OHE wear,1,7,14.3,0,53,1,1,High,95,44,0,0.1498
+T104100367,SNT,Cable,Cable insulation fault,4,5,7.4,1,55,0,0,Low,224,20,0,0.1208
+T104100368,TRD,OHE,OHE wear,2,5,14.6,0,82,0,1,Medium,367,60,1,0.1808
+T104100369,ENG,Fastening,Fastening renewal,1,9,12.6,0,36,0,0,Medium,5,59,0,0.0239
+T104100370,ENG,Bridge,Bearing wear,2,3,11.4,0,46,1,0,High,36,67,0,0.0861
+T104100371,SNT,Point Machine,Point machine overdue,2,11,13.5,1,28,0,1,High,194,28,0,0.1244
+T104100372,ENG,Bridge,Bearing wear,3,4,1.0,1,51,1,0,Low,233,72,0,0.137
+T104100373,TRD,OHE,OHE wear,3,13,6.0,0,51,1,1,Low,5,28,0,0.2019
+T104100374,SNT,Cable,Cable insulation fault,2,11,7.8,0,56,0,0,Medium,158,52,1,0.0741
+T104100375,ENG,Ballast,Ballast deficiency,5,16,6.0,2,70,1,0,High,175,74,1,0.4478
+T104100376,ENG,Ballast,Ballast deficiency,1,24,18.2,1,56,1,0,Medium,84,20,1,0.1687
+T104100377,SNT,Point Machine,Point machine overdue,4,3,12.7,2,49,1,1,Low,200,58,0,0.3539
+T104100378,SNT,Interlocking,Interlocking fault,2,13,13.8,0,112,1,1,Low,221,63,0,0.2694
+T104100379,SNT,Signal LED,LED failure,5,3,9.7,2,38,0,0,Medium,113,32,0,0.1351
+T104100380,SNT,Cable,Cable insulation fault,1,7,18.5,1,62,1,0,High,156,44,0,0.1148
+T104100381,ENG,Ballast,Ballast deficiency,3,31,12.7,1,69,1,0,Low,85,46,1,0.1751
+T104100382,TRD,Insulator,Insulator crack,4,2,10.5,0,30,0,0,Medium,166,68,0,0.0727
+T104100383,ENG,Rail,Rail crack,3,11,24.1,0,76,0,1,Low,414,52,0,0.2634
+T104100384,TRD,Insulator,Insulator crack,4,14,23.2,1,93,1,0,Low,67,68,0,0.2296
+T104100385,SNT,Signal LED,LED failure,4,8,7.9,0,68,0,0,High,272,74,1,0.1467
+T104100386,TRD,Feeder,Feeder overdue PM,1,4,6.6,0,27,0,0,High,272,33,0,0.0402
+T104100387,ENG,Ballast,Ballast deficiency,4,17,20.3,0,101,1,0,Low,7,76,0,0.1844
+T104100388,TRD,OHE,OHE wear,5,10,7.3,4,50,0,1,Medium,19,62,1,0.2816
+T104100389,ENG,Ballast,Ballast deficiency,1,9,7.9,1,53,0,0,Medium,133,42,0,0.0459
+T104100390,TRD,Sub-station,Sub-station overdue PM,2,15,19.1,1,87,0,0,Low,5,53,0,0.0532
+T104100391,ENG,Rail,Rail crack,2,18,18.1,0,22,0,1,Medium,274,59,0,0.2257
+T104100392,SNT,Signal LED,LED failure,2,3,22.0,0,76,1,0,Low,134,23,0,0.1063
+T104100393,ENG,Rail,Rail crack,5,8,13.0,0,50,1,1,High,83,53,0,0.567
+T104100394,ENG,Ballast,Ballast deficiency,4,4,11.1,1,83,1,0,Low,234,61,0,0.1642
+T104100395,TRD,OHE,OHE wear,4,10,8.2,0,71,1,1,Low,254,54,1,0.3178
+T104100396,SNT,Interlocking,Interlocking fault,4,9,2.4,0,84,0,1,Medium,83,58,0,0.1878
+T104100397,ENG,Rail,Rail crack,5,5,8.3,1,77,0,1,Medium,257,52,1,0.3567
+T104100398,ENG,Bridge,Bearing wear,2,2,13.8,0,25,0,0,Medium,150,43,0,0.0262
+T104100399,TRD,Sub-station,Sub-station overdue PM,3,5,11.4,1,35,1,0,Medium,185,68,0,0.084
+T104100400,ENG,Rail,Rail crack,3,11,12.1,0,52,0,1,Medium,194,78,0,0.1714
+T104100401,ENG,Bridge,Bearing wear,2,13,10.3,1,63,1,0,Low,303,55,0,0.1298
+T104100402,ENG,Ballast,Ballast deficiency,1,50,13.5,0,45,0,0,Low,158,59,0,0.1119
+T104100403,ENG,Rail,Rail crack,4,4,4.0,1,107,1,1,Medium,256,76,0,0.5019
+T104100404,SNT,Signal LED,LED failure,3,3,9.5,0,41,1,0,Medium,99,27,0,0.09
+T104100405,ENG,Bridge,Bearing wear,2,20,8.9,1,83,0,0,Medium,281,56,0,0.1115
+T104100406,TRD,Insulator,Insulator crack,1,14,13.7,1,83,0,0,High,337,49,0,0.1535
+T104100407,TRD,OHE,OHE wear,4,11,5.7,2,32,0,1,Low,197,60,0,0.2556
+T104100408,TRD,Insulator,Insulator crack,4,10,18.3,1,83,0,0,Low,121,88,0,0.1518
+T104100409,TRD,Sub-station,Sub-station overdue PM,5,5,13.1,2,39,1,0,Medium,95,94,0,0.2492
+T104100410,ENG,Rail,Rail crack,3,2,20.5,0,66,0,1,Medium,230,33,0,0.1649
+T104100411,ENG,Ballast,Ballast deficiency,5,14,3.3,0,83,1,0,Medium,128,37,0,0.2713
+T104100412,TRD,Feeder,Feeder overdue PM,5,12,20.1,0,41,0,0,Low,131,43,0,0.0911
+T104100413,SNT,Axle Counter,Axle counter drift,1,10,5.9,1,27,0,1,Low,178,25,0,0.0464
+T104100414,SNT,Axle Counter,Axle counter drift,2,27,4.6,1,64,1,1,Low,186,20,1,0.26
+T104100415,TRD,OHE,OHE wear,3,14,21.8,0,70,1,1,Medium,207,62,1,0.3619
+T104100416,SNT,Cable,Cable insulation fault,3,5,13.0,2,59,0,0,Low,185,59,0,0.0749
+T104100417,ENG,Bridge,Bearing wear,5,6,4.6,3,52,1,0,High,170,59,0,0.4032
+T104100418,TRD,OHE,OHE wear,2,10,18.2,0,91,1,1,Low,180,20,1,0.287
+T104100419,ENG,Ballast,Ballast deficiency,4,15,7.6,1,51,1,0,Low,74,62,0,0.1269
+T104100420,ENG,Ballast,Ballast deficiency,5,5,14.2,2,100,0,0,Low,125,79,1,0.1907
+T104100421,TRD,Sub-station,Sub-station overdue PM,3,5,15.1,0,6,1,0,Low,165,20,0,0.0657
+T104100422,ENG,Bridge,Bearing wear,1,6,16.4,0,75,0,0,Medium,280,27,0,0.0428
+T104100423,SNT,Cable,Cable insulation fault,1,19,16.7,0,99,1,0,Low,36,78,0,0.0744
+T104100424,SNT,Axle Counter,Axle counter drift,3,5,5.6,0,79,1,1,Low,209,47,0,0.191
+T104100425,ENG,Ballast,Ballast deficiency,4,10,15.0,1,83,0,0,Medium,183,20,0,0.1483
+T104100426,ENG,Rail,Rail crack,2,2,3.6,1,80,0,1,Medium,273,68,1,0.1663
+T104100427,ENG,Bridge,Bearing wear,3,4,10.4,3,54,1,0,High,189,35,0,0.2518
+T104100428,TRD,Insulator,Insulator crack,3,7,24.1,2,61,0,0,Medium,235,79,0,0.1503
+T104100429,SNT,Signal LED,LED failure,1,8,17.4,1,74,1,0,Low,200,35,0,0.0677
+T104100430,TRD,OHE,OHE wear,4,30,6.8,2,50,0,1,High,252,62,0,0.4573
+T104100431,TRD,Feeder,Feeder overdue PM,3,4,9.3,0,80,0,0,Low,276,39,0,0.0784
+T104100432,TRD,Sub-station,Sub-station overdue PM,3,20,20.1,0,98,1,0,Low,280,63,0,0.2341
+T104100433,ENG,Ballast,Ballast deficiency,1,16,4.8,0,51,0,0,Medium,235,50,0,0.0566
+T104100434,SNT,Axle Counter,Axle counter drift,3,7,10.1,0,93,0,1,Low,211,69,0,0.1564
+T104100435,SNT,Axle Counter,Axle counter drift,4,49,9.8,0,106,0,1,Low,160,47,0,0.4539
+T104100436,ENG,Bridge,Bearing wear,2,10,10.2,0,59,1,0,Low,134,57,0,0.0522
+T104100437,SNT,Point Machine,Point machine overdue,4,11,19.3,0,57,0,1,Medium,267,63,0,0.3339
+T104100438,ENG,Fastening,Fastening renewal,4,7,22.6,0,20,0,0,Low,232,20,0,0.0649
+T104100439,TRD,OHE,OHE wear,1,18,5.2,1,94,0,1,High,93,54,0,0.1212
+T104100440,TRD,OHE,OHE wear,1,2,2.2,0,56,0,1,Low,281,89,0,0.0754
+T104100441,ENG,Rail,Rail crack,3,3,15.1,0,69,0,1,Medium,398,30,0,0.2662
+T104100442,TRD,Feeder,Feeder overdue PM,4,3,7.5,0,79,0,0,Low,203,50,0,0.0694
+T104100443,SNT,Axle Counter,Axle counter drift,1,2,10.8,0,61,0,1,Low,89,29,0,0.0438
+T104100444,SNT,Interlocking,Interlocking fault,3,5,3.6,2,97,0,1,Medium,147,55,0,0.2713
+T104100445,ENG,Bridge,Bearing wear,1,4,12.1,1,117,0,0,Low,46,31,0,0.0386
+T104100446,ENG,Ballast,Ballast deficiency,4,12,15.5,0,52,0,0,Low,275,67,1,0.1479
+T104100447,ENG,Ballast,Ballast deficiency,3,3,4.4,1,35,0,0,Medium,364,71,0,0.0725
+T104100448,TRD,Feeder,Feeder overdue PM,4,18,8.2,0,82,0,0,High,202,44,1,0.1881
+T104100449,SNT,Interlocking,Interlocking fault,1,3,21.6,0,74,1,1,Medium,157,81,0,0.1591
+T104100450,TRD,Feeder,Feeder overdue PM,4,8,23.5,1,19,0,0,High,31,79,0,0.0885
+T104100451,ENG,Rail,Rail crack,3,33,15.6,1,46,1,1,Low,327,82,0,0.3963
+T104100452,ENG,Ballast,Ballast deficiency,5,3,7.4,0,59,0,0,Low,258,44,0,0.1258
+T104100453,TRD,Feeder,Feeder overdue PM,2,13,8.6,1,67,1,0,High,152,52,0,0.1543
+T104100454,TRD,OHE,OHE wear,5,4,16.1,0,123,0,1,Medium,168,47,0,0.4252
+T104100455,SNT,Point Machine,Point machine overdue,3,17,7.6,1,81,0,1,High,327,61,0,0.403
+T104100456,ENG,Fastening,Fastening renewal,4,2,8.7,1,83,1,0,Low,204,55,1,0.1888
+T104100457,SNT,Signal LED,LED failure,1,16,12.1,1,63,1,0,Low,136,27,0,0.0905
+T104100458,TRD,Sub-station,Sub-station overdue PM,2,4,14.6,0,34,1,0,Medium,329,63,1,0.0746
+T104100459,SNT,Axle Counter,Axle counter drift,4,10,19.7,0,86,1,1,Low,21,66,1,0.3253
+T104100460,ENG,Bridge,Bearing wear,5,8,16.1,2,26,0,0,Medium,199,92,0,0.186
+T104100461,TRD,Sub-station,Sub-station overdue PM,3,6,9.1,0,32,0,0,Low,206,53,0,0.0324
+T104100462,ENG,Fastening,Fastening renewal,3,5,2.3,1,15,1,0,High,247,58,0,0.1002
+T104100463,ENG,Rail,Rail crack,1,7,4.2,0,71,0,1,Medium,331,66,1,0.1351
+T104100464,SNT,Axle Counter,Axle counter drift,2,6,16.7,1,29,0,1,Medium,245,20,0,0.1127
+T104100465,ENG,Ballast,Ballast deficiency,5,23,17.0,0,62,0,0,Low,223,95,1,0.1706
+T104100466,ENG,Fastening,Fastening renewal,2,2,18.5,1,35,0,0,Low,136,78,0,0.039
+T104100467,SNT,Signal LED,LED failure,4,10,6.3,2,80,0,0,Low,61,60,0,0.099
+T104100468,TRD,Insulator,Insulator crack,5,4,7.0,2,67,0,0,Medium,69,49,1,0.1346
+T104100469,TRD,OHE,OHE wear,2,21,14.7,1,84,0,1,Medium,161,70,1,0.1789
+T104100470,ENG,Fastening,Fastening renewal,1,2,10.9,0,33,1,0,Medium,189,55,0,0.0469
+T104100471,SNT,Axle Counter,Axle counter drift,4,14,6.0,1,47,1,1,Medium,243,50,0,0.4885
+T104100472,TRD,Insulator,Insulator crack,3,8,15.7,2,46,0,0,Medium,311,71,0,0.1412
+T104100473,ENG,Ballast,Ballast deficiency,1,5,10.9,2,71,1,0,Low,206,41,0,0.0876
+T104100474,SNT,Signal LED,LED failure,2,14,10.0,1,116,0,0,Low,192,84,0,0.1225
+T104100475,SNT,Signal LED,LED failure,2,2,19.9,2,47,0,0,Low,5,41,0,0.0379
+T104100476,ENG,Fastening,Fastening renewal,4,10,8.9,0,62,0,0,Low,181,53,0,0.1062
+T104100477,ENG,Rail,Rail crack,2,14,11.3,1,48,1,1,High,176,56,1,0.3427
+T104100478,SNT,Interlocking,Interlocking fault,2,14,8.6,0,32,1,1,Low,97,20,0,0.1839
+T104100479,TRD,Feeder,Feeder overdue PM,4,7,14.2,1,51,0,0,Low,202,29,0,0.1016
+T104100480,ENG,Fastening,Fastening renewal,1,3,6.7,1,48,0,0,Medium,127,75,0,0.0331
+T104100481,ENG,Fastening,Fastening renewal,2,6,3.2,0,68,0,0,Low,155,70,0,0.0536
+T104100482,ENG,Rail,Rail crack,3,31,17.9,0,87,1,1,Low,199,67,0,0.4423
+T104100483,ENG,Bridge,Bearing wear,5,30,13.8,0,71,0,0,Low,104,75,0,0.1922
+T104100484,ENG,Rail,Rail crack,2,8,7.2,1,48,0,1,Medium,173,59,0,0.1415
+T104100485,TRD,Feeder,Feeder overdue PM,5,14,20.8,2,26,0,0,Low,175,29,0,0.1788
+T104100486,ENG,Bridge,Bearing wear,5,30,10.3,1,80,0,0,Medium,160,61,1,0.3597
+T104100487,TRD,OHE,OHE wear,3,12,14.0,0,92,0,1,Low,5,37,0,0.1554
+T104100488,SNT,Axle Counter,Axle counter drift,3,4,3.2,1,63,0,1,Medium,172,61,0,0.1516
+T104100489,ENG,Fastening,Fastening renewal,5,15,15.0,2,48,1,0,Medium,177,78,0,0.3128
+T104100490,TRD,OHE,OHE wear,1,24,10.6,0,46,1,1,Medium,243,25,0,0.247
+T104100491,ENG,Ballast,Ballast deficiency,3,3,7.2,1,52,1,0,Medium,183,62,0,0.0856
+T104100492,SNT,Signal LED,LED failure,4,20,26.3,0,32,1,0,High,5,43,0,0.2979
+T104100493,SNT,Axle Counter,Axle counter drift,4,2,21.4,0,88,0,1,Low,188,20,0,0.1998
+T104100494,ENG,Ballast,Ballast deficiency,1,11,15.1,0,17,1,0,Medium,59,70,0,0.054
+T104100495,ENG,Ballast,Ballast deficiency,5,3,0.0,0,34,1,0,Low,243,27,0,0.2586
+T104100496,TRD,Sub-station,Sub-station overdue PM,5,33,10.3,1,81,0,0,Low,99,49,0,0.1514
+T104100497,ENG,Bridge,Bearing wear,2,3,20.9,2,47,0,0,Low,356,64,0,0.0563
+T104100498,SNT,Signal LED,LED failure,3,16,14.3,1,96,1,0,Low,98,101,0,0.1737
+T104100499,SNT,Signal LED,LED failure,3,10,22.8,1,45,0,0,Low,263,47,0,0.0922
+T104100500,TRD,Sub-station,Sub-station overdue PM,4,10,11.8,1,7,0,0,Medium,124,62,0,0.0734
+T104100501,SNT,Interlocking,Interlocking fault,1,3,2.9,1,33,1,1,Low,447,57,0,0.2017
+T104100502,ENG,Ballast,Ballast deficiency,5,4,7.8,1,35,1,0,Low,259,66,0,0.167
+T104100503,ENG,Bridge,Bearing wear,3,14,17.2,0,93,1,0,Low,193,36,0,0.2886
+T104100504,SNT,Signal LED,LED failure,3,16,13.6,0,63,0,0,Medium,160,43,0,0.0681
+T104100505,ENG,Fastening,Fastening renewal,1,6,23.0,0,80,0,0,Medium,330,44,0,0.0869
+T104100506,ENG,Ballast,Ballast deficiency,5,9,20.4,1,87,1,0,High,123,25,1,0.3965
+T104100507,SNT,Interlocking,Interlocking fault,4,4,18.7,0,40,1,1,Low,139,29,0,0.2596
+T104100508,ENG,Rail,Rail crack,4,9,14.8,1,71,0,1,Low,209,38,1,0.2101
+T104100509,SNT,Axle Counter,Axle counter drift,5,5,14.1,3,60,1,1,Low,131,77,0,0.5214
+T104100510,ENG,Bridge,Bearing wear,4,3,8.9,0,39,1,0,Low,5,52,0,0.07
+T104100511,SNT,Axle Counter,Axle counter drift,4,7,18.7,2,22,1,1,Low,63,45,1,0.2693
+T104100512,ENG,Fastening,Fastening renewal,5,15,0.6,0,16,1,0,Low,157,34,0,0.1726
+T104100513,TRD,Sub-station,Sub-station overdue PM,3,2,5.1,0,34,1,0,High,208,60,0,0.1135
+T104100514,ENG,Rail,Rail crack,3,7,6.5,2,71,0,1,High,50,35,0,0.2376
+T104100515,SNT,Axle Counter,Axle counter drift,2,3,23.6,0,54,0,1,Low,223,52,0,0.1348
+T104100516,TRD,Feeder,Feeder overdue PM,4,2,10.7,1,13,0,0,Low,169,51,0,0.0502
+T104100517,TRD,Feeder,Feeder overdue PM,3,17,14.7,1,83,0,0,Low,366,85,0,0.1817
+T104100518,ENG,Bridge,Bearing wear,3,5,6.7,0,87,0,0,High,261,69,0,0.1321
+T104100519,ENG,Ballast,Ballast deficiency,2,32,5.0,0,61,0,0,Medium,223,20,0,0.0984
+T104100520,TRD,Insulator,Insulator crack,4,4,11.2,1,45,0,0,Medium,42,30,0,0.0875
+T104100521,ENG,Rail,Rail crack,1,9,19.0,0,53,1,1,High,198,58,0,0.2671
+T104100522,SNT,Point Machine,Point machine overdue,5,9,13.2,1,93,1,1,Low,198,41,1,0.4603
+T104100523,TRD,Sub-station,Sub-station overdue PM,1,17,16.4,0,56,1,0,Medium,170,45,0,0.1087
+T104100524,ENG,Bridge,Bearing wear,3,11,12.8,0,76,1,0,Low,214,87,0,0.1404
+T104100525,SNT,Point Machine,Point machine overdue,5,5,12.3,0,46,0,1,Low,197,51,0,0.2288
+T104100526,SNT,Point Machine,Point machine overdue,1,14,0.0,0,90,0,1,Low,222,69,0,0.1031
+T104100527,TRD,Sub-station,Sub-station overdue PM,3,20,4.5,0,40,0,0,Low,201,62,0,0.0722
+T104100528,TRD,Feeder,Feeder overdue PM,5,4,6.6,0,32,0,0,Medium,241,20,0,0.0682
+T104100529,ENG,Rail,Rail crack,5,9,12.8,1,19,1,1,High,305,113,0,0.4564
+T104100530,ENG,Rail,Rail crack,1,3,3.8,0,12,1,1,Low,210,54,0,0.1285
+T104100531,ENG,Rail,Rail crack,1,3,1.7,1,53,1,1,High,64,60,0,0.1419
+T104100532,SNT,Point Machine,Point machine overdue,4,9,9.0,2,53,0,1,Low,165,69,1,0.2711
+T104100533,ENG,Rail,Rail crack,3,32,3.9,1,64,0,1,Low,193,51,0,0.2462
+T104100534,ENG,Bridge,Bearing wear,3,8,22.8,2,76,0,0,Low,39,43,0,0.0657
+T104100535,ENG,Rail,Rail crack,2,24,10.9,0,83,1,1,Low,241,48,0,0.4179
+T104100536,TRD,Feeder,Feeder overdue PM,4,8,16.5,1,39,1,0,Medium,38,34,1,0.1938
+T104100537,SNT,Axle Counter,Axle counter drift,5,5,7.8,0,20,0,1,Low,228,60,0,0.1694
+T104100538,ENG,Ballast,Ballast deficiency,4,12,8.5,1,87,0,0,Low,205,44,1,0.1419
+T104100539,SNT,Signal LED,LED failure,3,2,17.3,0,52,1,0,High,99,59,0,0.1193
+T104100540,ENG,Fastening,Fastening renewal,1,11,13.0,0,82,0,0,Low,221,108,0,0.0458
+T104100541,ENG,Bridge,Bearing wear,4,6,14.6,1,78,1,0,Medium,201,113,1,0.2483
+T104100542,SNT,Interlocking,Interlocking fault,3,16,4.7,1,87,1,1,Medium,44,68,0,0.3766
+T104100543,SNT,Interlocking,Interlocking fault,1,30,11.1,0,58,1,1,Medium,236,54,0,0.2635
+T104100544,ENG,Ballast,Ballast deficiency,4,2,10.2,2,87,1,0,Low,191,51,0,0.2049
+T104100545,ENG,Fastening,Fastening renewal,3,10,16.2,0,35,0,0,Medium,119,68,1,0.0423
+T104100546,TRD,Feeder,Feeder overdue PM,2,14,13.4,0,63,0,0,Low,166,81,0,0.0458
+T104100547,TRD,OHE,OHE wear,2,4,15.3,0,102,1,1,Low,197,57,1,0.2084
+T104100548,ENG,Ballast,Ballast deficiency,2,10,14.3,2,57,0,0,Low,170,50,0,0.0741
+T104100549,SNT,Point Machine,Point machine overdue,4,15,4.1,2,93,0,1,Medium,199,65,1,0.4283
+T104100550,TRD,Insulator,Insulator crack,2,20,10.7,2,80,1,0,Low,268,27,0,0.2897
+T104100551,SNT,Interlocking,Interlocking fault,3,12,9.7,0,45,0,1,Medium,259,47,0,0.1731
+T104100552,ENG,Rail,Rail crack,5,19,11.6,0,108,1,1,Low,284,64,0,0.6555
+T104100553,ENG,Rail,Rail crack,1,11,12.2,0,83,1,1,Medium,80,30,0,0.2053
+T104100554,ENG,Ballast,Ballast deficiency,2,5,16.0,1,91,0,0,Medium,119,59,1,0.1127
+T104100555,TRD,Insulator,Insulator crack,1,24,5.1,1,76,0,0,Low,323,25,0,0.1388
+T104100556,ENG,Ballast,Ballast deficiency,4,4,13.6,0,90,0,0,Low,93,55,1,0.0709
+T104100557,ENG,Rail,Rail crack,3,4,3.8,1,66,0,1,Low,50,61,0,0.0835
+T104100558,ENG,Ballast,Ballast deficiency,1,5,10.9,0,93,1,0,High,255,58,0,0.1463
+T104100559,SNT,Axle Counter,Axle counter drift,4,5,14.0,1,73,0,1,Low,61,20,0,0.1332
+T104100560,ENG,Rail,Rail crack,4,4,22.4,0,32,1,1,Low,281,34,0,0.3424
+T104100561,SNT,Interlocking,Interlocking fault,1,11,12.5,1,76,1,1,Medium,262,35,0,0.3085
+T104100562,ENG,Rail,Rail crack,1,3,2.4,0,91,0,1,High,5,57,0,0.0753
+T104100563,SNT,Cable,Cable insulation fault,1,3,19.8,0,64,0,0,Low,158,91,0,0.0266
+T104100564,TRD,Insulator,Insulator crack,3,4,5.1,0,55,1,0,Low,318,63,0,0.1349
+T104100565,ENG,Bridge,Bearing wear,3,12,19.3,0,74,1,0,Medium,386,79,0,0.2609
+T104100566,TRD,Sub-station,Sub-station overdue PM,3,2,14.4,1,38,0,0,Low,44,61,0,0.0444
+T104100567,ENG,Bridge,Bearing wear,5,3,16.8,0,83,1,0,Low,165,23,0,0.2325
+T104100568,ENG,Bridge,Bearing wear,5,8,17.6,1,124,0,0,Medium,310,52,1,0.3646
+T104100569,TRD,Sub-station,Sub-station overdue PM,1,23,9.0,0,60,1,0,Medium,130,49,0,0.0865
+T104100570,TRD,Feeder,Feeder overdue PM,4,16,12.1,1,90,0,0,High,208,44,0,0.2135
+T104100571,ENG,Ballast,Ballast deficiency,3,4,2.1,0,23,1,0,Medium,15,76,0,0.0623
+T104100572,ENG,Bridge,Bearing wear,2,15,25.1,1,63,1,0,Medium,266,55,0,0.1864
+T104100573,ENG,Fastening,Fastening renewal,2,12,8.7,0,96,1,0,Medium,244,44,0,0.2316
+T104100574,TRD,Insulator,Insulator crack,4,38,15.2,0,76,1,0,Low,206,83,1,0.3156
+T104100575,SNT,Axle Counter,Axle counter drift,3,3,18.6,0,39,0,1,High,224,74,0,0.2119
+T104100576,ENG,Fastening,Fastening renewal,2,18,6.1,1,45,1,0,High,83,76,0,0.1113
+T104100577,ENG,Rail,Rail crack,2,15,7.0,0,50,1,1,Low,139,20,1,0.2069
+T104100578,ENG,Fastening,Fastening renewal,3,3,14.1,2,59,1,0,Medium,285,46,0,0.2001
+T104100579,SNT,Axle Counter,Axle counter drift,5,12,16.7,1,50,0,1,Low,226,61,1,0.3414
+T104100580,ENG,Fastening,Fastening renewal,3,10,9.6,0,59,0,0,Low,5,36,0,0.0449
+T104100581,ENG,Bridge,Bearing wear,1,5,22.5,1,30,1,0,Medium,5,36,0,0.0591
+T104100582,TRD,OHE,OHE wear,3,3,9.9,0,51,0,1,Low,289,67,0,0.1426
+T104100583,SNT,Axle Counter,Axle counter drift,4,22,16.0,0,11,1,1,Low,71,44,0,0.2229
+T104100584,ENG,Ballast,Ballast deficiency,1,18,16.9,2,110,1,0,Medium,264,59,0,0.2622
+T104100585,SNT,Cable,Cable insulation fault,5,13,7.1,1,54,0,0,Low,43,41,0,0.0853
+T104100586,ENG,Ballast,Ballast deficiency,2,10,10.6,0,41,0,0,High,89,43,0,0.0676
+T104100587,SNT,Cable,Cable insulation fault,2,15,11.4,0,51,0,0,Medium,155,47,0,0.0494
+T104100588,TRD,Feeder,Feeder overdue PM,5,8,19.8,0,60,0,0,Low,107,59,0,0.1026
+T104100589,ENG,Ballast,Ballast deficiency,5,17,15.3,1,42,1,0,Low,129,27,0,0.2367
+T104100590,ENG,Fastening,Fastening renewal,5,3,19.3,1,51,1,0,Low,262,53,1,0.226
+T104100591,SNT,Signal LED,LED failure,5,17,19.8,0,79,1,0,High,96,59,0,0.3761
+T104100592,TRD,Insulator,Insulator crack,4,22,12.5,1,21,1,0,Medium,237,54,0,0.2188
+T104100593,TRD,Insulator,Insulator crack,1,21,4.7,0,75,1,0,High,148,35,1,0.1038
+T104100594,TRD,Sub-station,Sub-station overdue PM,1,8,9.5,0,55,1,0,Medium,138,90,0,0.083
+T104100595,TRD,Insulator,Insulator crack,4,4,12.9,1,86,0,0,Low,94,73,0,0.0939
+T104100596,ENG,Ballast,Ballast deficiency,4,13,16.2,0,12,0,0,High,234,80,0,0.1137
+T104100597,ENG,Bridge,Bearing wear,1,2,18.1,0,58,1,0,Low,188,65,0,0.0465
+T104100598,ENG,Rail,Rail crack,1,7,11.8,2,88,0,1,Low,150,65,0,0.1348
+T104100599,SNT,Axle Counter,Axle counter drift,1,8,8.5,0,68,0,1,Medium,343,39,0,0.1119
+T104100600,TRD,OHE,OHE wear,4,11,26.9,1,96,1,1,Low,223,29,1,0.568
+T104100601,ENG,Ballast,Ballast deficiency,4,4,15.3,0,107,1,0,Low,241,34,0,0.2027
+T104100602,SNT,Point Machine,Point machine overdue,1,4,2.3,0,33,1,1,Low,201,65,0,0.0722
+T104100603,ENG,Fastening,Fastening renewal,3,3,12.2,0,82,0,0,Low,32,80,0,0.0521
+T104100604,ENG,Ballast,Ballast deficiency,2,7,21.6,2,73,0,0,High,205,48,0,0.176
+T104100605,ENG,Ballast,Ballast deficiency,2,9,3.2,3,62,0,0,Low,256,58,0,0.1153
+T104100606,ENG,Fastening,Fastening renewal,2,5,13.4,0,78,0,0,High,157,76,0,0.0626
+T104100607,SNT,Cable,Cable insulation fault,5,7,8.0,1,24,1,0,Medium,52,22,0,0.1136
+T104100608,TRD,Sub-station,Sub-station overdue PM,4,2,5.4,2,74,0,0,Low,149,62,0,0.0937
+T104100609,ENG,Rail,Rail crack,5,46,7.8,2,29,1,1,Low,193,72,0,0.7364
+T104100610,SNT,Cable,Cable insulation fault,5,5,18.2,0,5,0,0,Low,284,48,0,0.0954
+T104100611,ENG,Bridge,Bearing wear,5,3,9.3,1,56,0,0,Medium,275,31,0,0.161
+T104100612,ENG,Fastening,Fastening renewal,4,40,3.9,1,29,1,0,Low,285,70,1,0.3488
+T104100613,TRD,Sub-station,Sub-station overdue PM,4,18,10.8,0,60,1,0,Low,238,37,0,0.2268
+T104100614,SNT,Cable,Cable insulation fault,2,10,8.6,0,81,1,0,Medium,287,51,0,0.1742
+T104100615,SNT,Axle Counter,Axle counter drift,5,7,3.5,2,77,1,1,Low,240,24,0,0.4229
+T104100616,SNT,Signal LED,LED failure,1,2,13.1,0,66,0,0,Medium,250,50,0,0.0533
+T104100617,TRD,Feeder,Feeder overdue PM,2,5,1.4,1,55,1,0,Medium,228,69,0,0.1198
+T104100618,ENG,Rail,Rail crack,3,8,19.5,0,80,0,1,Low,290,38,0,0.2715
+T104100619,ENG,Bridge,Bearing wear,5,9,13.2,0,88,0,0,Medium,231,42,0,0.1757
+T104100620,ENG,Bridge,Bearing wear,2,11,6.7,0,71,1,0,Low,5,102,0,0.0705
+T104100621,SNT,Cable,Cable insulation fault,4,3,9.1,0,53,0,0,High,141,88,0,0.1006
+T104100622,SNT,Point Machine,Point machine overdue,3,9,7.4,0,49,1,1,Medium,67,113,0,0.2366
+T104100623,SNT,Signal LED,LED failure,1,2,12.0,1,119,0,0,Low,48,74,0,0.0257
+T104100624,ENG,Bridge,Bearing wear,2,9,13.8,0,94,1,0,Low,219,71,0,0.1709
+T104100625,SNT,Signal LED,LED failure,1,5,7.0,1,39,1,0,Medium,151,37,0,0.0729
+T104100626,TRD,Sub-station,Sub-station overdue PM,3,21,3.6,0,46,0,0,Low,352,29,0,0.0787
+T104100627,ENG,Ballast,Ballast deficiency,1,7,21.7,0,48,0,0,Medium,84,60,0,0.0208
+T104100628,SNT,Signal LED,LED failure,4,7,11.1,0,81,1,0,Medium,158,66,0,0.1875
+T104100629,ENG,Rail,Rail crack,4,5,7.0,3,5,0,1,Medium,52,62,0,0.134
+T104100630,TRD,Insulator,Insulator crack,2,8,10.8,0,62,0,0,Medium,106,34,0,0.0334
+T104100631,TRD,Feeder,Feeder overdue PM,1,6,6.3,0,37,1,0,Medium,244,68,0,0.0633
+T104100632,ENG,Fastening,Fastening renewal,5,5,2.2,3,73,0,0,Medium,92,54,0,0.181
+T104100633,TRD,Insulator,Insulator crack,4,10,18.3,2,34,1,0,Low,48,50,0,0.129
+T104100634,TRD,OHE,OHE wear,3,18,11.5,3,105,1,1,High,57,55,0,0.591
+T104100635,TRD,Sub-station,Sub-station overdue PM,2,11,19.6,0,47,1,0,Low,211,33,0,0.0987
+T104100636,TRD,Sub-station,Sub-station overdue PM,2,17,2.3,0,87,1,0,Low,51,51,0,0.0868
+T104100637,SNT,Signal LED,LED failure,4,4,10.4,2,84,1,0,Low,148,59,0,0.2445
+T104100638,ENG,Ballast,Ballast deficiency,1,11,16.3,1,76,1,0,High,164,47,0,0.1867
+T104100639,SNT,Signal LED,LED failure,3,4,3.7,0,102,1,0,Low,162,57,0,0.1317
+T104100640,ENG,Bridge,Bearing wear,3,2,10.4,1,62,0,0,High,80,69,0,0.0713
+T104100641,SNT,Interlocking,Interlocking fault,3,18,12.0,0,66,1,1,Medium,166,48,0,0.3831
+T104100642,SNT,Interlocking,Interlocking fault,3,11,7.6,0,64,1,1,Medium,346,34,1,0.3842
+T104100643,ENG,Rail,Rail crack,5,16,1.2,2,80,0,1,High,221,41,1,0.5793
+T104100644,ENG,Fastening,Fastening renewal,5,4,13.1,1,44,0,0,Medium,162,45,0,0.1223
+T104100645,SNT,Signal LED,LED failure,5,6,14.7,2,72,1,0,Low,305,64,0,0.3244
+T104100646,TRD,Sub-station,Sub-station overdue PM,4,2,1.1,1,70,0,0,Low,174,37,0,0.081
+T104100647,TRD,Sub-station,Sub-station overdue PM,2,8,2.6,0,35,1,0,Low,32,69,0,0.0361
+T104100648,ENG,Fastening,Fastening renewal,5,3,13.5,0,32,1,0,Low,72,74,0,0.0907
+T104100649,SNT,Signal LED,LED failure,1,14,13.0,0,23,0,0,Low,140,64,0,0.0213
+T104100650,SNT,Axle Counter,Axle counter drift,1,2,10.3,0,71,0,1,Medium,248,49,0,0.099
+T104100651,ENG,Bridge,Bearing wear,5,4,24.3,0,94,0,0,High,142,63,1,0.178
+T104100652,TRD,OHE,OHE wear,4,7,2.4,0,101,1,1,Low,92,23,1,0.3057
+T104100653,ENG,Bridge,Bearing wear,1,14,14.5,0,27,0,0,Medium,255,88,0,0.0582
+T104100654,SNT,Interlocking,Interlocking fault,3,6,11.6,1,71,0,1,Medium,239,51,0,0.1898
+T104100655,TRD,Sub-station,Sub-station overdue PM,5,2,14.6,1,53,1,0,Low,185,61,0,0.2262
+T104100656,TRD,Insulator,Insulator crack,3,16,13.0,1,11,1,0,High,192,82,1,0.1862
+T104100657,SNT,Interlocking,Interlocking fault,2,8,17.4,1,19,0,1,Low,351,54,0,0.156
+T104100658,ENG,Ballast,Ballast deficiency,1,4,10.8,0,31,0,0,Medium,182,64,0,0.0153
+T104100659,ENG,Rail,Rail crack,4,32,23.0,1,73,0,1,Low,171,58,1,0.4482
+T104100660,ENG,Rail,Rail crack,4,8,19.6,0,39,0,1,High,200,65,0,0.2725
+T104100661,ENG,Rail,Rail crack,2,5,15.4,1,38,0,1,High,236,57,0,0.2126
+T104100662,TRD,Feeder,Feeder overdue PM,1,6,14.3,0,96,0,0,Low,191,29,0,0.0596
+T104100663,ENG,Ballast,Ballast deficiency,3,11,11.2,1,42,0,0,Low,214,73,0,0.0976
+T104100664,TRD,OHE,OHE wear,5,4,6.1,1,45,1,1,Low,295,82,0,0.3871
+T104100665,TRD,OHE,OHE wear,2,37,0.4,2,85,1,1,Low,272,20,0,0.564
+T104100666,SNT,Cable,Cable insulation fault,4,2,6.2,0,37,1,0,Medium,87,32,0,0.0904
+T104100667,SNT,Axle Counter,Axle counter drift,4,9,6.8,0,76,0,1,Low,31,59,0,0.1849
+T104100668,ENG,Rail,Rail crack,1,6,13.8,0,32,0,1,Low,144,77,0,0.0438
+T104100669,ENG,Rail,Rail crack,3,19,11.2,0,82,0,1,Low,318,39,0,0.2188
+T104100670,ENG,Bridge,Bearing wear,1,10,9.3,0,93,1,0,Medium,292,76,1,0.1558
+T104100671,ENG,Rail,Rail crack,3,11,16.8,0,61,0,1,Medium,97,48,0,0.1727
+T104100672,SNT,Axle Counter,Axle counter drift,3,18,1.8,1,107,1,1,Medium,184,55,0,0.5542
+T104100673,TRD,Insulator,Insulator crack,3,5,15.2,0,57,0,0,High,250,53,0,0.0835
+T104100674,ENG,Fastening,Fastening renewal,2,12,6.4,0,50,1,0,Medium,226,51,1,0.12
+T104100675,ENG,Fastening,Fastening renewal,3,37,1.0,1,81,1,0,Low,161,80,0,0.295
+T104100676,ENG,Bridge,Bearing wear,1,7,13.2,1,73,0,0,Low,193,41,0,0.0608
+T104100677,ENG,Bridge,Bearing wear,5,11,12.0,1,86,0,0,Low,145,40,0,0.183
+T104100678,ENG,Rail,Rail crack,2,6,11.0,0,89,0,1,Medium,180,77,0,0.1011
+T104100679,SNT,Axle Counter,Axle counter drift,2,12,18.8,1,75,0,1,High,223,38,0,0.1928
+T104100680,ENG,Rail,Rail crack,4,2,12.6,1,82,0,1,Low,136,52,0,0.2062
+T104100681,TRD,Feeder,Feeder overdue PM,5,7,3.2,0,24,1,0,Low,267,48,1,0.1727
+T104100682,SNT,Signal LED,LED failure,1,3,10.5,0,37,1,0,Low,167,79,0,0.038
+T104100683,SNT,Axle Counter,Axle counter drift,5,20,10.0,1,25,1,1,Low,89,78,1,0.423
+T104100684,ENG,Ballast,Ballast deficiency,2,6,12.6,1,95,0,0,Medium,161,30,0,0.0935
+T104100685,TRD,Feeder,Feeder overdue PM,3,24,3.0,0,71,0,0,Medium,288,50,0,0.1607
+T104100686,ENG,Ballast,Ballast deficiency,5,6,14.4,2,81,0,0,Medium,308,68,0,0.287
+T104100687,TRD,Sub-station,Sub-station overdue PM,3,20,10.4,0,72,0,0,Medium,302,93,0,0.1687
+T104100688,SNT,Cable,Cable insulation fault,2,3,28.6,1,73,0,0,Low,215,44,0,0.0617
+T104100689,SNT,Point Machine,Point machine overdue,2,5,11.5,1,5,0,1,High,5,59,0,0.0776
+T104100690,ENG,Rail,Rail crack,2,5,20.5,1,56,1,1,Medium,258,70,0,0.3016
+T104100691,TRD,Feeder,Feeder overdue PM,5,10,14.7,2,46,1,0,Low,75,75,0,0.241
+T104100692,TRD,Sub-station,Sub-station overdue PM,2,4,0.0,0,46,1,0,High,252,49,0,0.0828
+T104100693,SNT,Signal LED,LED failure,5,55,14.6,0,97,1,0,High,96,60,1,0.7249
+T104100694,SNT,Cable,Cable insulation fault,3,9,9.2,1,52,1,0,Medium,52,41,0,0.1806
+T104100695,SNT,Interlocking,Interlocking fault,2,22,10.6,1,49,0,1,Low,131,59,0,0.1329
+T104100696,ENG,Fastening,Fastening renewal,3,18,6.8,1,84,0,0,Medium,238,84,0,0.1558
+T104100697,ENG,Bridge,Bearing wear,2,7,7.7,0,52,0,0,Medium,220,33,0,0.0694
+T104100698,TRD,Sub-station,Sub-station overdue PM,3,6,6.2,0,38,1,0,Medium,295,60,0,0.1363
+T104100699,ENG,Bridge,Bearing wear,2,2,20.9,0,43,1,0,Low,190,116,0,0.0875
+T104100700,TRD,Feeder,Feeder overdue PM,1,18,4.7,0,39,1,0,Low,5,28,0,0.0326
+T104100701,TRD,Feeder,Feeder overdue PM,2,9,6.7,1,96,1,0,Low,26,63,0,0.0941
+T104100702,TRD,OHE,OHE wear,3,10,13.6,2,79,0,1,Low,37,30,0,0.1685
+T104100703,ENG,Rail,Rail crack,3,5,19.8,0,50,0,1,Low,66,20,0,0.081
+T104100704,SNT,Cable,Cable insulation fault,2,12,10.6,0,29,0,0,Low,59,65,0,0.0371
+T104100705,ENG,Ballast,Ballast deficiency,3,8,3.4,0,47,0,0,Medium,207,62,0,0.0654
+T104100706,ENG,Fastening,Fastening renewal,3,2,15.2,0,33,1,0,High,171,53,0,0.1044
+T104100707,ENG,Bridge,Bearing wear,2,10,18.2,0,63,1,0,Low,164,102,0,0.1189
+T104100708,ENG,Rail,Rail crack,2,2,16.3,0,56,1,1,Medium,133,81,0,0.2007
+T104100709,ENG,Bridge,Bearing wear,3,14,17.4,1,83,0,0,Medium,204,65,1,0.1608
+T104100710,SNT,Interlocking,Interlocking fault,5,13,18.1,0,94,0,1,Low,198,64,0,0.3508
+T104100711,ENG,Rail,Rail crack,3,5,14.7,1,74,0,1,High,102,44,0,0.2207
+T104100712,SNT,Interlocking,Interlocking fault,1,19,14.2,0,92,0,1,Low,41,31,0,0.0947
+T104100713,TRD,Feeder,Feeder overdue PM,1,8,17.0,1,62,1,0,Medium,194,93,0,0.0915
+T104100714,TRD,Insulator,Insulator crack,3,16,17.3,0,78,1,0,High,71,29,0,0.1904
+T104100715,ENG,Rail,Rail crack,5,7,9.7,0,76,1,1,Medium,241,27,1,0.5243
+T104100716,SNT,Point Machine,Point machine overdue,3,6,14.7,0,75,1,1,Low,96,51,0,0.2334
+T104100717,SNT,Cable,Cable insulation fault,3,6,9.5,1,51,1,0,Low,5,52,0,0.0739
+T104100718,ENG,Fastening,Fastening renewal,3,3,7.3,0,81,0,0,Low,153,47,0,0.063
+T104100719,TRD,OHE,OHE wear,5,3,20.6,1,53,1,1,Low,164,48,1,0.4357
+T104100720,SNT,Axle Counter,Axle counter drift,3,5,14.0,1,103,0,1,High,116,20,0,0.2354
+T104100721,ENG,Bridge,Bearing wear,5,4,15.4,1,64,0,0,High,191,58,0,0.2554
+T104100722,SNT,Cable,Cable insulation fault,3,8,22.0,0,22,0,0,High,66,64,0,0.0463
+T104100723,ENG,Fastening,Fastening renewal,4,4,9.8,2,45,0,0,Medium,114,75,0,0.1075
+T104100724,TRD,OHE,OHE wear,3,21,2.6,0,26,0,1,Medium,99,51,0,0.1417
+T104100725,SNT,Cable,Cable insulation fault,3,2,2.7,0,93,0,0,Low,188,20,0,0.0398
+T104100726,ENG,Ballast,Ballast deficiency,3,11,17.7,1,65,1,0,Low,167,64,0,0.1384
+T104100727,ENG,Ballast,Ballast deficiency,4,10,12.4,0,44,0,0,Medium,194,58,0,0.114
+T104100728,ENG,Fastening,Fastening renewal,4,4,5.7,0,50,1,0,Medium,159,23,0,0.1035
+T104100729,TRD,Sub-station,Sub-station overdue PM,2,9,19.3,0,75,0,0,Low,209,77,0,0.0574
+T104100730,ENG,Bridge,Bearing wear,5,10,20.5,0,94,1,0,Medium,202,59,0,0.4129
+T104100731,ENG,Bridge,Bearing wear,4,6,15.0,0,87,1,0,Low,224,22,0,0.1922
+T104100732,SNT,Cable,Cable insulation fault,5,5,17.1,0,66,0,0,Medium,173,87,0,0.1351
+T104100733,ENG,Ballast,Ballast deficiency,4,7,10.2,1,40,0,0,Medium,223,81,0,0.1085
+T104100734,SNT,Axle Counter,Axle counter drift,5,3,4.5,1,53,0,1,Medium,229,59,0,0.2327
+T104100735,ENG,Fastening,Fastening renewal,5,22,5.4,1,93,0,0,High,176,77,0,0.3022
+T104100736,TRD,Insulator,Insulator crack,1,9,16.7,1,69,1,0,High,152,46,0,0.1245
+T104100737,ENG,Fastening,Fastening renewal,3,3,11.2,0,63,1,0,Low,107,74,1,0.0757
+T104100738,SNT,Interlocking,Interlocking fault,1,20,15.2,1,105,0,1,Medium,58,50,0,0.2171
+T104100739,ENG,Ballast,Ballast deficiency,3,7,17.6,1,78,0,0,Medium,11,40,0,0.0524
+T104100740,SNT,Interlocking,Interlocking fault,3,4,0.0,0,46,1,1,Low,74,61,0,0.1517
+T104100741,ENG,Fastening,Fastening renewal,3,5,17.9,1,84,1,0,Medium,316,22,1,0.2313
+T104100742,SNT,Axle Counter,Axle counter drift,5,12,12.9,2,87,1,1,Medium,130,46,0,0.5401
+T104100743,TRD,OHE,OHE wear,5,16,10.7,0,81,0,1,Low,205,38,0,0.3042
+T104100744,SNT,Cable,Cable insulation fault,4,21,10.3,2,59,0,0,Medium,156,74,0,0.1543
+T104100745,SNT,Point Machine,Point machine overdue,2,35,12.6,0,27,0,1,Medium,222,20,0,0.1692
+T104100746,ENG,Bridge,Bearing wear,1,14,11.8,1,55,0,0,Low,185,53,0,0.0542
+T104100747,SNT,Point Machine,Point machine overdue,1,22,5.5,0,39,1,1,Low,207,49,0,0.1347
+T104100748,SNT,Interlocking,Interlocking fault,3,6,2.8,0,84,1,1,Low,227,87,0,0.2823
+T104100749,SNT,Signal LED,LED failure,1,24,5.5,0,75,1,0,Low,133,39,0,0.0819
+T104100750,SNT,Interlocking,Interlocking fault,3,7,14.2,0,57,1,1,Low,23,56,0,0.1803
+T104100751,ENG,Ballast,Ballast deficiency,1,13,14.0,0,100,0,0,Low,53,89,0,0.0451
+T104100752,TRD,Feeder,Feeder overdue PM,5,7,8.5,1,90,1,0,Medium,157,83,0,0.3171
+T104100753,TRD,Insulator,Insulator crack,1,9,11.5,0,62,0,0,Low,276,54,0,0.046
+T104100754,ENG,Ballast,Ballast deficiency,4,8,1.9,0,56,0,0,High,192,96,0,0.0964
+T104100755,TRD,OHE,OHE wear,2,26,4.6,0,89,0,1,High,160,61,0,0.2192
+T104100756,SNT,Signal LED,LED failure,1,4,14.6,0,81,0,0,Medium,203,28,0,0.0571
+T104100757,TRD,Insulator,Insulator crack,3,8,11.0,0,90,1,0,Low,9,34,0,0.1193
+T104100758,TRD,Insulator,Insulator crack,1,5,4.9,1,59,1,0,Medium,253,50,0,0.0992
+T104100759,TRD,Feeder,Feeder overdue PM,1,28,14.0,0,58,0,0,Low,173,66,0,0.0478
+T104100760,ENG,Ballast,Ballast deficiency,5,8,16.1,0,96,0,0,High,263,69,0,0.2383
+T104100761,ENG,Ballast,Ballast deficiency,1,7,18.6,0,43,1,0,Medium,156,38,0,0.0727
+T104100762,ENG,Rail,Rail crack,1,3,8.2,0,91,1,1,Low,233,33,0,0.1278
+T104100763,ENG,Rail,Rail crack,1,12,7.1,0,74,1,1,High,230,71,0,0.1708
+T104100764,ENG,Fastening,Fastening renewal,5,8,18.6,1,49,0,0,Low,247,48,1,0.1568
+T104100765,SNT,Point Machine,Point machine overdue,2,9,18.9,0,56,1,1,Low,194,40,0,0.1579
+T104100766,TRD,Insulator,Insulator crack,1,5,17.1,0,42,0,0,Medium,117,70,0,0.0273
+T104100767,TRD,Feeder,Feeder overdue PM,5,16,15.9,2,43,0,0,Low,113,72,0,0.1122
+T104100768,SNT,Signal LED,LED failure,5,13,16.4,1,95,1,0,Low,381,65,0,0.4391
+T104100769,ENG,Ballast,Ballast deficiency,1,6,5.8,0,38,1,0,Low,183,49,0,0.066
+T104100770,ENG,Bridge,Bearing wear,2,6,18.5,1,21,0,0,Low,351,72,0,0.0766
+T104100771,TRD,OHE,OHE wear,5,6,17.1,0,27,1,1,Low,121,103,0,0.2738
+T104100772,TRD,Feeder,Feeder overdue PM,5,3,12.1,0,126,1,0,Low,93,64,0,0.2043
+T104100773,ENG,Ballast,Ballast deficiency,5,9,13.2,0,51,0,0,Medium,81,38,1,0.1365
+T104100774,SNT,Interlocking,Interlocking fault,2,2,13.6,1,55,0,1,Medium,173,45,0,0.1353
+T104100775,SNT,Point Machine,Point machine overdue,3,8,6.3,0,49,0,1,Medium,159,29,0,0.1054
+T104100776,TRD,OHE,OHE wear,5,4,7.7,2,89,1,1,Low,186,40,0,0.4836
+T104100777,ENG,Bridge,Bearing wear,1,11,11.7,0,63,0,0,Low,333,52,0,0.0468
+T104100778,SNT,Signal LED,LED failure,4,23,5.9,0,51,1,0,Low,285,54,0,0.1908
+T104100779,TRD,Insulator,Insulator crack,3,5,7.0,0,73,0,0,Low,114,43,0,0.0529
+T104100780,ENG,Bridge,Bearing wear,5,11,18.8,1,46,0,0,Low,193,37,0,0.1307
+T104100781,SNT,Cable,Cable insulation fault,1,3,12.6,0,59,0,0,Low,73,60,0,0.026
+T104100782,SNT,Point Machine,Point machine overdue,2,7,13.9,0,33,0,1,Low,37,82,0,0.0659
+T104100783,TRD,OHE,OHE wear,3,13,0.5,0,52,1,1,Medium,198,56,1,0.3338
+T104100784,TRD,Feeder,Feeder overdue PM,5,5,5.7,1,64,1,0,Low,154,82,0,0.2258
+T104100785,ENG,Ballast,Ballast deficiency,5,3,17.7,0,60,1,0,Low,240,58,0,0.23
+T104100786,ENG,Bridge,Bearing wear,2,23,16.1,0,44,1,0,High,143,42,1,0.1179
+T104100787,ENG,Rail,Rail crack,2,29,16.1,1,55,0,1,Medium,56,26,0,0.1723
+T104100788,ENG,Fastening,Fastening renewal,5,28,4.4,1,66,1,0,Low,96,87,0,0.3384
+T104100789,ENG,Fastening,Fastening renewal,2,5,20.3,2,50,0,0,Low,276,52,0,0.0852
+T104100790,ENG,Fastening,Fastening renewal,2,23,10.0,0,62,0,0,Low,192,79,0,0.0926
+T104100791,SNT,Cable,Cable insulation fault,3,14,3.7,0,54,0,0,Medium,109,20,0,0.0556
+T104100792,ENG,Bridge,Bearing wear,3,10,10.5,0,38,0,0,Low,299,80,0,0.1043
+T104100793,SNT,Cable,Cable insulation fault,1,5,18.3,0,54,1,0,Medium,180,67,0,0.0574
+T104100794,TRD,Sub-station,Sub-station overdue PM,4,14,14.3,3,67,0,0,Low,201,37,0,0.2372
+T104100795,SNT,Interlocking,Interlocking fault,3,4,12.8,1,54,0,1,Medium,235,59,1,0.204
+T104100796,SNT,Signal LED,LED failure,3,13,20.7,1,53,0,0,High,283,67,0,0.1298
+T104100797,SNT,Point Machine,Point machine overdue,5,7,12.9,0,29,0,1,Low,155,52,0,0.1525
+T104100798,ENG,Bridge,Bearing wear,5,16,13.3,2,106,1,0,Low,59,34,1,0.3542
+T104100799,SNT,Cable,Cable insulation fault,1,8,16.0,0,75,0,0,Low,181,52,0,0.0374
+T104100800,ENG,Bridge,Bearing wear,1,3,20.4,0,69,0,0,Medium,132,45,0,0.0279
+T104100801,SNT,Cable,Cable insulation fault,5,2,21.9,2,32,1,0,Low,103,60,0,0.2066
+T104100802,TRD,Insulator,Insulator crack,1,2,8.1,1,77,0,0,Medium,116,64,0,0.0482
+T104100803,TRD,Feeder,Feeder overdue PM,5,3,12.6,1,36,1,0,High,94,61,0,0.1887
+T104100804,ENG,Ballast,Ballast deficiency,1,6,15.2,2,63,0,0,Low,222,87,0,0.0521
+T104100805,SNT,Interlocking,Interlocking fault,4,5,14.1,0,66,1,1,Medium,162,84,0,0.342
+T104100806,TRD,Feeder,Feeder overdue PM,2,9,7.6,0,65,1,0,Low,97,48,0,0.0509
+T104100807,TRD,Insulator,Insulator crack,4,2,19.0,1,85,1,0,High,184,33,0,0.2571
+T104100808,ENG,Rail,Rail crack,2,3,4.2,1,62,1,1,Medium,137,44,0,0.1836
+T104100809,SNT,Point Machine,Point machine overdue,2,8,9.2,0,73,0,1,Low,21,28,1,0.0719
+T104100810,TRD,OHE,OHE wear,1,3,16.4,0,98,1,1,Low,154,103,0,0.1741
+T104100811,TRD,Feeder,Feeder overdue PM,3,2,12.7,1,79,0,0,High,247,41,0,0.1246
+T104100812,SNT,Point Machine,Point machine overdue,3,2,14.2,0,37,1,1,Low,191,61,0,0.1291
+T104100813,TRD,Insulator,Insulator crack,1,10,11.0,0,107,1,0,Medium,96,56,0,0.1252
+T104100814,ENG,Rail,Rail crack,5,26,0.0,2,56,0,1,Low,241,57,1,0.3876
+T104100815,ENG,Ballast,Ballast deficiency,3,40,10.7,1,69,0,0,Medium,256,42,1,0.2822
+T104100816,TRD,Sub-station,Sub-station overdue PM,5,20,17.4,2,86,0,0,Low,175,40,0,0.3356
+T104100817,SNT,Signal LED,LED failure,4,10,14.8,1,39,0,0,High,175,48,0,0.1544
+T104100818,ENG,Fastening,Fastening renewal,1,3,12.5,0,69,1,0,Low,199,71,1,0.0632
+T104100819,ENG,Ballast,Ballast deficiency,4,6,20.8,0,40,1,0,Medium,180,63,0,0.1631
+T104100820,TRD,Feeder,Feeder overdue PM,4,2,6.7,1,36,0,0,High,193,69,1,0.1155
+T104100821,TRD,Feeder,Feeder overdue PM,1,11,8.3,0,56,1,0,Low,418,70,0,0.0797
+T104100822,SNT,Cable,Cable insulation fault,3,13,2.6,1,76,1,0,High,97,80,0,0.2282
+T104100823,SNT,Interlocking,Interlocking fault,4,26,8.2,0,31,0,1,Medium,284,96,0,0.2251
+T104100824,ENG,Bridge,Bearing wear,2,5,11.5,1,93,0,0,Medium,159,41,0,0.0641
+T104100825,ENG,Ballast,Ballast deficiency,1,4,7.1,0,132,0,0,Low,394,68,0,0.0735
+T104100826,ENG,Rail,Rail crack,5,13,13.5,3,84,1,1,Medium,411,69,1,0.7647
+T104100827,ENG,Rail,Rail crack,1,3,16.8,1,66,1,1,Low,219,48,0,0.2105
+T104100828,ENG,Bridge,Bearing wear,3,23,13.5,0,119,0,0,Low,294,29,1,0.217
+T104100829,SNT,Point Machine,Point machine overdue,4,2,11.3,1,86,0,1,Low,88,66,1,0.1454
+T104100830,TRD,Insulator,Insulator crack,5,11,17.3,1,71,1,0,Low,256,72,1,0.3482
+T104100831,SNT,Point Machine,Point machine overdue,4,4,9.7,3,77,0,1,Low,166,59,0,0.2912
+T104100832,SNT,Interlocking,Interlocking fault,1,2,14.9,0,64,1,1,Medium,199,77,0,0.1708
+T104100833,SNT,Signal LED,LED failure,4,2,0.0,0,87,0,0,Low,176,44,0,0.0723
+T104100834,SNT,Axle Counter,Axle counter drift,3,20,8.9,1,69,0,1,Low,75,29,0,0.2092
+T104100835,TRD,Insulator,Insulator crack,5,5,2.7,0,46,0,0,Low,218,59,0,0.0963
+T104100836,ENG,Rail,Rail crack,2,18,10.8,0,33,0,1,Low,321,58,1,0.1288
+T104100837,SNT,Interlocking,Interlocking fault,1,4,11.4,1,64,1,1,High,98,48,0,0.1477
+T104100838,TRD,OHE,OHE wear,4,11,10.4,0,68,1,1,Medium,342,39,1,0.5694
+T104100839,TRD,OHE,OHE wear,2,9,12.5,1,47,0,1,Medium,14,36,0,0.0728
+T104100840,ENG,Ballast,Ballast deficiency,2,12,21.2,1,17,0,0,Medium,111,52,0,0.0557
+T104100841,TRD,Sub-station,Sub-station overdue PM,5,2,16.2,1,69,0,0,Medium,61,41,0,0.1271
+T104100842,TRD,Sub-station,Sub-station overdue PM,1,5,15.1,2,89,0,0,Low,176,82,1,0.0566
+T104100843,TRD,Sub-station,Sub-station overdue PM,4,18,14.3,0,78,1,0,Medium,129,44,0,0.2926
+T104100844,ENG,Ballast,Ballast deficiency,1,30,11.1,0,31,0,0,Medium,5,81,0,0.0392
+T104100845,ENG,Ballast,Ballast deficiency,2,6,16.9,0,85,0,0,Low,339,54,0,0.065
+T104100846,TRD,OHE,OHE wear,3,9,16.6,1,67,1,1,Low,24,41,0,0.1622
+T104100847,TRD,Sub-station,Sub-station overdue PM,2,11,21.2,0,88,0,0,Low,284,35,1,0.081
+T104100848,SNT,Axle Counter,Axle counter drift,4,14,26.7,1,55,0,1,Low,59,65,0,0.2485
+T104100849,ENG,Rail,Rail crack,1,6,19.4,0,87,1,1,High,115,62,0,0.1925
+T104100850,ENG,Fastening,Fastening renewal,5,8,15.9,0,32,0,0,Medium,29,34,1,0.0862
+T104100851,TRD,Sub-station,Sub-station overdue PM,1,5,9.0,0,65,1,0,Low,207,62,0,0.0709
+T104100852,ENG,Fastening,Fastening renewal,3,3,17.5,2,81,0,0,Low,193,68,0,0.1129
+T104100853,ENG,Fastening,Fastening renewal,2,3,9.5,0,21,0,0,Low,141,59,0,0.0241
+T104100854,ENG,Bridge,Bearing wear,5,18,8.9,2,74,0,0,Medium,405,64,1,0.4541
+T104100855,ENG,Ballast,Ballast deficiency,3,35,4.6,0,63,1,0,Medium,135,81,0,0.2121
+T104100856,ENG,Ballast,Ballast deficiency,5,11,11.1,2,54,1,0,High,247,53,0,0.4946
+T104100857,TRD,OHE,OHE wear,3,11,5.4,1,88,1,1,Low,133,94,1,0.2787
+T104100858,TRD,Sub-station,Sub-station overdue PM,5,9,13.8,2,81,0,0,Medium,101,79,0,0.141
+T104100859,TRD,Feeder,Feeder overdue PM,2,6,7.1,1,63,0,0,Low,77,73,0,0.0414
+T104100860,ENG,Bridge,Bearing wear,3,15,11.7,2,60,1,0,Low,96,60,0,0.1412
+T104100861,TRD,Feeder,Feeder overdue PM,4,14,11.9,0,56,1,0,Low,152,40,0,0.1297
+T104100862,SNT,Interlocking,Interlocking fault,1,8,24.9,1,65,0,1,Low,325,32,1,0.1007
+T104100863,ENG,Bridge,Bearing wear,3,14,5.1,0,43,1,0,Low,233,87,0,0.1052
+T104100864,SNT,Signal LED,LED failure,1,3,7.8,0,58,1,0,Medium,136,49,0,0.0386
+T104100865,SNT,Cable,Cable insulation fault,1,7,1.0,0,8,1,0,Low,10,79,0,0.0221
+T104100866,SNT,Interlocking,Interlocking fault,5,4,4.2,0,80,0,1,Low,258,70,0,0.214
+T104100867,ENG,Fastening,Fastening renewal,1,7,17.2,0,66,0,0,Low,150,103,0,0.0339
+T104100868,TRD,OHE,OHE wear,2,13,5.6,0,66,0,1,Low,140,72,0,0.1241
+T104100869,SNT,Interlocking,Interlocking fault,5,17,19.9,0,76,0,1,Low,5,36,0,0.2037
+T104100870,SNT,Axle Counter,Axle counter drift,5,5,4.9,2,5,0,1,Medium,162,68,0,0.2304
+T104100871,ENG,Fastening,Fastening renewal,2,12,8.5,0,68,1,0,Medium,181,56,0,0.1074
+T104100872,ENG,Ballast,Ballast deficiency,2,4,11.3,0,45,0,0,Low,265,56,0,0.0396
+T104100873,ENG,Rail,Rail crack,1,2,10.9,0,58,1,1,Medium,236,87,0,0.1474
+T104100874,SNT,Cable,Cable insulation fault,4,9,7.1,1,92,0,0,Medium,92,61,1,0.1242
+T104100875,ENG,Bridge,Bearing wear,5,7,12.2,0,45,0,0,High,298,53,0,0.2273
+T104100876,ENG,Bridge,Bearing wear,5,8,14.7,2,40,0,0,Medium,243,40,0,0.2461
+T104100877,ENG,Rail,Rail crack,5,6,2.5,0,66,0,1,Low,33,80,0,0.1405
+T104100878,ENG,Rail,Rail crack,5,25,12.1,1,54,1,1,Low,123,55,0,0.4685
+T104100879,ENG,Bridge,Bearing wear,2,13,28.1,1,15,1,0,Low,111,64,0,0.0904
+T104100880,TRD,Insulator,Insulator crack,1,3,14.2,1,67,0,0,Medium,59,53,0,0.0344
+T104100881,ENG,Rail,Rail crack,3,3,18.1,0,62,0,1,High,108,31,0,0.2128
+T104100882,ENG,Fastening,Fastening renewal,5,2,25.7,0,43,0,0,Medium,135,52,0,0.1252
+T104100883,SNT,Cable,Cable insulation fault,2,4,19.7,0,31,0,0,Low,122,84,0,0.0248
+T104100884,ENG,Ballast,Ballast deficiency,1,2,15.7,2,107,0,0,Medium,218,59,1,0.088
+T104100885,SNT,Axle Counter,Axle counter drift,1,3,17.8,0,68,0,1,High,39,38,0,0.0542
+T104100886,SNT,Interlocking,Interlocking fault,2,8,14.0,0,52,0,1,Low,166,64,0,0.1243
+T104100887,TRD,Sub-station,Sub-station overdue PM,4,3,8.9,0,76,0,0,Medium,140,61,0,0.1233
+T104100888,TRD,OHE,OHE wear,4,3,10.6,0,86,0,1,Low,166,68,1,0.1994
+T104100889,ENG,Fastening,Fastening renewal,3,16,13.4,1,81,1,0,High,149,21,1,0.275
+T104100890,ENG,Ballast,Ballast deficiency,2,2,7.4,0,66,1,0,Low,262,49,0,0.0617
+T104100891,TRD,Feeder,Feeder overdue PM,5,6,27.3,2,42,0,0,High,136,73,0,0.2077
+T104100892,ENG,Rail,Rail crack,3,7,1.1,0,75,0,1,Low,15,60,0,0.0845
+T104100893,ENG,Ballast,Ballast deficiency,3,4,8.8,3,68,0,0,Low,281,34,0,0.1513
+T104100894,SNT,Cable,Cable insulation fault,1,4,21.0,0,82,0,0,Low,168,62,0,0.0343
+T104100895,TRD,Feeder,Feeder overdue PM,2,16,9.4,0,134,1,0,Low,204,88,0,0.1725
+T104100896,TRD,Insulator,Insulator crack,3,11,16.7,0,81,0,0,Medium,259,48,0,0.114
+T104100897,SNT,Point Machine,Point machine overdue,5,8,6.4,1,5,0,1,Medium,199,56,0,0.1633
+T104100898,ENG,Bridge,Bearing wear,3,16,16.1,0,52,1,0,Medium,110,77,0,0.1399
+T104100899,ENG,Fastening,Fastening renewal,4,4,11.5,0,43,1,0,Low,214,30,0,0.1722
+T104100900,SNT,Point Machine,Point machine overdue,5,11,6.3,0,99,1,1,High,5,66,1,0.4629
+T104100901,ENG,Bridge,Bearing wear,1,9,10.5,0,82,1,0,Medium,320,69,1,0.0779
+T104100902,SNT,Axle Counter,Axle counter drift,1,6,5.5,0,76,1,1,Low,146,62,0,0.0898
+T104100903,SNT,Axle Counter,Axle counter drift,3,3,14.5,0,67,0,1,Medium,148,44,0,0.1413
+T104100904,ENG,Fastening,Fastening renewal,1,2,6.1,0,80,1,0,Low,25,44,0,0.044
+T104100905,ENG,Bridge,Bearing wear,1,3,9.8,0,62,1,0,Low,167,57,0,0.0381
+T104100906,SNT,Cable,Cable insulation fault,3,23,8.4,2,67,0,0,Medium,238,40,0,0.1717
+T104100907,SNT,Axle Counter,Axle counter drift,2,8,0.6,0,20,0,1,High,109,24,0,0.0987
+T104100908,ENG,Ballast,Ballast deficiency,1,2,4.1,0,55,0,0,Medium,140,30,0,0.033
+T104100909,ENG,Bridge,Bearing wear,5,11,17.9,0,55,1,0,Medium,163,57,0,0.2738
+T104100910,SNT,Signal LED,LED failure,3,13,10.1,1,69,0,0,Low,247,48,0,0.139
+T104100911,TRD,Sub-station,Sub-station overdue PM,2,8,4.5,1,51,0,0,Medium,151,43,0,0.0595
+T104100912,ENG,Fastening,Fastening renewal,3,11,19.5,0,53,1,0,Low,228,51,0,0.1333
+T104100913,ENG,Rail,Rail crack,5,14,18.7,1,32,0,1,Medium,103,67,1,0.2426
+T104100914,SNT,Axle Counter,Axle counter drift,1,12,12.8,1,36,1,1,Low,280,61,0,0.154
+T104100915,TRD,Feeder,Feeder overdue PM,2,5,17.4,0,5,0,0,Low,140,95,0,0.0208
+T104100916,ENG,Fastening,Fastening renewal,1,7,8.3,0,45,0,0,Low,82,82,1,0.0177
+T104100917,TRD,Insulator,Insulator crack,4,7,13.6,0,45,1,0,Medium,57,44,1,0.1326
+T104100918,ENG,Rail,Rail crack,1,13,12.2,1,80,0,1,Low,125,73,1,0.128
+T104100919,ENG,Bridge,Bearing wear,5,20,2.9,1,29,1,0,High,233,63,0,0.3809
+T104100920,SNT,Interlocking,Interlocking fault,3,3,7.5,0,89,0,1,Low,181,21,1,0.1103
+T104100921,TRD,Feeder,Feeder overdue PM,1,7,10.8,1,78,1,0,High,305,41,0,0.1585
+T104100922,SNT,Axle Counter,Axle counter drift,5,15,13.8,1,33,0,1,Low,161,53,0,0.2277
+T104100923,ENG,Bridge,Bearing wear,2,8,12.6,0,58,0,0,Low,151,43,0,0.0384
+T104100924,ENG,Ballast,Ballast deficiency,3,9,5.5,2,52,0,0,Low,5,51,0,0.0437
+T104100925,SNT,Cable,Cable insulation fault,1,3,12.1,0,118,1,0,High,157,71,0,0.1288
+T104100926,ENG,Bridge,Bearing wear,1,26,10.2,0,52,0,0,Medium,145,49,0,0.0433
+T104100927,ENG,Fastening,Fastening renewal,1,16,18.7,1,59,1,0,Medium,190,66,0,0.1447
+T104100928,ENG,Bridge,Bearing wear,2,4,6.8,0,49,1,0,Low,279,66,0,0.094
+T104100929,SNT,Axle Counter,Axle counter drift,4,7,14.7,0,79,1,1,Low,243,58,0,0.3595
+T104100930,TRD,Feeder,Feeder overdue PM,5,16,8.4,0,41,0,0,Medium,152,50,0,0.1343
+T104100931,ENG,Bridge,Bearing wear,4,9,8.0,0,69,0,0,Medium,207,20,0,0.0867
+T104100932,SNT,Interlocking,Interlocking fault,1,10,10.1,1,85,1,1,Low,150,57,0,0.1836
+T104100933,SNT,Axle Counter,Axle counter drift,1,49,3.9,0,42,1,1,Low,169,23,0,0.3184
+T104100934,ENG,Bridge,Bearing wear,4,13,12.1,0,65,0,0,Low,108,54,0,0.0726
+T104100935,ENG,Ballast,Ballast deficiency,5,2,2.5,0,38,1,0,Medium,216,39,0,0.167
+T104100936,ENG,Rail,Rail crack,1,10,12.8,0,81,0,1,Medium,204,56,0,0.1567
+T104100937,ENG,Fastening,Fastening renewal,2,4,13.6,1,73,1,0,High,5,73,0,0.1374
+T104100938,SNT,Axle Counter,Axle counter drift,5,4,9.2,1,46,1,1,Medium,57,71,0,0.3285
+T104100939,ENG,Fastening,Fastening renewal,4,17,8.3,2,19,1,0,Low,236,44,0,0.2303
+T104100940,TRD,OHE,OHE wear,2,3,21.1,0,80,0,1,High,207,47,0,0.1698
+T104100941,TRD,Sub-station,Sub-station overdue PM,2,18,16.7,0,76,0,0,Low,306,41,0,0.1172
+T104100942,TRD,OHE,OHE wear,2,6,13.8,0,93,1,1,Medium,266,79,0,0.2445
+T104100943,ENG,Bridge,Bearing wear,3,13,18.6,1,41,0,0,Low,155,64,0,0.0882
+T104100944,SNT,Signal LED,LED failure,4,11,14.5,0,77,0,0,Medium,243,50,0,0.1782
+T104100945,ENG,Bridge,Bearing wear,3,6,16.0,0,5,1,0,Medium,242,61,0,0.0821
+T104100946,ENG,Fastening,Fastening renewal,5,3,5.7,0,37,0,0,Medium,10,56,0,0.0418
+T104100947,TRD,OHE,OHE wear,4,3,12.3,0,61,0,1,High,200,47,1,0.3053
+T104100948,SNT,Cable,Cable insulation fault,3,3,14.2,3,89,0,0,Medium,213,20,0,0.1476
+T104100949,TRD,Feeder,Feeder overdue PM,5,11,7.4,0,66,0,0,Medium,231,52,0,0.1169
+T104100950,TRD,Sub-station,Sub-station overdue PM,2,2,16.0,0,15,1,0,Low,268,59,0,0.0605
+T104100951,TRD,OHE,OHE wear,4,8,13.3,2,70,0,1,Low,28,49,0,0.1814
+T104100952,ENG,Fastening,Fastening renewal,1,2,8.0,0,46,0,0,Low,30,42,0,0.0174
+T104100953,ENG,Fastening,Fastening renewal,1,5,7.8,0,44,1,0,Low,192,54,0,0.0483
+T104100954,ENG,Fastening,Fastening renewal,2,19,12.4,0,113,1,0,Medium,215,86,0,0.2638
+T104100955,SNT,Signal LED,LED failure,1,14,6.9,0,58,0,0,Medium,207,33,0,0.0445
+T104100956,ENG,Ballast,Ballast deficiency,3,6,10.2,0,61,1,0,High,215,61,0,0.1824
+T104100957,SNT,Cable,Cable insulation fault,1,48,4.2,0,54,0,0,Medium,285,44,1,0.1777
+T104100958,TRD,Insulator,Insulator crack,2,7,0.0,0,48,1,0,Low,83,45,0,0.0516
+T104100959,SNT,Cable,Cable insulation fault,1,6,9.2,1,89,1,0,Medium,202,30,0,0.1569
+T104100960,ENG,Bridge,Bearing wear,1,15,10.5,1,70,1,0,Low,226,65,0,0.1202
+T104100961,TRD,Insulator,Insulator crack,3,10,16.9,2,69,0,0,High,165,73,0,0.176
+T104100962,ENG,Fastening,Fastening renewal,4,19,18.3,1,71,0,0,Low,326,22,0,0.3216
+T104100963,TRD,Feeder,Feeder overdue PM,5,20,18.5,0,31,1,0,Medium,177,67,0,0.2601
+T104100964,TRD,Feeder,Feeder overdue PM,4,24,15.2,0,67,0,0,Medium,157,33,0,0.1451
+T104100965,TRD,Insulator,Insulator crack,3,2,17.8,0,72,0,0,Low,231,36,1,0.0718
+T104100966,SNT,Point Machine,Point machine overdue,1,9,16.8,1,20,0,1,Medium,29,63,0,0.0539
+T104100967,TRD,Sub-station,Sub-station overdue PM,4,8,10.9,0,51,0,0,Medium,234,80,0,0.1322
+T104100968,TRD,OHE,OHE wear,2,9,6.0,0,36,0,1,Medium,160,57,0,0.0978
+T104100969,ENG,Rail,Rail crack,4,12,21.4,1,58,0,1,Medium,166,77,0,0.2714
+T104100970,SNT,Interlocking,Interlocking fault,3,6,19.4,0,67,0,1,Medium,418,31,0,0.3108
+T104100971,ENG,Rail,Rail crack,4,18,2.9,1,70,1,1,High,102,47,0,0.5014
+T104100972,SNT,Interlocking,Interlocking fault,2,3,14.5,0,42,0,1,Low,126,45,0,0.0443
+T104100973,SNT,Cable,Cable insulation fault,3,8,6.1,0,9,0,0,Low,113,57,0,0.042
+T104100974,SNT,Interlocking,Interlocking fault,4,10,11.8,0,75,1,1,Low,17,63,1,0.2747
+T104100975,ENG,Ballast,Ballast deficiency,1,2,4.3,2,65,1,0,Low,202,20,0,0.0611
+T104100976,ENG,Bridge,Bearing wear,3,3,20.5,0,69,1,0,Medium,209,55,0,0.1405
+T104100977,SNT,Point Machine,Point machine overdue,1,10,15.7,1,73,0,1,Low,168,45,0,0.1397
+T104100978,SNT,Cable,Cable insulation fault,4,8,5.3,1,47,1,0,Low,211,77,0,0.1808
+T104100979,SNT,Cable,Cable insulation fault,4,5,17.3,1,33,0,0,High,144,103,0,0.1113
+T104100980,SNT,Signal LED,LED failure,5,9,22.4,2,85,1,0,High,234,30,0,0.5295
+T104100981,TRD,Insulator,Insulator crack,3,22,12.5,0,40,0,0,Low,244,71,0,0.0974
+T104100982,TRD,Feeder,Feeder overdue PM,5,27,5.6,2,87,1,0,Medium,162,64,0,0.459
+T104100983,TRD,Feeder,Feeder overdue PM,3,14,10.3,1,39,1,0,Medium,131,39,0,0.1864
+T104100984,ENG,Rail,Rail crack,5,43,10.8,1,55,1,1,High,100,62,0,0.6719
+T104100985,ENG,Rail,Rail crack,4,9,16.0,0,61,1,1,Medium,195,51,1,0.3659
+T104100986,ENG,Bridge,Bearing wear,1,2,9.5,2,85,1,0,Low,146,39,0,0.0856
+T104100987,ENG,Ballast,Ballast deficiency,5,42,28.4,0,49,1,0,Medium,5,74,0,0.4666
+T104100988,TRD,OHE,OHE wear,5,41,13.5,1,34,1,1,High,153,48,0,0.7092
+T104100989,SNT,Point Machine,Point machine overdue,4,7,9.5,2,59,0,1,High,168,46,0,0.3799
+T104100990,SNT,Point Machine,Point machine overdue,4,3,17.1,0,78,0,1,High,243,20,0,0.3395
+T104100991,ENG,Ballast,Ballast deficiency,3,7,5.2,1,76,1,0,Medium,26,38,0,0.1591
+T104100992,ENG,Fastening,Fastening renewal,3,15,17.1,2,34,0,0,Medium,277,82,1,0.1389
+T104100993,ENG,Rail,Rail crack,4,3,16.0,0,37,0,1,High,256,58,0,0.1652
+T104100994,ENG,Ballast,Ballast deficiency,2,6,18.7,0,35,1,0,Medium,130,33,0,0.0812
+T104100995,ENG,Ballast,Ballast deficiency,5,7,5.7,2,122,1,0,Low,19,55,0,0.2765
+T104100996,ENG,Rail,Rail crack,3,3,5.5,3,58,0,1,High,189,51,0,0.2975
+T104100997,ENG,Bridge,Bearing wear,4,7,16.7,1,88,1,0,Medium,53,47,1,0.296
+T104100998,SNT,Signal LED,LED failure,1,11,0.0,0,43,0,0,Medium,182,38,0,0.0281
+T104100999,ENG,Ballast,Ballast deficiency,1,26,0.0,0,23,1,0,Low,210,69,0,0.0669
+T104101000,TRD,Insulator,Insulator crack,3,10,15.6,0,87,1,0,Medium,266,49,0,0.2458
+T104101001,TRD,Feeder,Feeder overdue PM,4,15,12.2,0,49,0,0,Medium,152,28,0,0.1092
+T104101002,TRD,OHE,OHE wear,4,15,10.3,0,23,0,1,Low,177,82,0,0.1704
+T104101003,TRD,OHE,OHE wear,4,8,13.0,1,32,0,1,Medium,102,46,0,0.1419
+T104101004,SNT,Axle Counter,Axle counter drift,4,2,9.7,0,55,1,1,High,112,96,0,0.2392
+T104101005,ENG,Rail,Rail crack,3,4,9.7,0,65,1,1,Low,216,64,0,0.224
+T104101006,ENG,Rail,Rail crack,5,6,10.8,3,74,0,1,Medium,317,64,0,0.4482
+T104101007,ENG,Ballast,Ballast deficiency,1,15,4.1,0,57,0,0,Low,211,35,0,0.0274
+T104101008,ENG,Ballast,Ballast deficiency,1,6,10.7,0,14,1,0,Medium,300,69,0,0.067
+T104101009,ENG,Rail,Rail crack,5,2,9.8,1,43,1,1,High,79,35,0,0.4279
+T104101010,TRD,OHE,OHE wear,5,7,2.5,1,55,0,1,Low,84,85,0,0.1537
+T104101011,TRD,Insulator,Insulator crack,2,7,13.6,1,62,1,0,Low,43,28,0,0.0762
+T104101012,ENG,Rail,Rail crack,1,7,11.5,0,28,1,1,Low,152,71,1,0.0959
+T104101013,ENG,Ballast,Ballast deficiency,2,3,14.2,0,53,0,0,Low,242,57,0,0.0425
+T104101014,ENG,Rail,Rail crack,2,3,7.3,0,61,0,1,Low,96,35,0,0.0595
+T104101015,ENG,Fastening,Fastening renewal,4,6,3.9,2,34,0,0,Medium,242,44,0,0.1167
+T104101016,ENG,Ballast,Ballast deficiency,3,29,14.2,1,83,1,0,Medium,141,71,0,0.3197
+T104101017,ENG,Ballast,Ballast deficiency,3,7,16.7,0,47,0,0,Low,235,38,0,0.0981
+T104101018,TRD,Feeder,Feeder overdue PM,1,3,14.5,0,78,1,0,Low,150,30,0,0.0645
+T104101019,SNT,Point Machine,Point machine overdue,5,6,7.9,1,49,1,1,Medium,270,59,0,0.3877
+T104101020,TRD,Sub-station,Sub-station overdue PM,2,6,9.4,2,60,1,0,Medium,91,20,0,0.1429
+T104101021,ENG,Rail,Rail crack,3,3,5.3,2,13,0,1,Medium,272,68,0,0.1248
+T104101022,ENG,Fastening,Fastening renewal,2,9,20.9,0,60,1,0,High,245,73,0,0.1767
+T104101023,ENG,Rail,Rail crack,3,8,4.3,0,47,1,1,Low,114,60,0,0.2278
+T104101024,SNT,Signal LED,LED failure,3,5,21.0,2,84,1,0,Low,347,73,0,0.2595
+T104101025,SNT,Cable,Cable insulation fault,4,12,12.3,1,39,0,0,Low,217,51,1,0.0805
+T104101026,TRD,OHE,OHE wear,2,4,6.7,0,102,1,1,Medium,296,24,0,0.2977
+T104101027,ENG,Rail,Rail crack,1,2,18.9,0,37,0,1,Low,251,51,1,0.044
+T104101028,ENG,Rail,Rail crack,1,4,15.8,1,68,1,1,Low,147,20,0,0.0895
+T104101029,ENG,Bridge,Bearing wear,3,9,21.6,0,63,1,0,Low,260,64,0,0.153
+T104101030,SNT,Cable,Cable insulation fault,2,3,14.0,0,27,1,0,Low,187,74,0,0.0646
+T104101031,SNT,Cable,Cable insulation fault,2,12,13.5,0,68,1,0,Medium,297,97,0,0.2406
+T104101032,ENG,Ballast,Ballast deficiency,2,35,13.5,0,77,1,0,Low,48,51,0,0.1616
+T104101033,ENG,Rail,Rail crack,2,40,18.2,0,85,0,1,Medium,286,37,0,0.4138
+T104101034,SNT,Cable,Cable insulation fault,5,4,7.4,1,75,0,0,Low,52,34,0,0.1
+T104101035,ENG,Bridge,Bearing wear,2,9,20.5,0,77,0,0,Low,367,20,0,0.063
+T104101036,ENG,Fastening,Fastening renewal,3,3,13.4,0,65,1,0,Medium,212,23,0,0.0926
+T104101037,SNT,Axle Counter,Axle counter drift,2,8,1.5,1,46,0,1,High,163,38,0,0.1387
+T104101038,TRD,OHE,OHE wear,3,6,20.4,1,71,0,1,Medium,234,51,0,0.2323
+T104101039,TRD,Feeder,Feeder overdue PM,3,11,7.3,0,40,0,0,Medium,128,54,0,0.0613
+T104101040,TRD,Insulator,Insulator crack,1,18,8.3,0,62,0,0,Medium,145,52,0,0.044
+T104101041,ENG,Bridge,Bearing wear,1,5,7.6,1,9,0,0,Low,148,44,0,0.0194
+T104101042,ENG,Rail,Rail crack,1,8,11.7,1,58,0,1,Low,164,80,0,0.1144
+T104101043,ENG,Rail,Rail crack,2,3,4.7,0,47,0,1,Medium,292,50,0,0.1164
+T104101044,SNT,Signal LED,LED failure,2,2,8.1,1,27,1,0,Low,173,59,0,0.0518
+T104101045,ENG,Fastening,Fastening renewal,3,6,10.9,1,86,0,0,Medium,173,20,0,0.1317
+T104101046,ENG,Bridge,Bearing wear,1,6,19.9,0,71,0,0,Medium,96,57,0,0.0342
+T104101047,SNT,Cable,Cable insulation fault,1,4,12.0,0,84,1,0,Low,268,59,0,0.0537
+T104101048,TRD,Feeder,Feeder overdue PM,5,28,8.7,0,52,0,0,High,166,41,0,0.261
+T104101049,TRD,OHE,OHE wear,5,4,1.9,1,63,0,1,Medium,211,54,1,0.3039
+T104101050,SNT,Axle Counter,Axle counter drift,2,26,5.6,0,5,1,1,Low,267,30,0,0.2033
+T104101051,SNT,Point Machine,Point machine overdue,4,18,0.0,1,66,1,1,Low,155,87,1,0.3513
+T104101052,ENG,Ballast,Ballast deficiency,4,4,20.7,1,19,1,0,Low,286,66,0,0.2046
+T104101053,ENG,Bridge,Bearing wear,4,26,14.7,0,58,1,0,Low,292,91,0,0.3572
+T104101054,TRD,Feeder,Feeder overdue PM,4,2,12.6,0,79,0,0,Low,403,46,0,0.114
+T104101055,ENG,Rail,Rail crack,1,4,9.2,0,28,1,1,Low,179,45,0,0.0981
+T104101056,ENG,Rail,Rail crack,4,7,17.2,1,55,0,1,Low,181,91,0,0.179
+T104101057,TRD,OHE,OHE wear,3,10,9.5,1,45,0,1,Medium,192,41,0,0.1768
+T104101058,SNT,Point Machine,Point machine overdue,4,8,4.7,2,96,1,1,Low,85,35,0,0.4413
+T104101059,TRD,OHE,OHE wear,3,8,16.1,0,68,0,1,Low,168,30,0,0.1128
+T104101060,ENG,Ballast,Ballast deficiency,4,3,11.1,2,50,0,0,Medium,225,54,0,0.1594
+T104101061,TRD,OHE,OHE wear,5,9,13.0,2,36,1,1,Low,5,102,0,0.3569
+T104101062,SNT,Cable,Cable insulation fault,1,7,15.2,1,72,0,0,Low,281,48,0,0.0538
+T104101063,SNT,Cable,Cable insulation fault,5,11,10.3,1,107,1,0,Low,155,66,0,0.2916
+T104101064,ENG,Fastening,Fastening renewal,2,17,21.9,0,53,0,0,High,198,54,0,0.1023
+T104101065,SNT,Axle Counter,Axle counter drift,3,2,11.2,0,60,1,1,Low,207,50,0,0.2117
+T104101066,TRD,Sub-station,Sub-station overdue PM,4,5,19.3,0,56,1,0,Low,150,62,1,0.1296
+T104101067,ENG,Fastening,Fastening renewal,5,14,0.0,0,5,1,0,High,234,65,1,0.1775
+T104101068,ENG,Rail,Rail crack,1,6,10.4,0,122,1,1,Medium,157,53,0,0.2213
+T104101069,SNT,Signal LED,LED failure,5,8,16.2,1,71,0,0,Low,5,25,0,0.1273
+T104101070,SNT,Signal LED,LED failure,3,2,13.2,0,76,0,0,Low,211,81,0,0.0613
+T104101071,SNT,Point Machine,Point machine overdue,3,4,0.2,2,67,0,1,Low,93,83,0,0.1044
+T104101072,TRD,OHE,OHE wear,5,16,9.2,3,97,0,1,Medium,172,48,0,0.4274
+T104101073,TRD,Feeder,Feeder overdue PM,5,5,11.4,0,12,1,0,Medium,8,45,0,0.0821
+T104101074,TRD,Feeder,Feeder overdue PM,2,3,15.3,0,99,0,0,Low,58,59,1,0.0443
+T104101075,SNT,Point Machine,Point machine overdue,2,4,6.2,1,63,0,1,Low,45,46,0,0.08
+T104101076,ENG,Rail,Rail crack,5,16,15.0,1,38,1,1,High,215,28,1,0.581
+T104101077,ENG,Bridge,Bearing wear,1,5,6.0,1,94,0,0,Medium,336,79,1,0.0835
+T104101078,ENG,Bridge,Bearing wear,3,7,12.2,1,77,1,0,Medium,154,56,0,0.1566
+T104101079,ENG,Fastening,Fastening renewal,3,6,20.3,0,60,0,0,High,288,42,0,0.0976
+T104101080,SNT,Cable,Cable insulation fault,2,9,15.5,0,65,1,0,Medium,265,24,0,0.1273
+T104101081,SNT,Signal LED,LED failure,4,4,18.8,1,49,1,0,Medium,199,29,0,0.1756
+T104101082,ENG,Ballast,Ballast deficiency,2,9,6.3,0,74,0,0,Medium,163,30,0,0.0505
+T104101083,ENG,Rail,Rail crack,3,5,0.0,2,72,0,1,Medium,159,54,0,0.2812
+T104101084,ENG,Rail,Rail crack,2,13,13.9,1,69,0,1,Low,116,52,0,0.14
+T104101085,TRD,Insulator,Insulator crack,1,2,24.0,0,91,1,0,Low,230,80,0,0.076
+T104101086,ENG,Bridge,Bearing wear,1,42,14.5,1,52,1,0,High,240,20,1,0.352
+T104101087,ENG,Ballast,Ballast deficiency,2,10,7.5,0,51,0,0,Low,318,41,0,0.0429
+T104101088,ENG,Bridge,Bearing wear,5,8,9.4,1,77,0,0,Low,191,43,0,0.2068
+T104101089,SNT,Point Machine,Point machine overdue,4,3,5.7,0,62,1,1,Low,257,56,1,0.2975
+T104101090,ENG,Bridge,Bearing wear,4,2,10.2,3,52,0,0,Low,116,48,0,0.0903
+T104101091,ENG,Fastening,Fastening renewal,1,4,19.7,0,44,0,0,Low,46,69,0,0.0223
+T104101092,ENG,Ballast,Ballast deficiency,2,33,15.7,1,67,1,0,Low,284,22,0,0.2278
+T104101093,TRD,Sub-station,Sub-station overdue PM,5,13,13.1,0,58,1,0,Medium,157,51,1,0.2279
+T104101094,TRD,Insulator,Insulator crack,4,10,0.0,0,53,1,0,Low,143,42,0,0.0932
+T104101095,ENG,Bridge,Bearing wear,3,12,1.8,0,58,0,0,Medium,226,57,0,0.0971
+T104101096,SNT,Interlocking,Interlocking fault,5,11,14.2,0,26,0,1,Medium,120,63,0,0.2054
+T104101097,TRD,Insulator,Insulator crack,3,5,7.1,1,26,1,0,Medium,288,48,0,0.1529
+T104101098,TRD,Feeder,Feeder overdue PM,3,5,6.5,1,39,0,0,Low,71,65,0,0.0585
+T104101099,ENG,Rail,Rail crack,4,2,16.8,1,65,0,1,Low,232,86,0,0.161
+T104101100,SNT,Point Machine,Point machine overdue,5,4,13.1,1,75,1,1,High,143,40,1,0.5258
+T104101101,SNT,Cable,Cable insulation fault,3,10,8.6,1,92,0,0,Medium,233,30,1,0.1363
+T104101102,ENG,Ballast,Ballast deficiency,2,3,9.8,0,68,1,0,High,433,62,1,0.2183
+T104101103,ENG,Ballast,Ballast deficiency,2,5,15.5,0,50,1,0,Low,238,52,0,0.103
+T104101104,ENG,Bridge,Bearing wear,5,16,11.8,1,49,1,0,Low,200,45,0,0.2654
+T104101105,SNT,Axle Counter,Axle counter drift,1,3,20.6,0,72,0,1,Medium,160,76,0,0.0871
+T104101106,TRD,OHE,OHE wear,4,13,20.7,1,29,1,1,Low,217,52,0,0.4378
+T104101107,ENG,Bridge,Bearing wear,3,4,15.0,1,63,0,0,Low,86,83,0,0.0616
+T104101108,SNT,Signal LED,LED failure,3,3,0.0,1,77,1,0,Low,192,50,0,0.0713
+T104101109,ENG,Bridge,Bearing wear,1,4,1.4,0,5,0,0,Low,122,20,0,0.0097
+T104101110,ENG,Fastening,Fastening renewal,3,4,3.4,1,49,1,0,High,151,51,1,0.2049
+T104101111,TRD,Sub-station,Sub-station overdue PM,3,3,17.6,0,26,1,0,Low,5,106,1,0.0566
+T104101112,ENG,Bridge,Bearing wear,2,11,4.8,0,114,1,0,Low,209,31,0,0.0964
+T104101113,SNT,Interlocking,Interlocking fault,3,4,9.0,0,54,1,1,High,155,78,0,0.3417
+T104101114,SNT,Point Machine,Point machine overdue,4,46,10.4,0,54,1,1,Low,387,69,1,0.6779
+T104101115,TRD,Feeder,Feeder overdue PM,2,7,1.8,0,100,1,0,Low,5,65,0,0.0649
+T104101116,TRD,Feeder,Feeder overdue PM,2,14,16.8,0,27,1,0,Low,293,38,0,0.1176
+T104101117,SNT,Axle Counter,Axle counter drift,4,26,13.1,0,75,0,1,Medium,267,63,1,0.3877
+T104101118,SNT,Interlocking,Interlocking fault,1,7,16.2,1,41,1,1,Low,228,57,0,0.1711
+T104101119,SNT,Interlocking,Interlocking fault,1,4,18.3,0,32,0,1,Medium,34,63,0,0.045
+T104101120,TRD,Sub-station,Sub-station overdue PM,2,2,15.1,2,70,1,0,Medium,115,48,0,0.1228
+T104101121,SNT,Interlocking,Interlocking fault,4,3,15.2,0,63,0,1,Low,5,72,0,0.074
+T104101122,SNT,Cable,Cable insulation fault,3,9,15.1,1,34,1,0,Medium,5,31,0,0.1129
+T104101123,TRD,Sub-station,Sub-station overdue PM,1,20,12.4,0,32,1,0,Medium,110,49,0,0.0928
+T104101124,TRD,OHE,OHE wear,1,14,0.0,0,43,1,1,Low,277,71,0,0.1546
+T104101125,SNT,Point Machine,Point machine overdue,4,2,12.0,1,60,0,1,Low,199,59,0,0.1528
+T104101126,SNT,Interlocking,Interlocking fault,2,4,10.0,0,66,1,1,Low,28,38,0,0.1542
+T104101127,SNT,Axle Counter,Axle counter drift,4,12,4.8,0,109,1,1,Low,254,58,1,0.4348
+T104101128,TRD,Feeder,Feeder overdue PM,5,22,12.0,0,45,0,0,Medium,173,42,0,0.1712
+T104101129,SNT,Signal LED,LED failure,1,9,6.9,0,15,0,0,Low,19,49,0,0.0121
+T104101130,ENG,Rail,Rail crack,4,6,6.3,0,75,1,1,High,194,67,0,0.4409
+T104101131,ENG,Rail,Rail crack,4,7,13.0,1,48,0,1,High,216,66,0,0.2903
+T104101132,SNT,Axle Counter,Axle counter drift,1,6,12.6,0,45,0,1,Medium,290,67,0,0.0787
+T104101133,ENG,Ballast,Ballast deficiency,1,5,20.4,0,47,0,0,Low,65,90,0,0.0246
+T104101134,ENG,Rail,Rail crack,5,13,8.6,2,33,1,1,Low,245,34,1,0.5195
+T104101135,ENG,Fastening,Fastening renewal,2,8,5.8,0,55,0,0,Low,213,64,0,0.0467
+T104101136,ENG,Bridge,Bearing wear,5,14,0.0,0,104,1,0,Medium,105,37,0,0.2443
+T104101137,TRD,Insulator,Insulator crack,2,3,6.4,1,52,0,0,Medium,57,77,1,0.0501
+T104101138,TRD,Feeder,Feeder overdue PM,5,8,3.0,0,74,1,0,High,198,49,1,0.2705
+T104101139,SNT,Point Machine,Point machine overdue,4,3,13.8,3,10,1,1,Low,211,49,0,0.3247
+T104101140,SNT,Cable,Cable insulation fault,3,4,6.5,0,46,1,0,Low,188,48,0,0.0957
+T104101141,ENG,Bridge,Bearing wear,4,4,7.8,1,52,0,0,Medium,204,40,0,0.1451
+T104101142,TRD,Insulator,Insulator crack,3,7,6.9,0,76,1,0,Medium,150,64,0,0.1771
+T104101143,ENG,Fastening,Fastening renewal,1,13,29.3,0,52,1,0,Medium,262,55,0,0.1653
+T104101144,ENG,Fastening,Fastening renewal,1,15,3.6,2,46,0,0,Medium,65,74,0,0.0477
+T104101145,SNT,Cable,Cable insulation fault,3,5,23.6,2,85,0,0,Low,139,20,1,0.1029
+T104101146,TRD,Insulator,Insulator crack,2,29,16.0,3,50,1,0,Medium,137,62,0,0.2248
+T104101147,SNT,Cable,Cable insulation fault,1,11,12.5,1,118,0,0,Low,307,80,0,0.0995
+T104101148,TRD,OHE,OHE wear,3,5,16.0,1,85,0,1,Low,127,65,0,0.1181
+T104101149,ENG,Fastening,Fastening renewal,4,14,1.1,0,26,1,0,Low,135,37,0,0.1515
+T104101150,TRD,Feeder,Feeder overdue PM,2,2,15.9,2,98,1,0,Medium,103,38,0,0.1603
+T104101151,TRD,Sub-station,Sub-station overdue PM,3,8,5.7,0,25,1,0,Medium,149,83,1,0.1003
+T104101152,SNT,Interlocking,Interlocking fault,1,3,6.7,0,41,1,1,Low,5,32,0,0.0477
+T104101153,SNT,Cable,Cable insulation fault,1,17,19.8,1,54,1,0,Low,201,73,0,0.1217
+T104101154,ENG,Fastening,Fastening renewal,5,16,13.4,0,54,0,0,Low,71,39,0,0.1193
+T104101155,ENG,Ballast,Ballast deficiency,5,3,3.4,0,6,0,0,Low,253,78,0,0.0456
+T104101156,ENG,Ballast,Ballast deficiency,5,6,9.7,0,29,1,0,High,65,36,0,0.1561
+T104101157,SNT,Interlocking,Interlocking fault,3,12,4.3,0,25,0,1,Medium,308,52,0,0.1276
+T104101158,ENG,Bridge,Bearing wear,3,3,6.4,1,61,0,0,Low,195,57,0,0.0797
+T104101159,ENG,Fastening,Fastening renewal,5,2,11.6,1,28,0,0,Low,283,46,0,0.0866
+T104101160,ENG,Bridge,Bearing wear,4,22,16.9,0,48,0,0,Medium,111,60,0,0.1499
+T104101161,TRD,OHE,OHE wear,5,2,18.8,1,104,1,1,Medium,212,32,1,0.5203
+T104101162,SNT,Interlocking,Interlocking fault,3,11,14.3,0,73,0,1,Medium,264,26,0,0.1965
+T104101163,ENG,Fastening,Fastening renewal,5,7,6.1,2,23,0,0,Low,126,51,0,0.0785
+T104101164,ENG,Rail,Rail crack,4,7,16.3,2,29,0,1,Medium,107,59,1,0.1932
+T104101165,ENG,Rail,Rail crack,5,5,4.6,3,5,0,1,High,53,67,0,0.1735
+T104101166,ENG,Fastening,Fastening renewal,2,8,7.5,0,85,0,0,Low,388,20,0,0.0743
+T104101167,SNT,Cable,Cable insulation fault,1,6,5.2,0,34,1,0,Medium,166,45,0,0.0551
+T104101168,ENG,Bridge,Bearing wear,4,6,14.0,0,86,1,0,Low,131,20,1,0.1725
+T104101169,TRD,OHE,OHE wear,2,12,14.8,0,43,1,1,High,55,66,1,0.2094
+T104101170,SNT,Point Machine,Point machine overdue,3,5,14.1,0,80,1,1,Medium,240,76,0,0.3497
+T104101171,ENG,Ballast,Ballast deficiency,1,7,11.9,0,35,0,0,Low,58,67,0,0.0207
+T104101172,SNT,Signal LED,LED failure,5,6,3.5,0,42,0,0,Low,329,44,0,0.0996
+T104101173,SNT,Point Machine,Point machine overdue,5,8,12.9,0,40,1,1,Medium,178,80,0,0.434
+T104101174,SNT,Axle Counter,Axle counter drift,5,18,23.9,1,71,1,1,Low,202,41,1,0.5904
+T104101175,ENG,Bridge,Bearing wear,3,46,15.6,2,90,1,0,Low,104,60,0,0.4202
+T104101176,ENG,Rail,Rail crack,2,3,20.4,0,21,1,1,Low,43,40,0,0.0981
+T104101177,SNT,Cable,Cable insulation fault,2,5,2.6,0,35,0,0,Medium,42,38,0,0.0236
+T104101178,TRD,OHE,OHE wear,3,3,8.8,1,61,0,1,High,127,50,0,0.1483
+T104101179,TRD,OHE,OHE wear,5,7,12.8,0,51,0,1,Medium,46,47,0,0.1751
+T104101180,ENG,Ballast,Ballast deficiency,2,17,11.9,1,66,0,0,Low,211,78,1,0.0932
+T104101181,ENG,Fastening,Fastening renewal,4,2,26.5,0,81,0,0,Low,206,26,0,0.0876
+T104101182,TRD,Sub-station,Sub-station overdue PM,5,7,4.5,0,88,0,0,Medium,349,55,0,0.2222
+T104101183,SNT,Interlocking,Interlocking fault,5,5,3.3,0,83,1,1,Medium,12,80,1,0.429
+T104101184,ENG,Bridge,Bearing wear,4,11,8.8,2,13,0,0,Low,5,42,0,0.0493
+T104101185,ENG,Rail,Rail crack,3,3,15.1,1,29,1,1,Medium,32,69,0,0.1482
+T104101186,TRD,Insulator,Insulator crack,4,2,15.3,0,32,0,0,Medium,134,78,0,0.0611
+T104101187,TRD,Insulator,Insulator crack,4,3,14.5,0,64,0,0,Low,142,83,0,0.0933
+T104101188,ENG,Rail,Rail crack,4,12,8.5,1,49,0,1,High,254,82,1,0.3085
+T104101189,ENG,Bridge,Bearing wear,4,11,0.0,0,79,1,0,Medium,207,70,1,0.2541
+T104101190,ENG,Rail,Rail crack,2,11,10.9,0,81,0,1,Low,6,38,0,0.0629
+T104101191,ENG,Fastening,Fastening renewal,4,4,10.0,0,58,0,0,Low,83,43,0,0.0639
+T104101192,SNT,Cable,Cable insulation fault,5,13,14.8,1,46,1,0,Medium,176,63,0,0.2301
+T104101193,TRD,Feeder,Feeder overdue PM,4,4,23.1,0,50,0,0,Medium,146,61,0,0.1151
+T104101194,SNT,Interlocking,Interlocking fault,2,15,5.6,0,48,0,1,Medium,267,54,0,0.1388
+T104101195,TRD,OHE,OHE wear,5,14,5.6,0,75,1,1,Medium,274,50,1,0.5665
+T104101196,SNT,Cable,Cable insulation fault,1,9,15.2,1,86,1,0,Low,58,33,1,0.0701
+T104101197,TRD,Feeder,Feeder overdue PM,5,2,13.9,0,65,0,0,Low,32,74,0,0.0621
+T104101198,ENG,Fastening,Fastening renewal,5,6,9.4,1,75,0,0,Medium,262,53,0,0.2265
+T104101199,SNT,Axle Counter,Axle counter drift,1,2,10.9,0,49,1,1,Medium,57,50,0,0.0776
