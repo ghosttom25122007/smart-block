@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI-Powered Automatic Block Planning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#e8e9eb;
+    --sidebar:#ffffff;
+    --line:#e2e3e6;
+    --active-bg:#dbe2ee;
+    --active-text:#1c2b4a;
+    --nav-text:#5a5e70;
+    --heading:#12162a;
+    --card:#ffffff;
+    --label:#1a1d29;
+    --input-border:#dcdde0;
+    --chip-bg:#eef0f2;
+    --chip-text:#33363f;
+    --warn-bg:#fdf4dc;
+    --warn-border:#f0cd7e;
+    --warn-icon:#c9922e;
+    --warn-chip-bg:#f8e6b8;
+    --warn-chip-text:#5b4419;
+    --btn:#16233f;
+    --btn-hover:#1d2d4f;
+    --muted:#8a8d9a;
+    --map-bg:#dfe6da;
+    --pop-bg:#ffffff;
+    --pop-hover:#eef0f5;
+    --sans: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --display: "Poppins", var(--sans);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --page:#14151a; --sidebar:#1b1c22; --line:#2b2c33;
+      --active-bg:#28324a; --active-text:#c9d5ee; --nav-text:#9b9eac;
+      --heading:#eef0f6; --card:#1e1f26; --label:#e7e8ee;
+      --input-border:#34353d; --chip-bg:#2a2b33; --chip-text:#d6d7de;
+      --warn-bg:#3a301a; --warn-border:#6b5527; --warn-icon:#e0b45a;
+      --warn-chip-bg:#4a3c1f; --warn-chip-text:#f0d9a0;
+      --btn:#3a4a72; --btn-hover:#455783; --muted:#84869a; --map-bg:#232922;
+      --pop-bg:#23242c; --pop-hover:#2d2e38;
+    }
+  }
+  :root[data-theme="dark"]{
+    --page:#14151a; --sidebar:#1b1c22; --line:#2b2c33;
+    --active-bg:#28324a; --active-text:#c9d5ee; --nav-text:#9b9eac;
+    --heading:#eef0f6; --card:#1e1f26; --label:#e7e8ee;
+    --input-border:#34353d; --chip-bg:#2a2b33; --chip-text:#d6d7de;
+    --warn-bg:#3a301a; --warn-border:#6b5527; --warn-icon:#e0b45a;
+    --warn-chip-bg:#4a3c1f; --warn-chip-text:#f0d9a0;
+    --btn:#3a4a72; --btn-hover:#455783; --muted:#84869a; --map-bg:#232922;
+    --pop-bg:#23242c; --pop-hover:#2d2e38;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; margin:0; }
+  body{
+    background:var(--page); color:var(--heading); font-family:var(--sans);
+    display:flex; min-height:100%;
+  }
+
+  /* ---- sidebar ---- */
+  .sidebar{
+    width:230px; flex:0 0 230px; background:var(--sidebar); border-right:1px solid var(--line);
+    display:flex; flex-direction:column; padding: calc(24px + env(safe-area-inset-top,0px)) 0 20px;
+  }
+  .logo{ display:flex; justify-content:center; margin-bottom:26px; }
+  .logo .mark{
+    width:46px; height:46px; border-radius:50%; background:linear-gradient(160deg,#2a3a63,#1c2947);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--display);
+    font-weight:700; font-size:15px; letter-spacing:.02em;
+  }
+  .nav{ display:flex; flex-direction:column; gap:4px; padding:0 14px; }
+  .nav button{
+    all:unset; cursor:pointer; display:flex; align-items:center; gap:12px;
+    padding:11px 12px; border-radius:9px; color:var(--nav-text); font-size:14px; font-weight:500;
+  }
+  .nav button svg{ width:18px; height:18px; flex:0 0 18px; }
+  .nav button:hover{ background:var(--chip-bg); }
+  .nav button.active{ background:var(--active-bg); color:var(--active-text); font-weight:600; }
+  .sidebar-foot{ margin-top:auto; padding:0 14px; }
+  .sidebar-foot button{ all:unset; cursor:pointer; display:flex; align-items:center; gap:12px; padding:11px 12px; color:var(--nav-text); font-size:14px; }
+  .sidebar-foot button svg{ width:18px; height:18px; }
+  .sidebar-foot button:hover{ background:var(--chip-bg); border-radius:9px; }
+  .sidebar-foot button.active{ background:var(--active-bg); color:var(--active-text); font-weight:600; border-radius:9px; }
+
+  @media (max-width:820px){ .sidebar{ display:none; } }
+
+  /* ---- main ---- */
+  .main{ flex:1; min-width:0; height:100vh; overflow-y:auto; }
+  .topbar{
+    height:64px; display:flex; align-items:center; justify-content:flex-end; gap:16px;
+    padding: calc(0px + env(safe-area-inset-top,0px)) 40px 0 0;
+  }
+  .icon-btn{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--nav-text); cursor:pointer; }
+  .icon-btn:hover{ background:var(--chip-bg); }
+  .avatar{ width:36px; height:36px; border-radius:50%; background:var(--chip-bg); display:flex; align-items:center; justify-content:center; color:var(--nav-text); cursor:pointer; }
+  .avatar-wrap{ position:relative; }
+  .user-pop{ position:absolute; top:calc(100% + 12px); right:0; width:230px; background:var(--pop-bg); border:1px solid var(--input-border);
+    border-radius:12px; box-shadow:0 12px 28px rgba(10,10,20,0.16); z-index:30; display:none; overflow:hidden; }
+  .user-pop.show{ display:block; }
+  .user-pop-head{ display:flex; align-items:center; gap:10px; padding:14px; border-bottom:1px solid var(--line); }
+  .user-pop-avatar{ width:34px; height:34px; border-radius:50%; background:var(--chip-bg); display:flex; align-items:center; justify-content:center; color:var(--nav-text); flex:0 0 34px; }
+  .user-pop-name{ font-size:13px; font-weight:600; font-family:var(--display); color:var(--heading); }
+  .user-pop-role{ font-size:11px; color:var(--muted); margin-top:2px; }
+  .user-pop-list{ padding:6px; }
+  .user-pop-list button{ all:unset; box-sizing:border-box; width:100%; cursor:pointer; display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:8px; font-size:12.5px; color:var(--label); }
+  .user-pop-list button svg{ width:15px; height:15px; color:var(--muted); flex:0 0 15px; }
+  .user-pop-list button:hover{ background:var(--chip-bg); }
+  .user-pop-foot{ border-top:1px solid var(--line); padding:6px; }
+  .user-pop-foot button{ all:unset; box-sizing:border-box; width:100%; cursor:pointer; padding:9px 10px; border-radius:8px; font-size:12.5px; color:#b3554a; font-weight:600; text-align:left; }
+  .user-pop-foot button:hover{ background:rgba(179,85,74,0.08); }
+
+  .content{ padding: 12px 50px 70px; max-width:980px; }
+  h1{ font-family:var(--display); font-weight:700; font-size:30px; letter-spacing:-0.01em; margin: 18px 0 26px; color:var(--heading); }
+
+  .card{ background:var(--card); border-radius:16px; box-shadow:0 14px 34px rgba(20,20,30,0.08); padding:30px 30px 26px; display:grid; grid-template-columns: 1fr 190px; gap:26px; align-items:start; }
+  @media (max-width:760px){ .card{ grid-template-columns:1fr; } }
+
+  .form-col{ min-width:0; }
+  label{ display:block; font-size:13.5px; font-weight:600; color:var(--label); margin-bottom:8px; font-family:var(--display); }
+
+  /* generic field wrapper for popover-based controls */
+  .field{ position:relative; margin-bottom:22px; }
+  .field-btn{
+    all:unset; box-sizing:border-box; width:100%; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+    border:1px solid var(--input-border); border-radius:10px; padding:11px 13px; font-size:13.5px; color:var(--heading); font-family:var(--sans);
+  }
+  .field-btn svg{ width:14px; height:14px; color:var(--muted); flex:0 0 14px; }
+  .field-btn.open{ border-color:var(--active-text); }
+
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:560px){ .row2{ grid-template-columns:1fr; } }
+
+  .popover{
+    position:absolute; top:calc(100% + 6px); left:0; right:0; background:var(--pop-bg); border:1px solid var(--input-border);
+    border-radius:10px; box-shadow:0 12px 28px rgba(10,10,20,0.14); z-index:20; display:none; overflow:hidden;
+  }
+  .popover.show{ display:block; }
+
+  /* route combobox */
+  .combo-list{ max-height:230px; overflow-y:auto; }
+  .combo-list .opt{ padding:9px 13px; font-size:13px; cursor:pointer; }
+  .combo-list .opt:hover, .combo-list .opt.hl{ background:var(--pop-hover); }
+  .combo-empty{ padding:12px 13px; font-size:12.5px; color:var(--muted); }
+
+  /* calendar */
+  .cal{ padding:12px 14px 14px; width:auto; }
+  .cal-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  .cal-head span{ font-size:13px; font-weight:600; font-family:var(--display); }
+  .cal-nav{ all:unset; cursor:pointer; width:24px; height:24px; display:flex; align-items:center; justify-content:center; color:var(--muted); border-radius:6px; }
+  .cal-nav:hover{ background:var(--pop-hover); }
+  .cal-grid{ display:grid; grid-template-columns:repeat(7,26px); gap:3px; }
+  .cal-dow{ font-size:10.5px; color:var(--muted); text-align:center; padding-bottom:3px; }
+  .cal-day{ all:unset; cursor:pointer; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:12px; border-radius:7px; }
+  .cal-day:hover{ background:var(--pop-hover); }
+  .cal-day.sel{ background:var(--btn); color:#fff; }
+  .cal-day.mute{ color:var(--muted); opacity:.45; }
+
+  /* shift list */
+  .shift-list .opt{ padding:10px 13px; cursor:pointer; }
+  .shift-list .opt:hover, .shift-list .opt.hl{ background:var(--pop-hover); }
+  .shift-list .opt b{ font-size:13px; }
+  .shift-list .opt div{ font-size:11.5px; color:var(--muted); margin-top:2px; }
+
+  .field-row{ display:grid; grid-template-columns:1fr 170px; gap:20px; align-items:start; margin-bottom:20px; }
+  @media (max-width:560px){ .field-row{ grid-template-columns:1fr; } }
+
+  .tag-box{ position:relative; border:1px solid var(--input-border); border-radius:10px; padding:9px 10px; }
+  .tag-box input{
+    width:100%; border:none; background:transparent; font-size:13.5px; padding:5px 3px; color:var(--heading); font-family:var(--sans);
+  }
+  .tag-box input:focus{ outline:none; }
+  .tag-box input::placeholder{ color:var(--muted); }
+  .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  .tag{
+    display:inline-flex; align-items:center; gap:7px; background:var(--chip-bg); color:var(--chip-text);
+    border-radius:7px; padding:6px 9px; font-size:12.5px; font-family:var(--sans);
+  }
+  .tag button{ all:unset; cursor:pointer; color:var(--muted); font-size:13px; line-height:1; display:flex; }
+  .tag button:hover{ color:var(--heading); }
+
+  .suggest{ position:absolute; top:calc(100% + 4px); left:0; right:0; background:var(--pop-bg); border:1px solid var(--input-border);
+    border-radius:10px; box-shadow:0 12px 28px rgba(10,10,20,0.14); z-index:25; max-height:220px; overflow-y:auto; display:none; }
+  .suggest.show{ display:block; }
+  .suggest .opt{ padding:9px 13px; font-size:12.5px; cursor:pointer; display:flex; justify-content:space-between; gap:10px; }
+  .suggest .opt span.num{ color:var(--muted); font-family:ui-monospace, Menlo, monospace; font-size:11.5px; }
+  .suggest .opt:hover, .suggest .opt.hl{ background:var(--pop-hover); }
+
+  .warn-box{ background:var(--warn-bg); border:1px solid var(--warn-border); border-radius:12px; padding:16px 16px 14px; margin-bottom:22px; }
+  .warn-title{ display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:#7a5a20; margin-bottom:12px; font-family:var(--display); }
+  @media (prefers-color-scheme:dark){ .warn-title{ color:var(--warn-icon); } }
+  :root[data-theme="dark"] .warn-title{ color:var(--warn-icon); }
+  .warn-title svg{ width:16px; height:16px; color:var(--warn-icon); flex:0 0 16px; }
+  .warn-box .tag-box{ border-color:var(--warn-border); background:rgba(255,255,255,0.35); }
+  .warn-box .tag{ background:var(--warn-chip-bg); color:var(--warn-chip-text); }
+
+  .generate{
+    all:unset; box-sizing:border-box; width:100%; cursor:pointer; text-align:center;
+    background:var(--btn); color:#fff; font-family:var(--display); font-weight:600; font-size:14.5px;
+    padding:14px; border-radius:11px; display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .generate:hover{ background:var(--btn-hover); }
+  .generate svg{ width:16px; height:16px; }
+  .generate.busy{ opacity:.75; cursor:default; }
+
+  .status-line{ font-size:12.5px; color:var(--muted); margin-top:12px; text-align:center; min-height:16px; }
+
+  /* ---- map preview ---- */
+  .map{ background:var(--map-bg); border-radius:12px; height:260px; position:relative; overflow:hidden; }
+  .map svg{ width:100%; height:100%; display:block; }
+
+  ::-webkit-scrollbar{ width:8px; }
+  ::-webkit-scrollbar-thumb{ background:var(--line); }
+
+  /* ---- dashboard / schedules / alerts / settings ---- */
+  .kpi-row{ display:flex; flex-wrap:wrap; gap:0; margin-bottom:10px; }
+  .kpi-box{ background:var(--card); border-radius:14px; box-shadow:0 8px 20px rgba(20,20,30,0.06); padding:16px 20px; margin:0 14px 14px 0; min-width:160px; }
+  .kpi-label{ font-size:12px; color:var(--muted); }
+  .kpi-value{ font-family:var(--display); font-weight:700; font-size:24px; margin-top:6px; }
+  .kpi-note{ font-size:11.5px; color:var(--muted); margin-top:3px; }
+
+  .section-h{ font-family:var(--display); font-size:15px; font-weight:600; margin:28px 0 12px; }
+
+  .data-table{ width:100%; border-collapse:collapse; background:var(--card); border-radius:14px; overflow:hidden; box-shadow:0 8px 20px rgba(20,20,30,0.06); }
+  .data-table th{ text-align:left; font-size:11.5px; color:var(--muted); font-weight:600; padding:12px 16px; border-bottom:1px solid var(--line); }
+  .data-table td{ padding:12px 16px; font-size:13px; border-bottom:1px solid var(--line); }
+  .data-table tr:last-child td{ border-bottom:none; }
+
+  .dept-tag{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted); margin-right:16px; }
+  .dept-tag i{ width:8px; height:8px; border-radius:50%; display:inline-block; background:var(--muted); }
+  .dept-tag.eng i{ background:var(--warn-icon); }
+  .dept-tag.snt i{ background:#4a7a5c; }
+  .dept-tag.trd i{ background:var(--active-text); }
+  .week-toolbar{ margin-bottom:14px; }
+  .week-grid{ width:100%; border-collapse:collapse; background:var(--card); border-radius:14px; overflow:hidden; box-shadow:0 8px 20px rgba(20,20,30,0.06); }
+  .week-grid th{ text-align:left; font-size:11.5px; color:var(--muted); font-weight:600; padding:10px 12px; border-bottom:1px solid var(--line); }
+  .week-grid td{ vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); font-size:12px; }
+  .week-grid td:first-child{ font-weight:600; color:var(--muted); white-space:nowrap; }
+  .wk-task{ background:var(--chip-bg); border-radius:8px; padding:6px 8px; margin-bottom:5px; font-size:11.5px; }
+  .wk-open{ color:var(--muted); font-style:italic; font-size:11.5px; }
+
+  .alert-item{ background:var(--card); border-radius:12px; box-shadow:0 8px 20px rgba(20,20,30,0.06); padding:14px 18px; margin-bottom:12px; border-left:4px solid var(--muted); }
+  .alert-item.crit{ border-left-color:#b3554a; }
+  .alert-item.warn{ border-left-color:var(--warn-icon); }
+  .alert-item.ok{ border-left-color:#4a7a5c; }
+  .alert-top{ display:flex; justify-content:space-between; align-items:center; font-size:13.5px; font-weight:600; }
+  .sev{ font-size:11px; padding:3px 9px; border-radius:20px; font-weight:600; }
+  .sev.crit{ background:rgba(179,85,74,0.12); color:#b3554a; }
+  .sev.warn{ background:var(--warn-bg); color:var(--warn-icon); }
+  .sev.ok{ background:rgba(74,122,92,0.12); color:#4a7a5c; }
+  .alert-meta{ font-size:12px; color:var(--muted); margin-top:6px; }
+
+  .settings-row{ display:flex; align-items:center; justify-content:space-between; background:var(--card); border-radius:12px; box-shadow:0 8px 20px rgba(20,20,30,0.06); padding:16px 20px; margin-bottom:12px; }
+  .settings-label{ font-size:13.5px; font-weight:600; }
+  .settings-note{ font-size:12px; color:var(--muted); margin-top:3px; }
+  .switch{ position:relative; display:inline-block; width:40px; height:22px; }
+  .switch input{ opacity:0; width:0; height:0; }
+  .slider{ position:absolute; cursor:pointer; inset:0; background:var(--line); border-radius:22px; transition:.15s; }
+  .slider::before{ content:""; position:absolute; width:16px; height:16px; left:3px; top:3px; background:#fff; border-radius:50%; transition:.15s; }
+  .switch input:checked + .slider{ background:var(--btn); }
+  .switch input:checked + .slider::before{ transform:translateX(18px); }
+
+  /* ---- result view (optimized schedule) ---- */
+  .res-grid{ display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:start; }
+  @media (max-width:980px){ .res-grid{ grid-template-columns:1fr; } }
+  .res-card{ background:var(--card); border-radius:16px; box-shadow:0 14px 34px rgba(20,20,30,0.08); }
+  .res-head{ display:flex; align-items:center; justify-content:space-between; padding:16px 22px; border-bottom:1px solid var(--line); }
+  .res-head .t{ font-family:var(--display); font-weight:700; font-size:14px; }
+  .res-head .m{ font-family:var(--sans); font-size:12px; color:var(--muted); }
+  .res-body{ padding:14px 22px 22px; }
+  .caption{ font-size:12px; color:var(--muted); margin-bottom:14px; }
+  .caption b{ color:var(--label); }
+  .hourrow{ display:grid; font-family:var(--display); font-size:11px; font-weight:600; color:var(--muted); padding-bottom:9px; border-bottom:1px solid var(--line); margin-bottom:10px; }
+  .gt-block{ position:absolute; top:0; bottom:0; background:rgba(196,91,71,0.13); border-left:1.5px solid #e2a99a; border-right:1.5px solid #e2a99a; border-radius:4px; z-index:1; }
+  .gt-row{ display:grid; grid-template-columns:150px 1fr; align-items:center; min-height:34px; margin-bottom:6px; }
+  .gt-label{ font-size:12px; font-weight:500; padding-right:10px; }
+  .gt-track{ position:relative; height:24px; }
+  .gt-bar{ position:absolute; top:0; height:24px; border-radius:6px; display:flex; align-items:center; padding:0 8px; font-size:11px; font-weight:600; white-space:nowrap; overflow:hidden; z-index:2; }
+  .gt-bar.protected{ background:#dbeee0 !important; color:#2f6b40 !important; }
+  .gt-conflict{ position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:14px; height:14px; border-radius:50%; background:#c25b47; color:#fff; font-size:9.5px; font-weight:800; display:flex; align-items:center; justify-content:center; border:2px solid var(--card); z-index:3; }
+  .gt-empty{ padding:34px 0; text-align:center; color:var(--muted); font-size:12.5px; }
+
+  .res-opt{ border:1.5px solid var(--line); border-radius:11px; padding:12px 13px; margin-bottom:11px; cursor:pointer; }
+  .res-opt:last-child{ margin-bottom:0; }
+  .res-opt.sel{ border-color:var(--opt-c); background:var(--chip-bg); }
+  .res-opt-top{ display:flex; align-items:center; gap:9px; margin-bottom:8px; }
+  .res-opt-num{ width:20px; height:20px; border-radius:50%; background:var(--opt-c); color:#fff; font-family:var(--display); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex:0 0 20px; }
+  .res-opt-title{ font-family:var(--display); font-size:12.5px; font-weight:600; flex:1; }
+  .res-opt-prob{ font-size:10.5px; font-weight:700; color:var(--opt-c); background:var(--page); padding:3px 7px; border-radius:20px; white-space:nowrap; }
+  .res-opt-note{ font-size:11.5px; line-height:1.5; color:var(--muted); }
+  .res-opt.sel .res-opt-note{ color:var(--heading); }
+
+  .mrow{ display:flex; align-items:center; justify-content:space-between; padding:11px 0; border-bottom:1px solid var(--line); }
+  .mrow:last-child{ border-bottom:none; padding-bottom:0; }
+  .mrow .ml{ font-size:12px; color:var(--muted); }
+  .mrow .mv{ font-family:var(--display); font-weight:700; font-size:14.5px; text-align:right; }
+  .mrow .msub{ font-size:10.5px; color:#3d8b52; font-weight:600; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo"><div class="mark">BP</div></div>
+  <nav class="nav" id="nav">
+    <button data-view="dashboard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>
+      Dashboard
+    </button>
+    <button data-view="planner" class="active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 3v18M3 9h5"/></svg>
+      Block Planner
+    </button>
+    <button data-view="schedules">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      Schedules
+    </button>
+    <button data-view="alerts">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 9a6 6 0 0112 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 004 0"/></svg>
+      Alerts
+    </button>
+  </nav>
+  <div class="sidebar-foot">
+    <button type="button" id="foot-settings" data-view="settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 00-.1-1.2l2-1.6-2-3.4-2.4.9a7 7 0 00-2-1.2L14 3h-4l-.5 2.5a7 7 0 00-2 1.2l-2.4-.9-2 3.4 2 1.6a7 7 0 000 2.4l-2 1.6 2 3.4 2.4-.9a7 7 0 002 1.2L10 21h4l.5-2.5a7 7 0 002-1.2l2.4.9 2-3.4-2-1.6c.07-.4.1-.8.1-1.2z"/></svg>
+      Settings
+    </button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <div class="icon-btn">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 9a6 6 0 0112 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 004 0"/></svg>
+    </div>
+    <div class="avatar-wrap">
+      <div class="avatar" id="avatar-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></svg>
+      </div>
+      <div class="user-pop" id="avatar-pop">
+        <div class="user-pop-head">
+          <div class="user-pop-avatar"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></svg></div>
+          <div><div class="user-pop-name">Ananya Rao</div><div class="user-pop-role">Section Engineer &middot; SEC-02</div></div>
+        </div>
+        <div class="user-pop-list">
+          <button type="button" data-view="schedules">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            Previous Schedules
+          </button>
+          <button type="button" data-view="account">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></svg>
+            Account Details
+          </button>
+          <button type="button" data-view="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 00-.1-1.2l2-1.6-2-3.4-2.4.9a7 7 0 00-2-1.2L14 3h-4l-.5 2.5a7 7 0 00-2 1.2l-2.4-.9-2 3.4 2 1.6a7 7 0 000 2.4l-2 1.6 2 3.4 2.4-.9a7 7 0 002 1.2L10 21h4l.5-2.5a7 7 0 002-1.2l2.4.9 2-3.4-2-1.6c.07-.4.1-.8.1-1.2z"/></svg>
+            Settings
+          </button>
+        </div>
+        <div class="user-pop-foot"><button type="button" id="signout-btn">Sign out</button></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="view" id="view-dashboard" style="display:none;">
+  <div class="content">
+    <h1>Dashboard</h1>
+    <div class="kpi-row">
+      <div class="kpi-box"><div class="kpi-label">Open tasks</div><div class="kpi-value">47</div><div class="kpi-note">down 6 from last week</div></div>
+      <div class="kpi-box"><div class="kpi-label">Blocks this week</div><div class="kpi-value">19</div><div class="kpi-note">27% shared blocks</div></div>
+      <div class="kpi-box"><div class="kpi-label">Critical overdue</div><div class="kpi-value" style="color:var(--warn-icon)">4</div><div class="kpi-note">2 signal, 2 traction</div></div>
+      <div class="kpi-box"><div class="kpi-label">Corridor use</div><div class="kpi-value">68%</div><div class="kpi-note">up 5pt on baseline</div></div>
+    </div>
+
+    <h2 class="section-h">Priority queue</h2>
+    <table class="data-table">
+      <tr><th>Dept</th><th>Task</th><th>Section</th><th>Overdue</th><th>Score</th></tr>
+      <tr><td>S&amp;T</td><td>Interlocking relay fault, Cabin B</td><td>SEC-04</td><td>18d</td><td>92</td></tr>
+      <tr><td>TRD</td><td>OHE tension defect</td><td>SEC-02</td><td>12d</td><td>81</td></tr>
+      <tr><td>ENG</td><td>Rail crack, welded joint</td><td>SEC-04</td><td>9d</td><td>74</td></tr>
+      <tr><td>S&amp;T</td><td>Signal cable inspection</td><td>SEC-01</td><td>5d</td><td>58</td></tr>
+    </table>
+  </div>
+  </section>
+
+  <section class="view" id="view-planner">
+  <div class="content">
+    <h1>AI-Powered Automatic Block Planning</h1>
+
+    <div class="card">
+      <div class="form-col">
+
+        <div class="field" id="route-field">
+          <label>Select Route Section</label>
+          <button type="button" class="field-btn" id="route-btn">
+            <span id="route-value">Vadodara - Surat Double Line</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="popover" id="route-pop">
+            <div style="padding:8px 10px; border-bottom:1px solid var(--input-border);">
+              <input id="route-search" placeholder="Search a route section..." autocomplete="off"
+                style="width:100%; border:none; outline:none; background:transparent; font-size:13px; color:var(--heading); font-family:var(--sans);">
+            </div>
+            <div class="combo-list" id="route-list"></div>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field" id="date-field">
+            <label>Planning Date</label>
+            <button type="button" class="field-btn" id="date-btn">
+              <span id="date-value">Oct 12, 2026</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            </button>
+            <div class="popover" id="cal-pop"></div>
+          </div>
+          <div class="field" id="shift-field">
+            <label>Shift</label>
+            <button type="button" class="field-btn" id="shift-btn">
+              <span id="shift-value">Morning Shift</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="popover" id="shift-pop">
+              <div class="shift-list" id="shift-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" style="margin-bottom:0;">
+            <label>Trains Requiring Maintenance Blocks</label>
+            <div class="tag-box">
+              <input id="train-input" placeholder="Enter train number or name..." autocomplete="off">
+              <div class="suggest" id="train-suggest"></div>
+              <div class="tags" id="train-tags"></div>
+            </div>
+          </div>
+          <div>
+            <label>Required Block Duration:</label>
+            <select id="block-duration" style="width:100%; appearance:none; background-color:transparent; border:1px solid var(--input-border); border-radius:10px; padding:11px 34px 11px 13px; font-size:13.5px; color:var(--heading); font-family:var(--sans);
+              background-image: url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a8d9a' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>&quot;);
+              background-repeat:no-repeat; background-position:right 12px center;">
+              <option>90 mins</option>
+              <option selected>120 mins</option>
+              <option>150 mins</option>
+              <option>180 mins</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <div class="warn-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 16H3z"/><path d="M12 9.5v4.2"/><circle cx="12" cy="16.7" r=".6" fill="currentColor"/></svg>
+            Emergency / High-Priority Trains (System Override)
+          </div>
+          <div class="tag-box">
+            <input id="emg-input" placeholder="Enter train number or name..." autocomplete="off">
+            <div class="suggest" id="emg-suggest"></div>
+            <div class="tags" id="emg-tags"></div>
+          </div>
+        </div>
+
+        <button class="generate" id="generate-btn">
+          Generate Optimized Block Schedule
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="status-line" id="status-line"></div>
+      </div>
+
+      <div class="map">
+        <svg viewBox="0 0 190 260" preserveAspectRatio="none">
+          <rect width="190" height="260" fill="var(--map-bg)"/>
+          <path d="M0 40 L60 55 L90 30 L140 60 L190 45" stroke="#b9c3af" stroke-width="3" fill="none" opacity="0.7"/>
+          <path d="M0 120 L50 110 L100 140 L150 120 L190 150" stroke="#b9c3af" stroke-width="3" fill="none" opacity="0.7"/>
+          <path d="M0 200 L60 190 L110 210 L190 195" stroke="#b9c3af" stroke-width="3" fill="none" opacity="0.7"/>
+          <path d="M10 250 C 50 180, 70 140, 95 95 C 110 65, 130 45, 185 20" stroke="#5f9a52" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M95 95 C 105 110, 120 130, 140 150" stroke="#b1483f" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="95" cy="95" r="5" fill="#2c3e2c"/>
+          <circle cx="185" cy="20" r="4.5" fill="#2c3e2c"/>
+          <circle cx="10" cy="250" r="4.5" fill="#2c3e2c"/>
+          <circle cx="140" cy="150" r="4.5" fill="#2c3e2c"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="view" id="view-schedules" style="display:none;">
+  <div class="content">
+    <h1>Schedules</h1>
+    <div class="week-toolbar">
+      <span class="dept-tag eng"><i></i>Engineering</span>
+      <span class="dept-tag snt"><i></i>Signal &amp; Telecom</span>
+      <span class="dept-tag trd"><i></i>Traction</span>
+    </div>
+    <table class="week-grid" id="week-grid-table"></table>
+  </div>
+  </section>
+
+  <section class="view" id="view-alerts" style="display:none;">
+  <div class="content">
+    <h1>Alerts</h1>
+    <div class="alert-item crit">
+      <div class="alert-top"><span>Interlocking relay fault, Cabin B</span><span class="sev crit">critical</span></div>
+      <div class="alert-meta">SEC-04 · Signal &amp; Telecom · overdue 18 days</div>
+    </div>
+    <div class="alert-item crit">
+      <div class="alert-top"><span>OHE tension defect</span><span class="sev crit">critical</span></div>
+      <div class="alert-meta">SEC-02 · Traction · overdue 12 days</div>
+    </div>
+    <div class="alert-item warn">
+      <div class="alert-top"><span>Rail crack, welded joint</span><span class="sev warn">high</span></div>
+      <div class="alert-meta">SEC-04 · Engineering · overdue 9 days</div>
+    </div>
+    <div class="alert-item ok">
+      <div class="alert-top"><span>Signal cable inspection</span><span class="sev ok">routine</span></div>
+      <div class="alert-meta">SEC-01 · Signal &amp; Telecom · overdue 5 days</div>
+    </div>
+  </div>
+  </section>
+
+  <section class="view" id="view-settings" style="display:none;">
+  <div class="content">
+    <h1>Settings</h1>
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Default block duration</div>
+        <div class="settings-note">Used to pre-fill new block requests</div>
+      </div>
+      <select style="width:160px; appearance:none; background-color:transparent; border:1px solid var(--input-border); border-radius:10px; padding:9px 30px 9px 12px; font-size:13px; color:var(--heading); font-family:var(--sans);
+        background-image: url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a8d9a' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>&quot;);
+        background-repeat:no-repeat; background-position:right 10px center;">
+        <option>90 mins</option><option selected>120 mins</option><option>150 mins</option>
+      </select>
+    </div>
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Email alerts for critical overdue tasks</div>
+        <div class="settings-note">Sent once a task crosses its safety threshold</div>
+      </div>
+      <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+    </div>
+    <div class="settings-row">
+      <div>
+        <div class="settings-label">Auto-bundle same-section requests</div>
+        <div class="settings-note">Suggest a shared block when departments overlap</div>
+      </div>
+      <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+    </div>
+  </div>
+  </section>
+
+  <section class="view" id="view-result" style="display:none;">
+  <div class="content" style="max-width:1180px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <h1 style="margin-bottom:20px;">Optimized Block Schedule</h1>
+      <button type="button" id="back-to-planner" style="all:unset;cursor:pointer;font-size:13px;font-weight:600;color:var(--active-text);display:flex;align-items:center;gap:6px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+        Edit inputs
+      </button>
+    </div>
+
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-head">
+          <div class="t">SCHEDULE</div>
+          <div class="m"><span id="result-route"></span> &middot; <span id="result-date"></span> &middot; <span id="result-shift"></span></div>
+        </div>
+        <div class="res-body">
+          <div class="caption" id="block-caption"></div>
+          <div class="hourrow" id="hourrow"></div>
+          <div id="gantt-rows" style="position:relative;"></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <div class="res-card" style="padding:18px;">
+          <div style="font-family:var(--display);font-weight:700;font-size:13.5px;margin-bottom:14px;">AI CONFLICT RESOLUTION</div>
+          <div id="option-cards"></div>
+        </div>
+        <div class="res-card" style="padding:18px;">
+          <div style="font-family:var(--display);font-weight:700;font-size:13.5px;margin-bottom:6px;">OPERATIONAL METRICS (IMPACT ANALYSIS)</div>
+          <div id="metrics-box"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="view" id="view-account" style="display:none;">
+  <div class="content">
+    <h1>Account Details</h1>
+    <div class="card" style="display:block;">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+        <div style="width:60px;height:60px;border-radius:50%;background:var(--chip-bg);display:flex;align-items:center;justify-content:center;color:var(--nav-text);flex:0 0 60px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--display);font-weight:700;font-size:17px;">Ananya Rao</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:3px;">Section Engineer &middot; SEC-02 &middot; Vadodara Division</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 28px;">
+        <div><div class="kpi-label">Employee ID</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">IR-20481</div></div>
+        <div><div class="kpi-label">Department</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">Engineering</div></div>
+        <div><div class="kpi-label">Email</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">ananya.rao@indianrailways.gov.in</div></div>
+        <div><div class="kpi-label">Phone</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">+91 98xxx xxx12</div></div>
+        <div><div class="kpi-label">Base Section</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">SEC-02, Vadodara–Surat Line</div></div>
+        <div><div class="kpi-label">Access Level</div><div style="font-size:13.5px;font-weight:600;margin-top:5px;">Block Planner &middot; Editor</div></div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+</div>
+
+<script>
+/* ============ sidebar nav ============ */
+function setView(name){
+  document.querySelectorAll('.view').forEach(v=>v.style.display='none');
+  const el = document.getElementById('view-'+name);
+  if(el) el.style.display='block';
+  if(name === 'schedules') renderWeekGrid();
+  window.scrollTo(0,0);
+}
+document.getElementById('nav').addEventListener('click', e=>{
+  const btn = e.target.closest('button'); if(!btn) return;
+  setView(btn.dataset.view);
+  setActiveNav(btn.dataset.view);
+});
+
+/* keeps the highlight in sync across the top nav and the bottom Settings button */
+function setActiveNav(name){
+  document.querySelectorAll('#nav button, .sidebar-foot button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.view === name);
+  });
+}
+document.getElementById('foot-settings').addEventListener('click', ()=>{
+  setView('settings');
+  setActiveNav('settings');
+});
+
+/* ============ generic popover open/close helper ============ */
+const openPops = new Set();
+function closeAllPopovers(except){
+  openPops.forEach(p=>{ if(p!==except){ p.classList.remove('show'); } });
+  document.querySelectorAll('.field-btn.open').forEach(b=>{ if(b!==except) b.classList.remove('open'); });
+}
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.field')) closeAllPopovers(null);
+});
+
+function wireField(btnId, popId){
+  const btn = document.getElementById(btnId);
+  const pop = document.getElementById(popId);
+  openPops.add(pop);
+  btn.addEventListener('click', ev=>{
+    ev.stopPropagation();
+    const isOpen = pop.classList.contains('show');
+    closeAllPopovers(pop);
+    pop.classList.toggle('show', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+  });
+  return {btn, pop};
+}
+
+/* ============ route sections (searchable) ============ */
+const routeSections = [
+  "Vadodara - Surat Double Line","Surat - Mumbai Central","Mumbai CST - Pune",
+  "Delhi - Mumbai Central (Western)","Delhi - Howrah (Grand Chord)","Delhi - Kanpur",
+  "Kanpur - Allahabad","Allahabad - Varanasi","Varanasi - Patna","Patna - Howrah",
+  "Delhi - Jaipur","Jaipur - Ahmedabad","Ahmedabad - Vadodara","Vadodara - Ratlam",
+  "Ratlam - Kota","Kota - Delhi","Delhi - Agra","Agra - Jhansi","Jhansi - Bhopal",
+  "Bhopal - Nagpur","Nagpur - Mumbai CST","Nagpur - Secunderabad","Secunderabad - Chennai Central",
+  "Chennai Central - Bangalore City","Bangalore City - Hyderabad","Hyderabad - Vijayawada",
+  "Vijayawada - Chennai Central","Howrah - Kharagpur","Kharagpur - Bhubaneswar",
+  "Bhubaneswar - Visakhapatnam","Visakhapatnam - Vijayawada","Delhi - Ambala",
+  "Ambala - Amritsar","Delhi - Chandigarh","Chandigarh - Kalka","Guwahati - New Jalpaiguri",
+  "New Jalpaiguri - Kolkata","Chennai Central - Coimbatore","Coimbatore - Ernakulam",
+  "Ernakulam - Thiruvananthapuram","Mumbai CST - Solapur","Solapur - Secunderabad",
+  "Lucknow - Kanpur","Lucknow - Gorakhpur","Delhi - Dehradun","Delhi - Amritsar",
+  "Jodhpur - Jaipur","Jodhpur - Ahmedabad","Bikaner - Delhi","Guwahati - Dibrugarh",
+  "Mumbai CST - Ahmedabad","Surat - Vadodara Freight Corridor","Palanpur - Ahmedabad",
+  "Rajkot - Ahmedabad","Jamnagar - Rajkot","Bhavnagar - Ahmedabad","Indore - Ratlam",
+  "Ujjain - Indore","Gwalior - Jhansi","Kota - Sawai Madhopur"
+];
+let selectedRoute = routeSections[0];
+document.getElementById('route-value').textContent = selectedRoute;
+
+function renderRouteList(query){
+  const list = document.getElementById('route-list');
+  const q = (query||'').toLowerCase();
+  const matches = routeSections.filter(r=>r.toLowerCase().includes(q)).slice(0,25);
+  list.innerHTML = '';
+  if(matches.length===0){
+    list.innerHTML = '<div class="combo-empty">No matching route section</div>';
+    return;
+  }
+  matches.forEach(r=>{
+    const opt = document.createElement('div');
+    opt.className='opt'; opt.textContent=r;
+    opt.onclick = ()=>{
+      selectedRoute = r;
+      document.getElementById('route-value').textContent = r;
+      closeAllPopovers(null);
+    };
+    list.appendChild(opt);
+  });
+}
+wireField('route-btn','route-pop');
+document.getElementById('route-btn').addEventListener('click', ()=>{
+  renderRouteList('');
+  setTimeout(()=>document.getElementById('route-search').focus(), 0);
+});
+document.getElementById('route-search').addEventListener('input', e=>renderRouteList(e.target.value));
+document.getElementById('route-search').addEventListener('click', e=>e.stopPropagation());
+
+/* ============ date calendar ============ */
+let calMonth = 9; // 0-indexed: 9 = October
+let calYear = 2026;
+let selectedDate = {day:12, month:9, year:2026};
+const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function renderCalendar(){
+  const pop = document.getElementById('cal-pop');
+  const firstDow = new Date(calYear, calMonth, 1).getDay();
+  const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
+  const daysInPrevMonth = new Date(calYear, calMonth, 0).getDate();
+
+  let html = '<div class="cal">';
+  html += `<div class="cal-head">
+    <button class="cal-nav" id="cal-prev">&#8249;</button>
+    <span>${monthNames[calMonth]} ${calYear}</span>
+    <button class="cal-nav" id="cal-next">&#8250;</button>
+  </div>`;
+  html += '<div class="cal-grid">';
+  ['S','M','T','W','T','F','S'].forEach(d=>html += `<div class="cal-dow">${d}</div>`);
+
+  for(let i=firstDow-1;i>=0;i--){
+    html += `<button class="cal-day mute" disabled>${daysInPrevMonth-i}</button>`;
+  }
+  for(let d=1; d<=daysInMonth; d++){
+    const sel = (d===selectedDate.day && calMonth===selectedDate.month && calYear===selectedDate.year);
+    html += `<button class="cal-day ${sel?'sel':''}" data-day="${d}">${d}</button>`;
+  }
+  const totalCells = firstDow + daysInMonth;
+  const remainder = (7 - (totalCells % 7)) % 7;
+  for(let d=1; d<=remainder; d++){
+    html += `<button class="cal-day mute" disabled>${d}</button>`;
+  }
+  html += '</div></div>';
+  pop.innerHTML = html;
+
+  pop.querySelector('#cal-prev').onclick = (e)=>{ e.stopPropagation(); calMonth--; if(calMonth<0){calMonth=11; calYear--;} renderCalendar(); };
+  pop.querySelector('#cal-next').onclick = (e)=>{ e.stopPropagation(); calMonth++; if(calMonth>11){calMonth=0; calYear++;} renderCalendar(); };
+  pop.querySelectorAll('.cal-day[data-day]').forEach(btn=>{
+    btn.onclick = (e)=>{
+      e.stopPropagation();
+      selectedDate = {day: parseInt(btn.dataset.day), month: calMonth, year: calYear};
+      document.getElementById('date-value').textContent = `${monthNames[calMonth].slice(0,3)} ${selectedDate.day}, ${calYear}`;
+      closeAllPopovers(null);
+    };
+  });
+}
+wireField('date-btn','cal-pop');
+document.getElementById('date-btn').addEventListener('click', renderCalendar);
+
+/* ============ shift picker ============ */
+const shifts = [
+  {name:'Morning Shift', time:'06:00 – 12:00'},
+  {name:'Afternoon Shift', time:'12:00 – 18:00'},
+  {name:'Evening Shift', time:'18:00 – 22:00'},
+  {name:'Night Shift', time:'22:00 – 06:00'},
+];
+function renderShiftList(){
+  const list = document.getElementById('shift-list');
+  list.innerHTML = '';
+  shifts.forEach(s=>{
+    const opt = document.createElement('div');
+    opt.className='opt';
+    opt.innerHTML = `<b>${s.name}</b><div>${s.time}</div>`;
+    opt.onclick = ()=>{
+      document.getElementById('shift-value').textContent = s.name;
+      closeAllPopovers(null);
+    };
+    list.appendChild(opt);
+  });
+}
+wireField('shift-btn','shift-pop');
+document.getElementById('shift-btn').addEventListener('click', renderShiftList);
+
+/* ============ train number <-> name dataset ============ */
+const trainsData = [
+  {number:'12951', name:'Mumbai Rajdhani'}, {number:'12952', name:'New Delhi Rajdhani'},
+  {number:'12301', name:'Howrah Rajdhani'}, {number:'12302', name:'New Delhi Rajdhani'},
+  {number:'12423', name:'Dibrugarh Rajdhani'}, {number:'12424', name:'Dibrugarh Rajdhani (DBRT)'},
+  {number:'12009', name:'Shatabdi Express'}, {number:'12010', name:'Shatabdi Express'},
+  {number:'12001', name:'Bhopal Shatabdi'}, {number:'12002', name:'Bhopal Shatabdi'},
+  {number:'12029', name:'Swarna Shatabdi'}, {number:'12030', name:'Swarna Shatabdi'},
+  {number:'12259', name:'Sealdah Duronto'}, {number:'12260', name:'New Delhi Duronto'},
+  {number:'12273', name:'Howrah Duronto'}, {number:'12274', name:'New Delhi Duronto'},
+  {number:'12909', name:'Garib Rath Express'}, {number:'12910', name:'Garib Rath Express'},
+  {number:'12213', name:'Jan Shatabdi Express'}, {number:'12214', name:'Jan Shatabdi Express'},
+  {number:'22691', name:'Rajdhani Express (Bangalore)'}, {number:'22692', name:'Rajdhani Express (New Delhi)'},
+  {number:'22119', name:'Tejas Express'}, {number:'22120', name:'Tejas Express'},
+  {number:'20901', name:'Vande Bharat Express'}, {number:'20902', name:'Vande Bharat Express'},
+  {number:'22435', name:'Vande Bharat Express (New Delhi)'}, {number:'22436', name:'Vande Bharat Express (Varanasi)'},
+  {number:'12649', name:'Sampark Kranti Express'}, {number:'12650', name:'Sampark Kranti Express'},
+  {number:'12615', name:'Grand Trunk Express'}, {number:'12616', name:'Grand Trunk Express'},
+  {number:'12723', name:'Telangana Express'}, {number:'12724', name:'Telangana Express'},
+  {number:'12839', name:'Howrah - Chennai Mail'}, {number:'12840', name:'Chennai - Howrah Mail'},
+  {number:'12621', name:'SF Express (Tamil Nadu)'}, {number:'12622', name:'SF Express (Tamil Nadu)'},
+  {number:'16649', name:'Parasuram Express'}, {number:'16650', name:'Parasuram Express'},
+  {number:'12925', name:'Paschim Express'}, {number:'12926', name:'Paschim Express'},
+  {number:'12905', name:'Porbandar Express'}, {number:'12906', name:'Porbandar Express'},
+  {number:'19011', name:'Firozpur Janata Express'}, {number:'19012', name:'Firozpur Janata Express'},
+  {number:'14311', name:'Bareilly Express'}, {number:'14312', name:'Bareilly Express'},
+  {number:'09001', name:'Mumbai Central - Ahmedabad Special'}, {number:'09002', name:'Ahmedabad - Mumbai Central Special'},
+  {number:'05017', name:'Gorakhpur - Anand Vihar Special'}, {number:'05018', name:'Anand Vihar - Gorakhpur Special'},
+  {number:'06057', name:'Chennai - Coimbatore Special'}, {number:'06058', name:'Coimbatore - Chennai Special'},
+  {number:'09419', name:'Surat - Varanasi Special'}, {number:'09420', name:'Varanasi - Surat Special'},
+  {number:'GT-4471', name:'GT-4471 Goods Special'},
+];
+
+function filterTrains(query){
+  const q = query.trim().toLowerCase();
+  if(!q) return [];
+  return trainsData.filter(t =>
+    t.number.toLowerCase().startsWith(q) || t.name.toLowerCase().includes(q)
+  ).slice(0,8);
+}
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function attachTrainAutocomplete(inputId, suggestId, tagsId, initial){
+  const input = document.getElementById(inputId);
+  const suggestBox = document.getElementById(suggestId);
+  let items = initial.slice();
+  let hlIndex = -1;
+  let currentMatches = [];
+
+  function renderTags(){
+    const wrap = document.getElementById(tagsId);
+    wrap.innerHTML = '';
+    items.forEach((t,i)=>{
+      const tag = document.createElement('span');
+      tag.className='tag';
+      tag.innerHTML = `<span>${t}</span>`;
+      const close = document.createElement('button');
+      close.innerHTML = '&times;';
+      close.onclick = ()=>{ items.splice(i,1); renderTags(); };
+      tag.appendChild(close);
+      wrap.appendChild(tag);
+    });
+  }
+
+  function addTag(label){
+    items.push(label);
+    input.value = '';
+    renderTags();
+    suggestBox.classList.remove('show');
+    hlIndex = -1;
+  }
+
+  function renderSuggestions(query, matches){
+    currentMatches = matches;
+    if(matches.length===0){
+      const q = query.trim();
+      if(q){
+        suggestBox.innerHTML = `<div class="opt add-raw"><span>Add "${escapeHtml(q)}" as entered</span><span class="num">no match found</span></div>`;
+        suggestBox.classList.add('show');
+        hlIndex = 0;
+        suggestBox.querySelector('.add-raw').onclick = ()=> addTag(q);
+      } else {
+        suggestBox.classList.remove('show'); suggestBox.innerHTML=''; hlIndex = -1;
+      }
+      return;
+    }
+    hlIndex = 0; // top match is highlighted by default so Enter always has something to pick
+    suggestBox.innerHTML = matches.map((t,i)=>
+      `<div class="opt ${i===0?'hl':''}" data-i="${i}"><span>${t.name}</span><span class="num">${t.number}</span></div>`
+    ).join('');
+    suggestBox.classList.add('show');
+    suggestBox.querySelectorAll('.opt').forEach(opt=>{
+      opt.onclick = ()=>{
+        const t = matches[parseInt(opt.dataset.i)];
+        addTag(`[${t.number}] ${t.name}`);
+      };
+    });
+  }
+
+  input.addEventListener('input', ()=>{
+    renderSuggestions(input.value, filterTrains(input.value));
+  });
+  input.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowDown' && currentMatches.length){
+      e.preventDefault();
+      hlIndex = Math.min(hlIndex+1, currentMatches.length-1);
+      suggestBox.querySelectorAll('.opt').forEach((o,i)=>o.classList.toggle('hl', i===hlIndex));
+    } else if(e.key === 'ArrowUp' && currentMatches.length){
+      e.preventDefault();
+      hlIndex = Math.max(hlIndex-1, 0);
+      suggestBox.querySelectorAll('.opt').forEach((o,i)=>o.classList.toggle('hl', i===hlIndex));
+    } else if(e.key === 'Enter'){
+      e.preventDefault();
+      if(currentMatches.length){
+        const t = currentMatches[hlIndex >= 0 ? hlIndex : 0];
+        addTag(`[${t.number}] ${t.name}`);
+      } else if(input.value.trim()){
+        addTag(input.value.trim());
+      }
+    } else if(e.key === 'Escape'){
+      suggestBox.classList.remove('show');
+    }
+  });
+  input.addEventListener('click', e=>e.stopPropagation());
+  suggestBox.addEventListener('click', e=>e.stopPropagation());
+
+  renderTags();
+}
+
+attachTrainAutocomplete('train-input','train-suggest','train-tags', ['[12952] Mumbai Rajdhani','[12951] NDLS Rajdhani']);
+attachTrainAutocomplete('emg-input','emg-suggest','emg-tags', ['[12424] DBRT Rajdhani','Medical Special 01']);
+
+/* close suggestion boxes on outside click too */
+document.addEventListener('click', ()=>{
+  document.querySelectorAll('.suggest').forEach(s=>s.classList.remove('show'));
+});
+
+/* ============ schedules week grid ============ */
+const wkDays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const wkSections = ['SEC-01','SEC-02','SEC-03','SEC-04'];
+const wkCells = {
+  'SEC-01_Mon': [{dept:'ENG', title:'Ballast tamping'}],
+  'SEC-04_Mon': [{dept:'S&T', title:'Relay fault fix'},{dept:'ENG', title:'Rail crack weld'}],
+  'SEC-02_Tue': [{dept:'TRD', title:'OHE tension check'}],
+  'SEC-01_Wed': [{dept:'S&T', title:'Cable inspection'}],
+  'SEC-04_Thu': [{dept:'TRD', title:'Sub-station patrol'}],
+  'SEC-03_Fri': [{dept:'ENG', title:'Ballast renewal'}],
+  'SEC-02_Sat': [{dept:'S&T', title:'Signal test'},{dept:'TRD', title:'Feeder check'}],
+};
+function renderWeekGrid(){
+  const table = document.getElementById('week-grid-table');
+  if(!table || table.dataset.built) return;
+  let html = '<tr><th>Section</th>' + wkDays.map(d=>`<th>${d}</th>`).join('') + '</tr>';
+  wkSections.forEach(s=>{
+    html += `<tr><td>${s}</td>`;
+    wkDays.forEach(d=>{
+      const items = wkCells[s+'_'+d];
+      if(items){
+        html += '<td>' + items.map(it=>`<div class="wk-task">${it.dept} · ${it.title}</div>`).join('') + '</td>';
+      } else {
+        html += `<td><span class="wk-open">open window</span></td>`;
+      }
+    });
+    html += '</tr>';
+  });
+  table.innerHTML = html;
+  table.dataset.built = '1';
+}
+
+/* ============ generate button ============ */
+document.getElementById('generate-btn').addEventListener('click', function(){
+  const btn = this;
+  const status = document.getElementById('status-line');
+  btn.classList.add('busy');
+  status.textContent = 'Scoring tasks and checking corridor windows...';
+  setTimeout(()=>{
+    btn.classList.remove('busy');
+    status.textContent = 'Draft schedule ready — building optimized view...';
+    buildResultFromInputs();
+    setView('result');
+  }, 1400);
+});
+
+/* ============ optimized schedule (built from the planner's own inputs) ============ */
+const ganttPalette = [
+  {bg:'#dbe4f5',text:'#1f3d7a'}, {bg:'#f5dbdb',text:'#7a2a2a'},
+  {bg:'#dbf0e6',text:'#1f6b4a'}, {bg:'#f6ecd0',text:'#7a5b12'},
+  {bg:'#e6dbf5',text:'#4a2a7a'}, {bg:'#d0eef6',text:'#0e5b73'},
+  {bg:'#f0dbe8',text:'#7a1f52'}, {bg:'#e2ecd0',text:'#42631a'}
+];
+const optionMeta = [
+  {n:1, color:'#2f6fed', title:'Minimize Delay',  note:d=>`Nudges the block to a quieter part of the shift so it clears ${d.protectedCount} priority train${d.protectedCount===1?'':'s'} and touches only ${d.conflicts} of ${d.total} maintenance train${d.total===1?'':'s'}.`},
+  {n:2, color:'#0d9488', title:'Maximize Block',  note:d=>`Extends the window to 1.75x the requested duration for full single-pass coverage. Covers more track but overlaps ${d.conflicts} train${d.conflicts===1?'':'s'}, so expect more rerouting.`},
+  {n:3, color:'#7c3aed', title:'Split Window',    note:d=>`Breaks the block into two shorter windows around the busiest hour. Usually the lowest passenger impact, at the cost of a second crew mobilization.`}
+];
+let currentOption = 1;
+
+function hashStr(s){ let h=0; for(let i=0;i<s.length;i++){ h=(h*31+s.charCodeAt(i))>>>0; } return h; }
+function timeToHour(t){ const [h,m]=t.split(':').map(Number); return h+(m||0)/60; }
+function getShiftRange(){
+  const val = document.getElementById('shift-value').textContent;
+  const s = shifts.find(x=>x.name===val) || shifts[0];
+  const [a,b] = s.time.split('–').map(x=>x.trim());
+  let start=timeToHour(a), end=timeToHour(b);
+  if(end<=start) end+=24;
+  return {start, end};
+}
+function getBlockDurationHrs(){
+  const sel = document.getElementById('block-duration');
+  return parseInt(sel.value,10)/60;
+}
+function getTags(containerId){
+  return Array.from(document.querySelectorAll('#'+containerId+' .tag span:first-child')).map(el=>el.textContent.trim()).filter(Boolean);
+}
+function buildTrains(names, shift){
+  return names.map((name,i)=>{
+    const h = hashStr(name+i);
+    const span = shift.end-shift.start;
+    const durHrs = 1 + (h%3)*0.5;
+    const maxStart = Math.max(0.25, span-durHrs-0.25);
+    const start = shift.start + ((h%97)/97)*maxStart;
+    return {name, start, end:start+durHrs, color:ganttPalette[i%ganttPalette.length]};
+  });
+}
+function overlaps(a1,a2,b1,b2){ return a1<b2 && b1<a2; }
+function getBlockWindow(option, shift, durHrs){
+  if(option===1){ const start=shift.start+0.5; return {start, end:start+durHrs}; }
+  if(option===2){ const ext=durHrs*1.75; const start=shift.start+1; return {start, end:Math.min(shift.end,start+ext)}; }
+  const half=durHrs/2; const mid=(shift.start+shift.end)/2;
+  const s1=shift.start+0.75, s2=Math.min(shift.end-half-0.25, mid+0.75);
+  return {split:true, windows:[{start:s1,end:s1+half},{start:s2,end:s2+half}]};
+}
+function computeConflicts(trains, block, emgNames){
+  return trains.map(t=>{
+    const isProtected = emgNames.some(e=>e.toLowerCase()===t.name.toLowerCase());
+    let conflict=false;
+    if(!isProtected){
+      conflict = block.split ? block.windows.some(w=>overlaps(t.start,t.end,w.start,w.end)) : overlaps(t.start,t.end,block.start,block.end);
+    }
+    return Object.assign({}, t, {conflict, protected:isProtected});
+  });
+}
+function computeMetrics(trainsC, option){
+  const total = trainsC.length || 1;
+  const conflicts = trainsC.filter(t=>t.conflict).length;
+  const protectedCount = trainsC.filter(t=>t.protected).length;
+  const resolvedPct = Math.round(((total-conflicts)/total)*100);
+  const availability = option===1 ? 8+resolvedPct*0.12 : option===2 ? 2+resolvedPct*0.08 : 5+resolvedPct*0.10;
+  const delay = Math.round((option===1?25:option===2?55:38) + conflicts*9);
+  const utilization = option===2 ? 96 : option===3 ? 84 : 90;
+  const probability = Math.max(28, Math.min(96, 95 - conflicts*9 - (option===2?10:option===3?16:0)));
+  return {conflicts, total, protectedCount, availability:Math.round(availability), delay, utilization, probability};
+}
+function escapeHtml2(s){ return s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function renderHourRow(shift){
+  const total = Math.max(1, Math.round(shift.end-shift.start));
+  const row = document.getElementById('hourrow');
+  row.style.gridTemplateColumns = `150px repeat(${total},1fr)`;
+  let html = '<span>TRAIN ID / SECTION</span>';
+  for(let i=0;i<total;i++){ html += `<span>${String(Math.floor(shift.start+i)%24).padStart(2,'0')}:00</span>`; }
+  row.innerHTML = html;
+  return total;
+}
+function renderGantt(shift, block, trainsC){
+  const total = renderHourRow(shift);
+  const pct = v => (v-shift.start)/total*100;
+  let html = '';
+  if(block.split){
+    block.windows.forEach(w=>{
+      html += `<div class="gt-block" style="left:calc(150px + (100% - 150px) * ${pct(w.start)/100});width:calc((100% - 150px) * ${(pct(w.end)-pct(w.start))/100});"></div>`;
+    });
+  } else {
+    html += `<div class="gt-block" style="left:calc(150px + (100% - 150px) * ${pct(block.start)/100});width:calc((100% - 150px) * ${(pct(block.end)-pct(block.start))/100});"></div>`;
+  }
+  if(trainsC.length===0){
+    html += '<div class="gt-empty">Add trains under "Trains Requiring Maintenance Blocks" in the planner to see them here.</div>';
+  } else {
+    trainsC.forEach(t=>{
+      const left=Math.max(0,pct(t.start)), width=Math.max(6,pct(t.end)-pct(t.start));
+      const style = t.protected ? '' : `background:${t.color.bg};color:${t.color.text};`;
+      html += `<div class="gt-row"><div class="gt-label">${escapeHtml2(t.name)}</div><div class="gt-track"><div class="gt-bar ${t.protected?'protected':''}" style="left:${left}%;width:${width}%;${style}">${escapeHtml2(t.name)}${t.conflict?'<span class="gt-conflict">!</span>':''}</div></div></div>`;
+    });
+  }
+  document.getElementById('gantt-rows').innerHTML = html;
+}
+function renderOptionCards(allMetrics){
+  const box = document.getElementById('option-cards');
+  box.innerHTML = optionMeta.map(o=>{
+    const m = allMetrics[o.n];
+    const isBest = o.n === allMetrics.bestOption;
+    return `<div class="res-opt ${o.n===currentOption?'sel':''}" style="--opt-c:${o.color}" data-opt="${o.n}">
+      <div class="res-opt-top"><div class="res-opt-num">${o.n}</div><div class="res-opt-title">${o.title}</div><div class="res-opt-prob">${m.probability}%${isBest?' best fit':''}</div></div>
+      <div class="res-opt-note">${o.note(m)}</div>
+    </div>`;
+  }).join('');
+  box.querySelectorAll('.res-opt').forEach(el=>{
+    el.addEventListener('click', ()=>{ currentOption = parseInt(el.dataset.opt,10); refreshResult(); });
+  });
+}
+function renderMetrics(m){
+  document.getElementById('metrics-box').innerHTML = `
+    <div class="mrow"><span class="ml">Network Availability Gain</span><span class="mv">+${m.availability}%</span></div>
+    <div class="mrow"><span class="ml">Total Train Delay</span><span class="mv">${m.delay} min <span class="msub">of trains affected</span></span></div>
+    <div class="mrow"><span class="ml">Trains Rerouted</span><span class="mv">${m.conflicts} <span class="msub">of ${m.total}</span></span></div>
+    <div class="mrow"><span class="ml">Corridor Utilization</span><span class="mv">${m.utilization}%</span></div>`;
+}
+function refreshResult(){
+  const block = getBlockWindow(currentOption, window.__shift, window.__durHrs);
+  const trainsC = computeConflicts(window.__trains, block, window.__emg);
+  renderGantt(window.__shift, block, trainsC);
+  const caption = block.split
+    ? `Two split windows of ${Math.round((block.windows[0].end-block.windows[0].start)*60)} min each`
+    : `Block window ${String(Math.floor(block.start)%24).padStart(2,'0')}:${String(Math.round((block.start%1)*60)).padStart(2,'0')} – ${String(Math.floor(block.end)%24).padStart(2,'0')}:${String(Math.round((block.end%1)*60)).padStart(2,'0')}`;
+  document.getElementById('block-caption').innerHTML = `<b>${caption}</b> &middot; ${window.__emg.length} priority train${window.__emg.length===1?'':'s'} protected from rescheduling`;
+
+  const allMetrics = {};
+  let best=1, bestScore=-1;
+  [1,2,3].forEach(o=>{
+    const b = getBlockWindow(o, window.__shift, window.__durHrs);
+    const tc = computeConflicts(window.__trains, b, window.__emg);
+    const m = computeMetrics(tc, o);
+    allMetrics[o] = m;
+    if(m.probability>bestScore){ bestScore=m.probability; best=o; }
+  });
+  allMetrics.bestOption = best;
+  renderOptionCards(allMetrics);
+  renderMetrics(allMetrics[currentOption]);
+}
+function buildResultFromInputs(){
+  const shift = getShiftRange();
+  window.__shift = shift;
+  window.__durHrs = getBlockDurationHrs();
+  window.__trains = buildTrains(getTags('train-tags'), shift);
+  window.__emg = getTags('emg-tags');
+  currentOption = 1;
+  document.getElementById('result-route').textContent = selectedRoute;
+  document.getElementById('result-date').textContent = document.getElementById('date-value').textContent;
+  document.getElementById('result-shift').textContent = document.getElementById('shift-value').textContent;
+  refreshResult();
+}
+document.getElementById('back-to-planner').addEventListener('click', ()=>{
+  setView('planner');
+  document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active', b.dataset.view==='planner'));
+});
+
+/* ============ avatar dropdown ============ */
+const avatarBtn = document.getElementById('avatar-btn');
+const avatarPop = document.getElementById('avatar-pop');
+avatarBtn.addEventListener('click', e=>{
+  e.stopPropagation();
+  closeAllPopovers(null);
+  avatarPop.classList.toggle('show');
+});
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.avatar-wrap')) avatarPop.classList.remove('show');
+});
+avatarPop.querySelectorAll('[data-view]').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const name = btn.dataset.view;
+    setView(name);
+    setActiveNav(name);
+    avatarPop.classList.remove('show');
+  });
+});
+document.getElementById('signout-btn').addEventListener('click', ()=>{
+  avatarPop.classList.remove('show');
+  alert('Signed out (demo only — no auth is wired up yet).');
+});
+</script>
+</body>
+</html>
